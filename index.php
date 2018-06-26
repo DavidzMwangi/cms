@@ -1,3 +1,10 @@
-//home page 
-//can redirect to login page
-//anything
+
+<?php
+include_once 'header.php';
+?>
+<div class="container">
+
+</div>
+<?php
+include_once 'footer.php';
+?>
