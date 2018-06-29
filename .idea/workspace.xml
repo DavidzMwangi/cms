@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1d9bedd4-717e-49d8-84e8-258c78f147e5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/technician/footer.php" afterPath="$PROJECT_DIR$/technician/footer.php" />
       <change beforePath="$PROJECT_DIR$/technician/index.php" afterPath="$PROJECT_DIR$/technician/index.php" />
+      <change beforePath="$PROJECT_DIR$/technician/save_milk.php" afterPath="$PROJECT_DIR$/technician/save_milk.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,8 +38,8 @@
       <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/technician/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="51" lean-forward="false" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+            <state relative-caret-position="0">
+              <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -68,14 +68,14 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/technician/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
               <folding>
-                <marker date="1530260717298" expanded="true" signature="673:702" ph="SELECT id,ni... cows" />
-                <marker date="1530260717298" expanded="true" signature="1207:1530" ph="..." />
-                <marker date="1530260717298" expanded="true" signature="1339:1519" ph="..." />
-                <marker date="1530260717298" expanded="true" signature="1578:1760" ph="..." />
-                <marker date="1530260717298" expanded="true" signature="1850:1957" ph="..." />
+                <marker date="1530267719658" expanded="true" signature="1677:1706" ph="SELECT id,ni... cows" />
+                <marker date="1530267719658" expanded="true" signature="2211:2534" ph="..." />
+                <marker date="1530267719658" expanded="true" signature="2343:2523" ph="..." />
+                <marker date="1530267719658" expanded="true" signature="2582:2764" ph="..." />
+                <marker date="1530267719658" expanded="true" signature="2854:2961" ph="..." />
               </folding>
             </state>
           </provider>
@@ -94,26 +94,30 @@
       <file leaf-file-name="save_milk.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/technician/save_milk.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="115">
+              <caret line="129" column="41" lean-forward="true" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
               <folding>
-                <marker date="1530258066861" expanded="true" signature="511:575" ph="SELECT morni... milking" />
-                <marker date="1530258066861" expanded="true" signature="511:598" ph="SELECT morni... milking" />
-                <marker date="1530258066861" expanded="true" signature="511:609" ph="SELECT morni... milking" />
-                <marker date="1530258066861" expanded="true" signature="1075:1110" ph="UPDATE milking... " />
-                <marker date="1530258066861" expanded="true" signature="1075:1122" ph="UPDATE milking... " />
-                <marker date="1530258066861" expanded="true" signature="1075:1128" ph="UPDATE milking... " />
-                <marker date="1530258066861" expanded="true" signature="1075:1171" ph="UPDATE milking... " />
-                <marker date="1530258066861" expanded="true" signature="1250:1301" ph="..." />
-                <marker date="1530258066861" expanded="true" signature="1317:1359" ph="{...}" />
-                <marker date="1530258066861" expanded="true" signature="1418:1453" ph="UPDATE milking... " />
-                <marker date="1530258066861" expanded="true" signature="1418:1465" ph="UPDATE milking... " />
-                <marker date="1530258066861" expanded="true" signature="1418:1471" ph="UPDATE milking... " />
-                <marker date="1530258066861" expanded="true" signature="1418:1472" ph="UPDATE milking... " />
-                <marker date="1530258066861" expanded="true" signature="1418:1514" ph="UPDATE milking... " />
-                <marker date="1530258066861" expanded="true" signature="1601:1652" ph="..." />
-                <marker date="1530258066861" expanded="true" signature="2011:2165" ph="INSERT INTO milking" />
-                <marker date="1530258066861" expanded="true" signature="2242:2293" ph="..." />
+                <marker date="1530266438334" expanded="true" signature="864:968" ph="SELECT morni... milking" />
+                <marker date="1530266438334" expanded="true" signature="1297:1405" ph="UPDATE milking... " />
+                <marker date="1530266438334" expanded="true" signature="1652:1760" ph="UPDATE milking... " />
+                <marker date="1530266438334" expanded="true" signature="2253:2413" ph="INSERT INTO milking" />
+                <marker date="1530266438334" expanded="true" signature="3125:3189" ph="SELECT morni... milking" />
+                <marker date="1530266438334" expanded="true" signature="3125:3212" ph="SELECT morni... milking" />
+                <marker date="1530266438334" expanded="true" signature="3125:3223" ph="SELECT morni... milking" />
+                <marker date="1530266438334" expanded="true" signature="3707:3742" ph="UPDATE milking... " />
+                <marker date="1530266438334" expanded="true" signature="3707:3754" ph="UPDATE milking... " />
+                <marker date="1530266438334" expanded="true" signature="3707:3760" ph="UPDATE milking... " />
+                <marker date="1530266438334" expanded="true" signature="3707:3803" ph="UPDATE milking... " />
+                <marker date="1530266438334" expanded="true" signature="3888:3943" ph="..." />
+                <marker date="1530266438334" expanded="true" signature="3961:4007" ph="{...}" />
+                <marker date="1530266438334" expanded="true" signature="4072:4107" ph="UPDATE milking... " />
+                <marker date="1530266438334" expanded="true" signature="4072:4119" ph="UPDATE milking... " />
+                <marker date="1530266438334" expanded="true" signature="4072:4125" ph="UPDATE milking... " />
+                <marker date="1530266438334" expanded="true" signature="4072:4126" ph="UPDATE milking... " />
+                <marker date="1530266438334" expanded="true" signature="4072:4168" ph="UPDATE milking... " />
+                <marker date="1530266438334" expanded="true" signature="4259:4314" ph="..." />
+                <marker date="1530266438334" expanded="true" signature="4701:4855" ph="INSERT INTO milking" />
+                <marker date="1530266438334" expanded="true" signature="4936:4991" ph="..." />
               </folding>
             </state>
           </provider>
@@ -129,8 +133,8 @@
       <list>
         <option value="$PROJECT_DIR$/technician/header.php" />
         <option value="$PROJECT_DIR$/technician/config.php" />
-        <option value="$PROJECT_DIR$/technician/save_milk.php" />
         <option value="$PROJECT_DIR$/technician/footer.php" />
+        <option value="$PROJECT_DIR$/technician/save_milk.php" />
         <option value="$PROJECT_DIR$/technician/index.php" />
       </list>
     </option>
@@ -246,19 +250,19 @@
       <updated>1529998749462</updated>
       <workItem from="1529998750819" duration="2862000" />
       <workItem from="1530117094366" duration="15000" />
-      <workItem from="1530212920055" duration="13656000" />
+      <workItem from="1530212920055" duration="17807000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16533000" />
+    <option name="totallyTimeSpent" value="20684000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13842663" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27458397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -337,50 +341,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/technician/save_milk.php">
+    <entry file="file://$PROJECT_DIR$/technician/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <marker date="1530258066861" expanded="true" signature="511:575" ph="SELECT morni... milking" />
-            <marker date="1530258066861" expanded="true" signature="511:598" ph="SELECT morni... milking" />
-            <marker date="1530258066861" expanded="true" signature="511:609" ph="SELECT morni... milking" />
-            <marker date="1530258066861" expanded="true" signature="1075:1110" ph="UPDATE milking... " />
-            <marker date="1530258066861" expanded="true" signature="1075:1122" ph="UPDATE milking... " />
-            <marker date="1530258066861" expanded="true" signature="1075:1128" ph="UPDATE milking... " />
-            <marker date="1530258066861" expanded="true" signature="1075:1171" ph="UPDATE milking... " />
-            <marker date="1530258066861" expanded="true" signature="1250:1301" ph="..." />
-            <marker date="1530258066861" expanded="true" signature="1317:1359" ph="{...}" />
-            <marker date="1530258066861" expanded="true" signature="1418:1453" ph="UPDATE milking... " />
-            <marker date="1530258066861" expanded="true" signature="1418:1465" ph="UPDATE milking... " />
-            <marker date="1530258066861" expanded="true" signature="1418:1471" ph="UPDATE milking... " />
-            <marker date="1530258066861" expanded="true" signature="1418:1472" ph="UPDATE milking... " />
-            <marker date="1530258066861" expanded="true" signature="1418:1514" ph="UPDATE milking... " />
-            <marker date="1530258066861" expanded="true" signature="1601:1652" ph="..." />
-            <marker date="1530258066861" expanded="true" signature="2011:2165" ph="INSERT INTO milking" />
-            <marker date="1530258066861" expanded="true" signature="2242:2293" ph="..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/technician/footer.php">
+    <entry file="file://$PROJECT_DIR$/technician/save_milk.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="51" lean-forward="false" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
-          <folding />
+        <state relative-caret-position="115">
+          <caret line="129" column="41" lean-forward="true" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
+          <folding>
+            <marker date="1530266438334" expanded="true" signature="864:968" ph="SELECT morni... milking" />
+            <marker date="1530266438334" expanded="true" signature="1297:1405" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="1652:1760" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="2253:2413" ph="INSERT INTO milking" />
+            <marker date="1530266438334" expanded="true" signature="3125:3189" ph="SELECT morni... milking" />
+            <marker date="1530266438334" expanded="true" signature="3125:3212" ph="SELECT morni... milking" />
+            <marker date="1530266438334" expanded="true" signature="3125:3223" ph="SELECT morni... milking" />
+            <marker date="1530266438334" expanded="true" signature="3707:3742" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="3707:3754" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="3707:3760" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="3707:3803" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="3888:3943" ph="..." />
+            <marker date="1530266438334" expanded="true" signature="3961:4007" ph="{...}" />
+            <marker date="1530266438334" expanded="true" signature="4072:4107" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="4072:4119" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="4072:4125" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="4072:4126" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="4072:4168" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="4259:4314" ph="..." />
+            <marker date="1530266438334" expanded="true" signature="4701:4855" ph="INSERT INTO milking" />
+            <marker date="1530266438334" expanded="true" signature="4936:4991" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/technician/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
           <folding>
-            <marker date="1530260717298" expanded="true" signature="673:702" ph="SELECT id,ni... cows" />
-            <marker date="1530260717298" expanded="true" signature="1207:1530" ph="..." />
-            <marker date="1530260717298" expanded="true" signature="1339:1519" ph="..." />
-            <marker date="1530260717298" expanded="true" signature="1578:1760" ph="..." />
-            <marker date="1530260717298" expanded="true" signature="1850:1957" ph="..." />
+            <marker date="1530267719658" expanded="true" signature="1677:1706" ph="SELECT id,ni... cows" />
+            <marker date="1530267719658" expanded="true" signature="2211:2534" ph="..." />
+            <marker date="1530267719658" expanded="true" signature="2343:2523" ph="..." />
+            <marker date="1530267719658" expanded="true" signature="2582:2764" ph="..." />
+            <marker date="1530267719658" expanded="true" signature="2854:2961" ph="..." />
           </folding>
         </state>
       </provider>

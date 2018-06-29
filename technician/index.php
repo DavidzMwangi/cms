@@ -16,9 +16,53 @@ require_once "config.php";
 $DB=new DB_FACADE();
 
 
+
+
+if (isset($_POST['submit'])){
+    $cow_id=$_POST['cow'];
+    $milking_time=$_POST['milking_time'];
+    $amount=$_POST['litres_amount'];
+
+
+    //initiate the saving process
+    require_once 'save_milk.php';
+    $newRecord=new SaveMilk($cow_id,$milking_time,$amount);
+
+    if ($newRecord->saveMilk()){
+        //saved successfully
+        $status=true;
+    }else{
+        //error occurred
+        $status=false;
+    }
+
+}
 ?>
 <div class="container-fluid">
-    <form action="save_milk.php" method="post">
+    <form action="" method="post">
+
+        <?php
+        if (isset($status)){
+            if ($status){
+               ?>
+<!--                <div class="row">-->
+        <div class="col-offset-4 col-md-4 col-lg-4 col-sm-12  alert-success" >
+            <h3>Record Saved successfully</h3>
+        </div>
+<!--                </div>-->
+        <?php
+            }else{
+                ?>
+
+                <div class="row">
+                   <div class="col-md-4 alert-danger">
+                       <h3>Error saving the record</h3>
+                   </div>
+                </div>
+        <?php
+            }
+        }
+        ?>
 <div class="row">
     <div class="col-md-4 col-sm-12 col-lg-4">
         <label for="cow_name">Cow Name</label>
