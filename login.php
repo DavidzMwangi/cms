@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'user.php';
+include_once 'login/user.php';
 $user = new User();
 if ($user->session()) {
     header("location:index.php");
@@ -31,9 +31,9 @@ if (isset($_POST['submit'])) {
 
     <title>Log in</title>
 
-    <link href="bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">-->
-    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
