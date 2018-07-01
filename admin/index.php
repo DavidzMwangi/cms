@@ -1,14 +1,15 @@
 <?php
 session_start();
-include_once 'user.php';
+include_once '../login/user.php';
 $user = new User;
 $id = $_SESSION['id'];
 if (!$user->session()){
-    header("location:login.php");
+
+    header("location:../login.php");
 }
 else{
     if (!$user->isAdmin()){
-        header("location:index.php");
+        header("location:../index.php");
     }
 }
 
@@ -21,7 +22,7 @@ if (isset($_REQUEST['q'])){
 
 <head>
     <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 
 <body>
