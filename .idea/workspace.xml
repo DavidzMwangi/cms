@@ -2,86 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d9bedd4-717e-49d8-84e8-258c78f147e5" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/css/mdb.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/css/mdb.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/css/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/css/style.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Bold.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Bold.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Bold.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Bold.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Light.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Light.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Light.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Light.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Medium.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Medium.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Medium.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Medium.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Regular.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Regular.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Regular.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Thin.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Thin.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Thin.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/font/roboto/Roboto-Thin.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/home.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/img/lightbox/default-skin.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/img/lightbox/default-skin.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/img/lightbox/preloader.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/img/overlays/01.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/img/overlays/02.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/img/overlays/03.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/img/overlays/04.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/img/overlays/05.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/img/overlays/06.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/img/overlays/07.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/img/overlays/08.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/img/overlays/09.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/img/svg/arrow_left.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/img/svg/arrow_right.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/js/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/js/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/js/jquery-3.3.1.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/js/mdb.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/js/mdb.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/js/popper.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/_custom-styles.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/_custom-variables.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/core/_colors.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/core/_global.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/core/_helpers.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/core/_masks.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/core/_mixins.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/core/_typography.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/core/_variables.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/core/_waves.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/core/bootstrap/_functions.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/core/bootstrap/_variables.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_animations-basic.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_animations-extended.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_badges.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_buttons.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_cards.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_carousels.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_depreciated.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_dropdowns.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_footers.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_forms.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_input-group.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_list-group.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_modals.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_msc.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_navbars.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_pagination.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/free/_tables.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/mdb.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/scss/style.scss" />
-      <change beforePath="$PROJECT_DIR$/.idea/cms.iml" afterPath="$PROJECT_DIR$/.idea/cms.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/technician/add_milk_record.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/technician/content.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/technician/sidebar.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/technician/index.php" afterPath="$PROJECT_DIR$/technician/index.php" />
     </list>
@@ -93,27 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="2" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="9" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/footer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/technician/footer.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -144,27 +47,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/technician/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="1424" column="16" lean-forward="true" selection-start-line="1424" selection-start-column="16" selection-end-line="1424" selection-end-column="16" />
+            <state relative-caret-position="2244">
+              <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#19285#19292#1#HTML" expanded="true" />
-                <element signature="e#21806#21813#1#HTML" expanded="true" />
-                <element signature="e#24309#24316#1#HTML" expanded="true" />
-                <element signature="e#27243#27250#1#HTML" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#5;n#section#0;n#div#0;n#div#1;n#div#4;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#5;n#section#0;n#div#0;n#div#1;n#div#4;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#32222#32229#1#HTML" expanded="true" />
-                <element signature="e#33808#33815#1#HTML" expanded="true" />
-                <element signature="e#36489#36496#1#HTML" expanded="true" />
-                <element signature="e#41032#41039#1#HTML" expanded="true" />
-                <element signature="e#45594#45601#1#HTML" expanded="true" />
-                <element signature="e#50152#50159#1#HTML" expanded="true" />
-                <element signature="e#53349#53356#1#HTML" expanded="true" />
+                <marker date="1530303210284" expanded="true" signature="4269:4335" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/technician/sidebar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" column="43" lean-forward="false" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -172,10 +72,22 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/technician/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="1037">
+              <caret line="61" column="13" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
               <folding>
                 <marker date="1530267719658" expanded="true" signature="1677:1706" ph="SELECT id,ni... cows" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_milk_record.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/technician/add_milk_record.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="47" column="14" lean-forward="false" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+              <folding>
+                <marker date="1530303277353" expanded="true" signature="1872:1901" ph="SELECT id,ni... cows" />
               </folding>
             </state>
           </provider>
@@ -194,7 +106,7 @@
       <file leaf-file-name="save_milk.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/technician/save_milk.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
+            <state relative-caret-position="2193">
               <caret line="129" column="41" lean-forward="false" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
               <folding>
                 <marker date="1530266438334" expanded="true" signature="864:968" ph="SELECT morni... milking" />
@@ -223,7 +135,22 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="content.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/technician/content.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7871">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>modal</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -235,7 +162,10 @@
         <option value="$PROJECT_DIR$/technician/footer.php" />
         <option value="$PROJECT_DIR$/technician/save_milk.php" />
         <option value="$PROJECT_DIR$/technician/header.php" />
+        <option value="$PROJECT_DIR$/technician/content.php" />
+        <option value="$PROJECT_DIR$/technician/sidebar.php" />
         <option value="$PROJECT_DIR$/technician/index.php" />
+        <option value="$PROJECT_DIR$/technician/add_milk_record.php" />
       </list>
     </option>
   </component>
@@ -270,7 +200,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -317,6 +246,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -357,33 +287,33 @@
       <updated>1529998749462</updated>
       <workItem from="1529998750819" duration="2862000" />
       <workItem from="1530117094366" duration="15000" />
-      <workItem from="1530212920055" duration="22077000" />
+      <workItem from="1530212920055" duration="28562000" />
+      <workItem from="1530351742882" duration="518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24954000" />
+    <option name="totallyTimeSpent" value="31957000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27458397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27912253" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS Styles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -400,11 +330,118 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/technician/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2244">
+          <caret line="132" column="0" lean-forward="true" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding>
+            <marker date="1530303210284" expanded="true" signature="4269:4335" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="43" lean-forward="false" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="13" lean-forward="true" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+          <folding>
+            <marker date="1530267719658" expanded="true" signature="1677:1706" ph="SELECT id,ni... cows" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/add_milk_record.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="14" lean-forward="false" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+          <folding>
+            <marker date="1530303277353" expanded="true" signature="1872:1901" ph="SELECT id,ni... cows" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/save_milk.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2193">
+          <caret line="129" column="41" lean-forward="false" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
+          <folding>
+            <marker date="1530266438334" expanded="true" signature="864:968" ph="SELECT morni... milking" />
+            <marker date="1530266438334" expanded="true" signature="1297:1405" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="1652:1760" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="2253:2413" ph="INSERT INTO milking" />
+            <marker date="1530266438334" expanded="true" signature="3125:3189" ph="SELECT morni... milking" />
+            <marker date="1530266438334" expanded="true" signature="3125:3212" ph="SELECT morni... milking" />
+            <marker date="1530266438334" expanded="true" signature="3125:3223" ph="SELECT morni... milking" />
+            <marker date="1530266438334" expanded="true" signature="3707:3742" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="3707:3754" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="3707:3760" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="3707:3803" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="3888:3943" ph="..." />
+            <marker date="1530266438334" expanded="true" signature="3961:4007" ph="{...}" />
+            <marker date="1530266438334" expanded="true" signature="4072:4107" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="4072:4119" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="4072:4125" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="4072:4126" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="4072:4168" ph="UPDATE milking... " />
+            <marker date="1530266438334" expanded="true" signature="4259:4314" ph="..." />
+            <marker date="1530266438334" expanded="true" signature="4701:4855" ph="INSERT INTO milking" />
+            <marker date="1530266438334" expanded="true" signature="4936:4991" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -412,7 +449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="2" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="9" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -420,7 +456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -450,7 +485,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/technician/save_milk.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
+        <state relative-caret-position="2193">
           <caret line="129" column="41" lean-forward="false" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
           <folding>
             <marker date="1530266438334" expanded="true" signature="864:968" ph="SELECT morni... milking" />
@@ -478,14 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/technician/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/technician/img/svg/arrow_left.svg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -495,17 +522,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="0" column="209386" lean-forward="false" selection-start-line="0" selection-start-column="209384" selection-end-line="0" selection-end-column="209386" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding>
-            <marker date="1530267719658" expanded="true" signature="1677:1706" ph="SELECT id,ni... cows" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -513,30 +529,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="43" lean-forward="false" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="13" lean-forward="false" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
+          <folding>
+            <marker date="1530267719658" expanded="true" signature="1677:1706" ph="SELECT id,ni... cows" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/add_milk_record.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="14" lean-forward="false" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+          <folding>
+            <marker date="1530303277353" expanded="true" signature="1872:1901" ph="SELECT id,ni... cows" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/technician/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="1424" column="16" lean-forward="true" selection-start-line="1424" selection-start-column="16" selection-end-line="1424" selection-end-column="16" />
+        <state relative-caret-position="2244">
+          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#19285#19292#1#HTML" expanded="true" />
-            <element signature="e#21806#21813#1#HTML" expanded="true" />
-            <element signature="e#24309#24316#1#HTML" expanded="true" />
-            <element signature="e#27243#27250#1#HTML" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#5;n#section#0;n#div#0;n#div#1;n#div#4;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#5;n#section#0;n#div#0;n#div#1;n#div#4;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#32222#32229#1#HTML" expanded="true" />
-            <element signature="e#33808#33815#1#HTML" expanded="true" />
-            <element signature="e#36489#36496#1#HTML" expanded="true" />
-            <element signature="e#41032#41039#1#HTML" expanded="true" />
-            <element signature="e#45594#45601#1#HTML" expanded="true" />
-            <element signature="e#50152#50159#1#HTML" expanded="true" />
-            <element signature="e#53349#53356#1#HTML" expanded="true" />
+            <marker date="1530303210284" expanded="true" signature="4269:4335" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7871">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>
