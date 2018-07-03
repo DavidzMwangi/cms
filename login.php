@@ -4,7 +4,7 @@ session_start();
 include_once 'login/User.php';
 $user = new User;
 if ($user->isloggedIn()) {
-    if($user->isAdmin())
+    if ($user->isAdmin())
         header("location:admin/index.php");
     else
         header("location:technician/index.php");
@@ -40,7 +40,11 @@ if (isset($_POST['submit'])) {
 
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">-->
+<<<<<<< HEAD
     <link href="assets/css/main.css" rel="stylesheet">
+=======
+    <link href="assets/css/style.css" rel="stylesheet">
+>>>>>>> e362a4ee2544cb70d44bae300bd4a5fb674981d5
 </head>
 
 <body>
@@ -88,3 +92,5 @@ if (isset($_POST['submit'])) {
 
 </body>
 </html>
+
+
