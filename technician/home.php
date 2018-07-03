@@ -25,7 +25,7 @@ if (isset($_POST['submit'])){
 
 
     //initiate the saving process
-    require_once 'save_milk.php';
+    require_once 'SaveMilk.php';
     $newRecord=new SaveMilk($cow_id,$milking_time,$amount);
 
     if ($newRecord->saveMilk()){
