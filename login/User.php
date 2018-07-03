@@ -1,14 +1,21 @@
 <?php
-require_once '../login/dbconfig.php';
+// session_start();
+
+require_once 'dbconfig.php';
 
 class User
 {
     private $con;
+    private static $user = null;
 
     public function __construct()
     {
         $db = new DB;
         $this->con = $db->getCon();
+    }
+
+    public static function getInstance(){
+       return new User;
     }
 
 
@@ -33,8 +40,16 @@ class User
         }
     }
 
-    public  function isAdmin(){
+    public function isAdmin(){
         return $_SESSION['user_type'] == 'admin';
+    }
+
+    public function redirect(){
+        if($this->isAdmin()){
+            return  header("location:admin/index.php");
+        }else{
+            return header("location:technician/index.php");
+        }
     }
 
 
@@ -45,11 +60,12 @@ class User
         echo $row['name'];
     }
 
-    public function session()
+    public function isloggedIn()
     {
-        if (isset($_SESSION['login'])) {
-            return $_SESSION['login'];
+        if (isset($_SESSION['id'])) {
+            return $_SESSION['id'] > 0;
         }
+        return false;
     }
 
     public function logout()

@@ -1,33 +1,31 @@
 <?php
 session_start();
-include_once 'user.php';
+include_once '../login/User.php';
 $user = new User;
-$id = $_SESSION['id'];
-if (!$user->session()){
-    header("location:login.php");
-}
-else{
+
+// if ($user->isloggedIn()){
+//     header("location:../login.php");
+// }
+if(!(isset($_SESSION['id']) && $_SESSION['id']>0)){
+    header("location:../login.php");
+}else{
     if (!$user->isAdmin()){
-        header("location:index.php");
+        header("location:../technician/index.php");
     }
 }
 
-if (isset($_REQUEST['q'])){
-    $user->logout();
-    header("location:login.php");
-}
 ?>
 <html>
 
 <head>
     <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
+
 </head>
 
 <body>
 <div class="form">
-    <h1>Welcome <?php $user->fullname($id);?></h1>
-    <p align="right"><a href="?q=logout">LOGOUT</a></p>
+    <h1>Welcome <?//php $id = $_SESSION['id']; $user->fullname($id);?></h1>
+    
 </div>
 </body>
 
