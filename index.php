@@ -2,6 +2,7 @@
 <?php
 include_once 'header.php';
 ?>
+<body class="index-body" background= "pics/pic.jpeg">
 <div class="container" >
   <nav class="navbar">
     <div class="container-fluid">
@@ -16,6 +17,7 @@ include_once 'header.php';
 
   <div class="project-name">
     <h1>ANIMAL MANAGEMENT SYSTEM</h1>
+
   </div>
 </div>
 <?php
