@@ -34,7 +34,10 @@ if (isset($_POST['submit'])){
         $status=false;
     }
 
+
 }
+
+
 ?>
 <div class="card mb-4 wow fadeIn">
 

@@ -215,19 +215,35 @@ if (isset($_POST['submit'])){
                 <table id="table_id" class="display">
                     <thead>
                     <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
+                        <th>Cow NickName</th>
+                        <th>Milking Date</th>
+                        <th>Morning Amount(Litres)</th>
+                        <th>Evening Amount(Litres)</th>
+                        <th>Actions</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                    </tr>
-                    <tr>
-                        <td>Row 2 Data 1</td>
-                        <td>Row 2 Data 2</td>
-                    </tr>
+
+                    <?php
+                    require_once 'MilkManager.php';
+
+                    $data=new MilkManager();
+                    $querty=$data->milkRecords();
+
+                    while ($result=mysqli_fetch_array($querty)){
+                        echo '<tr>
+                        <td >'.$data->cowNameResolver($result['cow_id']).'</td>
+                        <td>'.$result['date'].'</td>
+                        <td>'.$result['morning_amount'].'</td>
+                        <td>'.$result['evening_amount'].'</td>
+                        <td>
+                       <a href="#"><button class="btn btn-outline-primary" onclick="getSelectedDetails('.$result['id'].','.$result['morning_amount'].','.$result['evening_amount'].')" data-toggle="modal" data-target="#centralModalLGInfoDemo" >Edit</button></a>
+                      <a href="#"><button class="btn btn-outline-danger">Delete</button></a>
+                         </td>
+                        </tr>';
+                    }
+                       ?>
+
                     </tbody>
                 </table>
 
@@ -236,6 +252,59 @@ if (isset($_POST['submit'])){
             </div>
 
         </div>
+    </div>
+</div>
+
+<div class="modal fade" id="centralModalLGInfoDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+                <p class="heading lead">Edit Milk Record</p>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 col-lg-4 col-sm-12">
+                       <label for="cow_name">Cow Name</label>
+                        <span id="cow_name"></span>
+<!--                        <input type="date" name="date" class="form-control" id="date" required>-->
+                    </div>
+
+                    <div class="col-md-4 col-lg-4 col-sm-12">
+                        <label for="morning_amount">Morning Amount</label>
+
+                        <input type="number" id="morning_amount" name="morning_amount" min="0" class="form-control">
+                    </div>
+
+                    <div class="col-md-4 col-lg-4 col-sm-12">
+                       <label for="evening_amount">Evening Amount </label>
+                        <input type="number" class="form-control" id="evening_amount" name="evening_amount" min="0">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer">
+
+                <button type="reset" class="btn btn-danger waves-effect" data-dismiss="modal">No, thanks</button>
+
+
+                <button class="btn btn-success" type="submit">Update</button>
+<!--                <a role="button" class="btn btn-success">Update-->
+<!--                    <i class="fa fa-diamond ml-1"></i>-->
+<!--                </a>-->
+            </div>
+        </div>
+        <!--/.Content-->
     </div>
 </div>
 
@@ -256,6 +325,12 @@ if (isset($_POST['submit'])){
 
     });
 
+    function getSelectedDetails(milk_record_id,morning_amount,evening_amount) {
+        // alert
+        $('#morning_amount').val(morning_amount);
+        $('#evening_amount').val(evening_amount)
+
+    }
 </script>
 
 </body>
