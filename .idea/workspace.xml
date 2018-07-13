@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1d9bedd4-717e-49d8-84e8-258c78f147e5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technician/MilkManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/MilkManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technician/add_milk_record.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/add_milk_record.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technician/daily_milk.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/daily_milk.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MilkManager.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MilkManager.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/technician/MilkManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="23" selection-start-line="29" selection-end-line="30" />
+            <state relative-caret-position="425">
+              <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -40,14 +37,32 @@
       <file leaf-file-name="SaveMilk.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/technician/SaveMilk.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+            <state relative-caret-position="263">
+              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
               <folding>
                 <marker date="1530613466380" expanded="true" signature="864:968" ph="SELECT morni... milking" />
                 <marker date="1530613466380" expanded="true" signature="1297:1405" ph="UPDATE milking... " />
                 <marker date="1530613466380" expanded="true" signature="1652:1760" ph="UPDATE milking... " />
                 <marker date="1530613466380" expanded="true" signature="2253:2413" ph="INSERT INTO milking" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-318">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -70,15 +85,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="add_milk_record.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/technician/add_milk_record.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -88,10 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="daily_milk.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="daily_milk.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/technician/daily_milk.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
+            <state relative-caret-position="314">
               <caret line="332" column="5" lean-forward="true" selection-start-line="332" selection-start-column="5" selection-end-line="332" selection-end-column="5" />
             </state>
           </provider>
@@ -102,15 +108,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" column="39" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/technician/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -206,7 +203,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../acadonsweb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hightech-pos" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
   </component>
   <component name="RecentsManager">
@@ -252,12 +249,12 @@
       <workItem from="1531326963234" duration="248000" />
       <workItem from="1531327319464" duration="385000" />
       <workItem from="1531435405128" duration="11024000" />
-      <workItem from="1531509266353" duration="698000" />
+      <workItem from="1531509266353" duration="3470000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54236000" />
+    <option name="totallyTimeSpent" value="57008000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -292,13 +289,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/technician/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/technician/sidebar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -567,13 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/technician/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -616,26 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/technician/SaveMilk.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-          <folding>
-            <marker date="1530613466380" expanded="true" signature="864:968" ph="SELECT morni... milking" />
-            <marker date="1530613466380" expanded="true" signature="1297:1405" ph="UPDATE milking... " />
-            <marker date="1530613466380" expanded="true" signature="1652:1760" ph="UPDATE milking... " />
-            <marker date="1530613466380" expanded="true" signature="2253:2413" ph="INSERT INTO milking" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/MilkManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="23" selection-start-line="29" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/technician/old_index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1938">
@@ -648,8 +611,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/technician/daily_milk.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
+        <state relative-caret-position="314">
           <caret line="332" column="5" lean-forward="true" selection-start-line="332" selection-start-column="5" selection-end-line="332" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/SaveMilk.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+          <folding>
+            <marker date="1530613466380" expanded="true" signature="864:968" ph="SELECT morni... milking" />
+            <marker date="1530613466380" expanded="true" signature="1297:1405" ph="UPDATE milking... " />
+            <marker date="1530613466380" expanded="true" signature="1652:1760" ph="UPDATE milking... " />
+            <marker date="1530613466380" expanded="true" signature="2253:2413" ph="INSERT INTO milking" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-318">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/MilkManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
         </state>
       </provider>
     </entry>

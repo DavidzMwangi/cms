@@ -15,6 +15,8 @@ class MilkManager{
     public function milkRecords()
     {
         return mysqli_query($this->db->connect(),"SELECT * FROM milking");
+
+
     }
 
     public function cowNameResolver($cow_id)
