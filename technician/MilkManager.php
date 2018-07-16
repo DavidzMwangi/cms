@@ -32,4 +32,20 @@ class MilkManager{
 //                return '<span class="alert-danger">Unknown Cow</span>';
         }
     }
+
+    public function editMilk($milk_record_id,$morning_amount,$evening_amount)
+    {
+        $sql="UPDATE milking SET evening_amount='".$evening_amount."' ,morning_amount='".$morning_amount."' WHERE id='".$milk_record_id."'";
+        if ($this->db->connect()->query($sql)==true){
+            return true;
+        }else{
+            return false;
+
+        }
+    }
+
+    public function deleteMilkRecord()
+    {
+        echo "deleting";
+    }
 }
