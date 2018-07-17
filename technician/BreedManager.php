@@ -26,8 +26,12 @@ class BreedManager
         
     }
 
-    public function saveBreed()
+    public function saveBreed($name)
     {
-        
+        $sql="INSERT INTO breed (name) VALUE ('".$name."')";
+
+
+
+        return $this->db->connect()->query($sql);
     }
 }
