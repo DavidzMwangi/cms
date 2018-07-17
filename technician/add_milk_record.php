@@ -23,7 +23,7 @@ if (isset($_POST['submit'])){
 
 
     //initiate the saving process
-    require_once 'save_milk.php';
+    require_once 'SaveMilk.php';
     $newRecord=new SaveMilk($cow_id,$milking_time,$amount);
 
     if ($newRecord->saveMilk()){
@@ -34,7 +34,10 @@ if (isset($_POST['submit'])){
         $status=false;
     }
 
+
 }
+
+
 ?>
 <div class="card mb-4 wow fadeIn">
 
