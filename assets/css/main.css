@@ -1,31 +1,13 @@
-/*body {*/
-/*font-family: Arial, Sans-Serif;*/
-/*background-color: #ffffff;*/
-/*}*/
-/*a {*/
-/*color: #78b941; text-decoration:none;}*/
-/*a:hover {text-decoration:underline;}*/
-/*.form {width: 00px; margin: 0 auto;}*/
-/*input[type= 'text'], input[type = 'password'] {*/
-/*width: 200px;border-radius: 2px;border: 1px solid #CCC;padding: 10px;color: #333; font-size: 14px; margin-top: 10px;}*/
-/*input[type= 'submit'] {*/
-/*padding: 10px 25px 8px;*/
-/*color: #fff;background-color: #78b941;*/
-/*text-shadow: rgba(0,0,0,0.24) 0 1px 0;*/
-/*font-size: 16px; box-shadow: rgba(255,255,255,0.24) 0 2px 0 0 inset,#fff 0 1px 0 0;border: 1px solid #6faf38; border-radius: 2px; margin-top: 10px; cursor:pointer;}*/
-/*input[type= 'submit']:hover {*/
-/*background-color: #80c248;}*/
+.project-name{
+  padding: 130px;
+  
+}
+.index-body {
+    text-align: center;
+    padding: 40px;
+    background-size: cover;
+    }
 
-/*.name input[type=text]{*/
-/*padding-left:40px;*/
-/*}*/
-/*.name i{*/
-/*position:absolute;*/
-/*left:0;*/
-/*top: 8px;*/
-/*padding: 9px;*/
-/*color:#aaa;*/
-/*}*/
 body {
     padding-top: 80px;
     padding-bottom: 40px;
@@ -64,4 +46,3 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
-

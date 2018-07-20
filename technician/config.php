@@ -7,7 +7,7 @@ class DB_FACADE{
     private $host="localhost";
     private $user="root";
     private $password="";
-    private $database="login_assignment";
+    private $database="cms";
 
     public function __construct()
     {
@@ -17,8 +17,9 @@ class DB_FACADE{
     }
 
 
-
-
+    /**
+     * @return mysqli|null
+     */
     public function connect()
     {
 //        if (!$this->conn) {

@@ -1,37 +1,23 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: David
- * Date: 6/29/2018
- * Time: 8:04 PM
- */
-class SideBar{
-    private $page;
-    public function __construct()
-    {
-//        $this->page=$page;
-    }
-
-    public function changeView($page)
-    {
-        $this->page=$page;
-        switch ($page){
-            case 1:{
-                $this->dashboard();
-            }
-            case 2:{
-                $this->version();
-            }
-            default:{
-
-            }
-        }
-    }
-    public function dashboard()
-    {
-        return require_once 'content.php';
-    }
-    public function version(){
-        return  require_once 'save_milk.php';
-    }
-}
+<li><a href="index.php">Dashboard</a></li>
+<li><a href="add_cow.php">Add Cow</a></li>
+<li><a href="daily_milk.php">Add Milk Record</a></li>
+<li><a href="add_calf.php">Add calf record</a></li>
+    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+    <ul class="collapse list-unstyled" id="pageSubmenu">
+        <li>
+            <a href="#">Page 1</a>
+        </li>
+        <li>
+            <a href="#">Page 2</a>
+        </li>
+        <li>
+            <a href="#">Page 3</a>
+        </li>
+    </ul>
+</li>
+<li>
+    <a href="breed.php">Breed</a>
+</li>
+<li>
+    <a href="#">Contact</a>
+</li>
