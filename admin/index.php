@@ -66,7 +66,7 @@
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Records</a>
                 <ul class="collapse show list-styled" id="pageSubmenu">
                     <li>
-                        <a href="#">Daily</a>
+                        <a href="#" onclick="loadTodaysData(event)" >Daily</a>
                     </li>
                     <li>
                         <a href="#" onclick="loadMonthlyData(event)">Monthly</a>
