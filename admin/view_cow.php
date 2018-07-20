@@ -19,8 +19,19 @@
 
 
 require_once '../technician/CowManager.php';
-
 $cow_manager=new CowManager();
+
+if (isset($_POST['delete_submit'])){
+    $id= $_POST['cow_to_delete'];
+    if ($cow_manager->deleteCow($id)){
+        $status_delete= true;
+
+    }else{
+        $status_delete= false;
+
+    }
+}
+
 //?>
 <head>
     <meta charset="utf-8" />
@@ -134,9 +145,10 @@ $cow_manager=new CowManager();
         <!--Content-->
         <div class="modal-content">
             <!--Header-->
+            <form action="" method="post">
             <div class="modal-header">
                 <p class="heading lead">delete</p>
-
+                <input type="hidden" id="cow_to_delete" name="cow_to_delete">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true" class="white-text">&times;</span>
                 </button>
@@ -147,13 +159,14 @@ $cow_manager=new CowManager();
                 <h3>Do you want to delete this cow?</h3>
 
             <div class="modal-footer">
-                <a role="button" class="btn btn-danger">delete
-                    <i class="fa fa-diamond ml-1"></i>
-                </a>
+                <button class="btn btn-danger" name="delete_submit" type="submit">delete
+
+                </button>
                 <a role="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
             </div>
         </div>
         <!--/.Content-->
+            </form>
     </div>
 </div>
 
@@ -176,7 +189,7 @@ $cow_manager=new CowManager();
     });
 
     function deleteF(id) {
-        alert(id);
+        $('#cow_to_delete').val(id)
     }
 </script>
 </body>
