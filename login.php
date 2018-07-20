@@ -67,7 +67,7 @@ if (isset($_POST['submit'])) {
                         <h2 class="form-signin-heading">Please Sign in</h2>
 
                         <div class="form-group">
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                            <input type="text" id="inputEmail" class="form-control" placeholder="Email address"
                                    name="email" required autofocus>
 
                         </div>
