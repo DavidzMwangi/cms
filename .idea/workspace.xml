@@ -2,182 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a8d3a00-2cda-4b1c-b434-20f3758ac22b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/cms.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin/getmonthlydata.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin/js/charts.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin/nav.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin/sidebar.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/admin/view_cow.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/css/c3.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/css/sidebar.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/HELP-US-OUT.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/css/font-awesome.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/css/font-awesome.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/fonts/FontAwesome.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/less/animated.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/less/bordered-pulled.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/less/core.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/less/fixed-width.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/less/font-awesome.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/less/icons.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/less/larger.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/less/list.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/less/mixins.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/less/path.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/less/rotated-flipped.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/less/screen-reader.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/less/stacked.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/less/variables.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/scss/_animated.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/scss/_bordered-pulled.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/scss/_core.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/scss/_fixed-width.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/scss/_icons.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/scss/_larger.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/scss/_list.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/scss/_mixins.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/scss/_path.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/scss/_rotated-flipped.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/scss/_screen-reader.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/scss/_stacked.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/scss/_variables.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/font-awesome-4.7.0/scss/font-awesome.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/images/profile.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/js/c3.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/js/d3.v5.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/js/main.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/css/dataTables.bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/css/dataTables.bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/css/dataTables.bootstrap4.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/css/dataTables.foundation.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/css/dataTables.foundation.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/css/dataTables.jqueryui.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/css/dataTables.jqueryui.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/css/dataTables.semanticui.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/css/dataTables.semanticui.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/css/jquery.dataTables.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/css/jquery.dataTables.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/images/sort_asc.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/images/sort_asc_disabled.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/images/sort_both.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/images/sort_desc.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/images/sort_desc_disabled.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/js/dataTables.bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/js/dataTables.bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/js/dataTables.bootstrap4.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/js/dataTables.bootstrap4.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/js/dataTables.foundation.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/js/dataTables.foundation.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/js/dataTables.jqueryui.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/js/dataTables.jqueryui.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/js/dataTables.semanticui.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/js/dataTables.semanticui.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/js/jquery.dataTables.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/DataTables-1.10.18/js/jquery.dataTables.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/datatables.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/datatables.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/datatables.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/DataTables/datatables.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/ar.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/az.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/bg.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/ca.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/cs.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/da.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/de.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/el.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/en.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/es.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/et.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/eu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/fa.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/fi.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/fr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/gl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/he.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/hi.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/hr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/hu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/id.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/is.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/it.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/ja.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/km.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/ko.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/lt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/lv.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/mk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/ms.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/nb.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/nl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/pl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/pt-BR.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/pt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/ro.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/ru.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/sk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/sr-Cyrl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/sr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/sv.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/th.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/tr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/uk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/vi.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/zh-CN.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/i18n/zh-TW.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/select2.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/select2.full.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/select2.full.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/select2.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/select2.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/plugins/select2/select2.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/logout.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pics/pic.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/BreedManager.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/CalfManager.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/CowManager.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/MilkManager.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/SaveMilk.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/add-calf-weight/add_calf_weight.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/add_cow.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/add_milk_record.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/breed.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/config.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/content.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/css/main.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/daily_milk.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/footer.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/header.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/home.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/js/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/js/jquery.slim.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/js/main.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/js/popper.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/nav.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/old_index.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/technician/sidebar.php" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/admin/index.php" />
-      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap.css" afterPath="$PROJECT_DIR$/assets/css/bootstrap.css" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.css" afterPath="$PROJECT_DIR$/assets/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change beforePath="$PROJECT_DIR$/login/User.php" afterPath="$PROJECT_DIR$/login/User.php" />
-      <change beforePath="$PROJECT_DIR$/login/dbconfig.php" afterPath="$PROJECT_DIR$/login/dbconfig.php" />
-      <change beforePath="$PROJECT_DIR$/technician/index.php" afterPath="$PROJECT_DIR$/technician/index.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/admin/view_cow.php" afterPath="$PROJECT_DIR$/admin/view_cow.php" />
+      <change beforePath="$PROJECT_DIR$/technician/CowManager.php" afterPath="$PROJECT_DIR$/technician/CowManager.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -203,14 +30,31 @@
       <file leaf-file-name="view_cow.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/view_cow.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="181" column="7" lean-forward="true" selection-start-line="181" selection-start-column="7" selection-end-line="181" selection-end-column="7" />
+            <state relative-caret-position="404">
+              <caret line="37" column="51" lean-forward="true" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
               <folding>
                 <element signature="e#29#47#0#PHP" expanded="true" />
-                <marker date="1531966325721" expanded="true" signature="2800:3263" ph="..." />
-                <marker date="1531966325721" expanded="true" signature="3014:3126" ph="..." />
-                <marker date="1531966325721" expanded="true" signature="3014:3127" ph="..." />
-                <marker date="1531966325721" expanded="true" signature="3014:3233" ph="..." />
+                <marker date="1532110570653" expanded="true" signature="2993:3456" ph="..." />
+                <marker date="1532110570653" expanded="true" signature="3207:3319" ph="..." />
+                <marker date="1532110570653" expanded="true" signature="3207:3320" ph="..." />
+                <marker date="1532110570653" expanded="true" signature="3207:3426" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CowManager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/technician/CowManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="62" column="34" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="62" selection-end-column="34" />
+              <folding>
+                <marker date="1532110570605" expanded="true" signature="337:433" ph="INSERT INTO cows... " />
+                <marker date="1532110570605" expanded="true" signature="638:656" ph="SELECT * FRO... cows" />
+                <marker date="1532110570605" expanded="true" signature="789:836" ph="SELECT name breed" />
+                <marker date="1532110570605" expanded="true" signature="1229:1256" ph="DELETE FROM cows... " />
+                <marker date="1532110570605" expanded="true" signature="1229:1264" ph="DELETE FROM cows... " />
+                <marker date="1532110570605" expanded="true" signature="1229:1406" ph="DELETE FROM cows... " />
               </folding>
             </state>
           </provider>
@@ -219,8 +63,8 @@
       <file leaf-file-name="add_cow.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/technician/add_cow.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3383">
-              <caret line="199" column="26" lean-forward="false" selection-start-line="184" selection-start-column="22" selection-end-line="199" selection-end-column="26" />
+            <state relative-caret-position="2757">
+              <caret line="180" column="31" lean-forward="true" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
               <folding>
                 <marker date="1531850217618" expanded="true" signature="6051:6546" ph="..." />
                 <marker date="1531850217618" expanded="true" signature="6265:6516" ph="..." />
@@ -295,6 +139,7 @@
         <option value="$PROJECT_DIR$/admin/index.php" />
         <option value="$PROJECT_DIR$/admin/sidebar.php" />
         <option value="$PROJECT_DIR$/admin/nav.php" />
+        <option value="$PROJECT_DIR$/technician/CowManager.php" />
         <option value="$PROJECT_DIR$/admin/view_cow.php" />
       </list>
     </option>
@@ -330,7 +175,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -353,6 +197,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -387,17 +232,17 @@
       <workItem from="1531854536028" duration="1491000" />
       <workItem from="1531958063816" duration="6884000" />
       <workItem from="1532013451598" duration="133000" />
+      <workItem from="1532107887499" duration="2622000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8508000" />
+    <option name="totallyTimeSpent" value="11130000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18078668" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18305598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -405,7 +250,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -438,6 +283,85 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/admin/index.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding>
+            <element signature="e#22#40#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/add_cow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3383">
+          <caret line="199" column="26" lean-forward="false" selection-start-line="184" selection-start-column="22" selection-end-line="199" selection-end-column="26" />
+          <folding>
+            <marker date="1531850217618" expanded="true" signature="6051:6546" ph="..." />
+            <marker date="1531850217618" expanded="true" signature="6265:6516" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/nav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/daily_milk.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5270">
+          <caret line="310" column="53" lean-forward="true" selection-start-line="310" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
+          <folding>
+            <marker date="1531850217634" expanded="true" signature="5291:5320" ph="SELECT id,ni... cows" />
+            <marker date="1531850217634" expanded="true" signature="7837:8446" ph="..." />
+            <marker date="1531850217634" expanded="true" signature="8125:8416" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/view_cow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3077">
+          <caret line="181" column="7" lean-forward="true" selection-start-line="181" selection-start-column="7" selection-end-line="181" selection-end-column="7" />
+          <folding>
+            <element signature="e#29#47#0#PHP" expanded="true" />
+            <marker date="1532110570653" expanded="true" signature="2993:3456" ph="..." />
+            <marker date="1532110570653" expanded="true" signature="3207:3319" ph="..." />
+            <marker date="1532110570653" expanded="true" signature="3207:3320" ph="..." />
+            <marker date="1532110570653" expanded="true" signature="3207:3426" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
@@ -452,10 +376,10 @@
           <caret line="178" column="18" lean-forward="false" selection-start-line="178" selection-start-column="18" selection-end-line="178" selection-end-column="18" />
           <folding>
             <element signature="e#29#47#0#PHP" expanded="true" />
-            <marker date="1531966325721" expanded="true" signature="2800:3263" ph="..." />
-            <marker date="1531966325721" expanded="true" signature="3014:3126" ph="..." />
-            <marker date="1531966325721" expanded="true" signature="3014:3127" ph="..." />
-            <marker date="1531966325721" expanded="true" signature="3014:3233" ph="..." />
+            <marker date="1532110570653" expanded="true" signature="2993:3456" ph="..." />
+            <marker date="1532110570653" expanded="true" signature="3207:3319" ph="..." />
+            <marker date="1532110570653" expanded="true" signature="3207:3320" ph="..." />
+            <marker date="1532110570653" expanded="true" signature="3207:3426" ph="..." />
           </folding>
         </state>
       </provider>
@@ -575,17 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/technician/add_cow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3383">
-          <caret line="199" column="26" lean-forward="false" selection-start-line="184" selection-start-column="22" selection-end-line="199" selection-end-column="26" />
-          <folding>
-            <marker date="1531850217618" expanded="true" signature="6051:6546" ph="..." />
-            <marker date="1531850217618" expanded="true" signature="6265:6516" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/technician/daily_milk.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5270">
@@ -598,16 +511,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/technician/add_cow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2757">
+          <caret line="180" column="31" lean-forward="true" selection-start-line="180" selection-start-column="31" selection-end-line="180" selection-end-column="31" />
+          <folding>
+            <marker date="1531850217618" expanded="true" signature="6051:6546" ph="..." />
+            <marker date="1531850217618" expanded="true" signature="6265:6516" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/CowManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="62" column="34" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="62" selection-end-column="34" />
+          <folding>
+            <marker date="1532110570605" expanded="true" signature="337:433" ph="INSERT INTO cows... " />
+            <marker date="1532110570605" expanded="true" signature="638:656" ph="SELECT * FRO... cows" />
+            <marker date="1532110570605" expanded="true" signature="789:836" ph="SELECT name breed" />
+            <marker date="1532110570605" expanded="true" signature="1229:1256" ph="DELETE FROM cows... " />
+            <marker date="1532110570605" expanded="true" signature="1229:1264" ph="DELETE FROM cows... " />
+            <marker date="1532110570605" expanded="true" signature="1229:1406" ph="DELETE FROM cows... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/view_cow.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="181" column="7" lean-forward="true" selection-start-line="181" selection-start-column="7" selection-end-line="181" selection-end-column="7" />
+        <state relative-caret-position="404">
+          <caret line="37" column="51" lean-forward="true" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
           <folding>
             <element signature="e#29#47#0#PHP" expanded="true" />
-            <marker date="1531966325721" expanded="true" signature="2800:3263" ph="..." />
-            <marker date="1531966325721" expanded="true" signature="3014:3126" ph="..." />
-            <marker date="1531966325721" expanded="true" signature="3014:3127" ph="..." />
-            <marker date="1531966325721" expanded="true" signature="3014:3233" ph="..." />
+            <marker date="1532110570653" expanded="true" signature="2993:3456" ph="..." />
+            <marker date="1532110570653" expanded="true" signature="3207:3319" ph="..." />
+            <marker date="1532110570653" expanded="true" signature="3207:3320" ph="..." />
+            <marker date="1532110570653" expanded="true" signature="3207:3426" ph="..." />
           </folding>
         </state>
       </provider>
