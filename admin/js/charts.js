@@ -30,6 +30,58 @@ function loadMonthlyData(event, month) {
     xmlhttp.send();
 }
 
+function loadTodaysData(event, date) {
+    event.preventDefault();
+    var url = 'getdailydata.php';
+    if (date !== undefined) {
+        url = url + '?q=' + date
+    }
+    var xmlhttp = new XMLHttpRequest()
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+            // var chartDiv = document.getElementById('chart');
+            console.log(xmlhttp.responseText)
+            // console.log(createTable(xmlhttp.responseText))
+            // chartDiv.append(createTable(xmlhttp.responseText));
+
+        }
+
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
+    // $.ajax({
+    //     url: url,
+    //     error:function (xhr, status, error) {
+    //        $('.chart').html('<div class="alert alert-danger"> Error fetching data from server </div>')
+    //     },
+    //     success:function (result) {
+    //         if(result){
+    //             console.log(result);
+    //         }else {
+    //             $('.chart').html('<div class="alert alert-success"> No records found for that date </div>')
+    //         }
+    //     }
+    // })
+}
+
+function createTable(data) {
+    var str = '<table><tr><td>ID</td><td>Name</td><td>Morning</td><td>Evening</td><td>Average</td></tr>';
+    for (var i = 0; i < data.length; i++) {
+        var elem = data[i];
+        str = str + '<tr><td>' + elem.cow_id + '</td>'
+            + '<td>' + elem.morning + '</td>'
+            + '<td>' + elem.evening + '</td>';
+        var average = (parseFloat(elem.morning) + parseFloat(elem.evening)) / 2.0;
+        str = str + '<td>' + average + '</td></tr>';
+    }
+    str = str + "<table>"
+    // data.forEach(function (elem, index) {
+    //
+    // });
+
+    return str;
+}
 
 function drawChart(col1, col2) {
     var chart = c3.generate({

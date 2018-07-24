@@ -1,7 +1,7 @@
 <li><a href="index.php">Dashboard</a></li>
 <li><a href="add_cow.php">Add Cow</a></li>
 <li><a href="daily_milk.php">Add Milk Record</a></li>
-<li>
+<li><a href="add_calf.php">Add calf record</a></li>
     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
     <ul class="collapse list-unstyled" id="pageSubmenu">
         <li>
