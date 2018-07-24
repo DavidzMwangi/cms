@@ -16,6 +16,7 @@
             </li> -->
 
         <li><a href=""><i class="fa fa-address-card mr-3"></i>Dashboard</a></li>
+        <li><a href=""><i class="fa fa-address-card mr-3"></i>View Cow</a></li>
 
         <li>
             <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Records</a>
@@ -32,10 +33,11 @@
             </ul>
         </li>
         <li>
-            <a href="#">Portfolio</a>
+            <a href="#">View Cow</a>
         </li>
         <li>
-            <a href="#">Contact</a>
+            <a href="#">Portfolio</a>
+
         </li>
     </ul>
 </nav>
