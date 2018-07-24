@@ -19,4 +19,14 @@ class CalfManager
 
 
     }
+
+    public function allCalves()
+    {
+        $sql="SELECT * FROM calf";
+
+        return mysqli_query($this->db->connect(),$sql);
+
+    }
+    
+
 }

@@ -68,4 +68,15 @@ class CowManager
 
 
     }
+
+//    public function deleteCalf ($ID){
+//
+//        $sql = "DELETE FROM calfs WHERE id= '".$ID."'";
+//        if ( $this->db->connect()->query($sql)==true){
+//            return true;
+//        }else{
+//            return false;
+//        }
+//
+//    }
 }
