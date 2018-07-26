@@ -84,13 +84,16 @@
                 <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Records</a>
                 <ul class="collapse show list-styled" id="pageSubmenu">
                     <li>
-                        <a href="#" onclick="loadTodaysData(event)" >Daily</a>
+                        <a href="#" onclick="loadTodaysData(event)" > Daily</a>
                     </li>
                     <li>
                         <a href="#" onclick="loadMonthlyData(event)">Monthly</a>
                     </li>
                     <li>
-                        <a href="#">Page 3</a>
+                        <a href="#" onclick="loadMonthlyAverageData(event)">Monthly Average For Cow</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="loadYearlyData(event)">Year</a>
                     </li>
                 </ul>
             </li>
