@@ -16,17 +16,21 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-for($month =1;$month < 9; $month++){
+// $query  = "Delete from milk_records";
+// if($conn->query($query) == true){
+//     echo "Table records dropped";
+// }
+for($month = 6; $month < 8; $month++){
     for($day =1; $day <= 30; $day++){
-        for($cow = 0;$cow < 42; $cow++){
+        for($cow = 0;$cow < 10; $cow++){
            $cow_id = 'EU '.(300 + $cow);
            $morning = random_number(); //btn 1.2 - 4.8
            $evening = random_number(); //btn $morning +- 1;
            $date = generate_date(2018, $month, $day); // 01-01-2018
 
         //    $sql = "insert into milk_records (cow_id, morning, evening, date) values('".$cow_id."',")"
-            $sql = "insert into milk_records (cow_id, morning, evening, date, isMilked) values" .
-                    " ('" . $cow_id . "','" .$morning . "','" .$evening. "','". $date ."','" . 1 ."')";
+            $sql = "insert into milk_records (cow_id, morning, evening, date) values" .
+                    " ('" . $cow_id . "','" .$morning . "','" .$evening. "','". $date ."')";
                  
             if ($conn->query($sql) === TRUE) {
                 echo "New record created successfully";
