@@ -93,7 +93,7 @@ if (isset($_POST['submit'])){
                             if ($status==true){
                                 ?>
                                 <!--                <div class="row">-->
-                                <div class="col-offset-4 col-md-4 col-lg-4 col-sm-12  alert-success" >
+                                <div class="col-offset-4 col-md-4 col-lg-6 col-sm-12  alert-success" >
                                     <h3>Record Saved successfully</h3>
                                 </div>
                                 <!--                </div>-->

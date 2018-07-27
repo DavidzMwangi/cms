@@ -2,7 +2,7 @@
 define('HOST', 'localhost');
 define('USER', 'root');
 define('PASS', '');
-define('DB', 'login_assignment');
+define('DB', 'cms');
 
 class DB
 {
