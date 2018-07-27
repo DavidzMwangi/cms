@@ -42,20 +42,97 @@ class MilkRecord
 
     }
 
-    public function monRec()
+    public function monRec($month)
     {
-        //$query = "select *  from milk_records where YEAR(date)='" . $year . "' and MONTH(date)='" . $month ."' and isMilked = true";
-        //loop through getting all the months
-        $year=date('Y');
-        for ($i=0; $i<=11;$i++){
-            //run the sql code to get the records of that month
-            $sql_month="SELECT cow_id,morning,evening FROM milk_records WHERE YEAR(date)='".$year."' and MONTH(date)='".($i+1)."' and isMilked=true ";
 
-            //get the records
-            $query=mysqli_query($this->DB->connect(),$sql_month);
-            $results=mysqli_fetch_array($query);
+        $year=date('Y');
+        $month_name=null;
+
+//        for ($i=1;$i<=12;$i++){
+            switch ($month){
+                case 1:
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $month_name="January";
+                    break;
+
+                case 2:
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $month_name="February";
+
+                    break;
+                case 3:
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $month_name="March";
+
+                    break;
+                case 4:
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $month_name="April";
+
+                    break;
+                case 5:
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $month_name="May";
+
+                    break;
+                case 6:
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $month_name="June";
+
+                    break;
+                case 7:
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $month_name="July";
+
+                    break;
+                case 8:
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $month_name="August";
+
+                    break;
+                case 9:
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $month_name="September";
+
+                    break;
+                case 10:
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $month_name="October";
+
+                    break;
+                case 11:
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $month_name="November";
+
+                    break;
+                case 12:
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $month_name="December";
+
+                    break;
+//            }
+        }
+
+        $result=$this->DB->connect()->query($sql_months);
+
+        if ($result->num_rows>0){
+
+            while ($row=$result->fetch_assoc()){
+//
+                return "<tr>
+
+                        <td>".$month_name."</td>
+                        <td>".$row['cow_id']."</td>
+                        <td>".number_format(($row['morning']+ $row['evening']),2)."</td>
+                        <td>".number_format($row['morning'],2)."</td>
+                        <td>".number_format($row['evening'],2)."</td>
+                        <td>".number_format(($row['morning']+ $row['evening'])/2,2)."</td>
+                    </tr>";
+            }
 
         }
+
+
     }
 
 }
