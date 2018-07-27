@@ -149,14 +149,14 @@ if (isset($_POST['edit_submit'])){
                        ?>
                        <div class="row">
                            <div class="col-md-4 col-sm-12 col-lg-4">
-                               <label for="cow_name">Cow Name</label>
+                               <label for="cow_name">Cow ID</label>
                                <select id="cow_name" name="cow" class="form-control" required>
                                    <option selected disabled>Select a cow</option>
                                    <?php
-                                   $sql="SELECT id,nick_name FROM cows ";
+                                   $sql="SELECT cow_id,nick_name FROM cows ";
                                    $results=mysqli_query($DB->connect(),$sql);
                                    while ($row = mysqli_fetch_array($results)) {
-                                       echo "<option value='$row[0]'>$row[1]</option>";
+                                       echo "<option value='$row[0]'>$row[0] <b>    Nickname: </b>$row[1]</option>";
                                    }
 
 
@@ -229,10 +229,15 @@ if (isset($_POST['edit_submit'])){
                         echo '<tr>
                         <td >'.$data->cowNameResolver($result['cow_id']).'</td>
                         <td>'.$result['date'].'</td>
-                        <td>'.$result['morning_amount'].'</td>
-                        <td>'.$result['evening_amount'].'</td>
+                        <td>'.$result['morning'].'</td>
+                        <td>'.$result['evening'].'</td>
                         <td>
-                       <a href="#"><button class="btn btn-outline-primary" onclick="getSelectedDetails('.$result['id'].','.$result['morning_amount'].','.$result['evening_amount'].')" data-toggle="modal" data-target="#centralModalLGInfoDemo" >Edit</button></a>
+                        
+                      
+                      <a href="#"><button class="btn btn-outline-primary"  onclick="getSelectedDetails('.$result['id'].','.$result['morning'].','.$result['evening'].')"  data-toggle="modal" data-target="#centralModalLGInfoDemo" >
+                       Edit
+                       </button>
+                       </a> 
                          </td>
                         </tr>';
                     }
@@ -375,7 +380,7 @@ if (isset($_POST['edit_submit'])){
         $('#morning_amount').val(morning_amount);
         $('#evening_amount').val(evening_amount);
         $('#edit_milk_record_id').val(milk_record_id);
-        // $('#cow_name').text()
+        // $('#cow_name').val(id)
 
     }
 </script>
