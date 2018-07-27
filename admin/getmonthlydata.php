@@ -9,7 +9,7 @@ $month = intval($_GET['q']);
 $year = date("Y");
 $conn = new PDO("mysql:host=localhost;dbname=cms", "root", "");
 $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-$query = "select *  from milk_records where YEAR(date)='" . $year . "' and MONTH(date)='" . $month ."' and isMilked = true";
+$query = "select *  from milk_records where YEAR(date)='" . $year . "' and MONTH(date)='" . $month ."'";
 
 $result = $conn->query($query);
 

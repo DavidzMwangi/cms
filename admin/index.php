@@ -61,9 +61,11 @@
 <body>
 <div class="wrapper">
     <!-- sidebar -->
+
     <?php
     require_once '../admin/sidebar.php';
     ?>
+
 
     <!-- page content -->
     <div id="content" class="w-100 ml-2">
