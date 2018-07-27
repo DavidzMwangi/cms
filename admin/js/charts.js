@@ -131,38 +131,8 @@ function loadTodaysData(event, date) {
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 
-    // $.ajax({
-    //     url: url,
-    //     error:function (xhr, status, error) {
-    //        $('.chart').html('<div class="alert alert-danger"> Error fetching data from server </div>')
-    //     },
-    //     success:function (result) {
-    //         if(result){
-    //             console.log(result);
-    //         }else {
-    //             $('.chart').html('<div class="alert alert-success"> No records found for that date </div>')
-    //         }
-    //     }
-    // })
 }
 
-function createTable(data) {
-    var str = '<table><tr><td>ID</td><td>Name</td><td>Morning</td><td>Evening</td><td>Average</td></tr>';
-    for (var i = 0; i < data.length; i++) {
-        var elem = data[i];
-        str = str + '<tr><td>' + elem.cow_id + '</td>'
-            + '<td>' + elem.morning + '</td>'
-            + '<td>' + elem.evening + '</td>';
-        var average = (parseFloat(elem.morning) + parseFloat(elem.evening)) / 2.0;
-        str = str + '<td>' + average + '</td></tr>';
-    }
-    str = str + "<table>"
-    // data.forEach(function (elem, index) {
-    //
-    // });
-
-    return str;
-}
 
 function drawChart(col1, col2, ylabel, xlabel,xType) {
     var chart = c3.generate({
