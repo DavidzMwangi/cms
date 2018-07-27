@@ -99,29 +99,32 @@ require_once 'nav.php';
             <span id="12">DEC</span>
         </div>
 <div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
 
 
         <div class="card mt-5">
 
             <div class="card-body">
+                <form method="post" >
 
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <input type="text" name="username" placeholder="username" required >
+
+                        <div class="form-group">
+
+                            <input type="text" name="username" class="form-control" placeholder="username" required >
                         </div>
-                    </div>
 
 
-
-
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-4">
-                            <input type="password" name="password" placeholder="password" required >
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="password" required >
                         </div>
-                    </div>
 
-                <div id="chart">
+                    <div >
+<!--                        <div class="col-sm-12 col-md-6 col-lg-4">-->
+                        <button class ="btn btn-primary" type="submit" name="submit">Register</button>
+<!--                <div id="chart">-->
 
+                </div>
                 </div>
             </div>
 
@@ -130,7 +133,7 @@ require_once 'nav.php';
     </div>
 </div>
 </div>
-
+</div>
 <!-- js scripts -->
 <script src="../assets/js/jquery.slim.min.js"></script>
 <script src="../assets/js/popper.min.js"></script>
