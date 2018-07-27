@@ -42,6 +42,46 @@ class MilkRecord
 
     }
 
+    public function totalMonthMilk()
+    {
+        $year=date('Y');
+        $month_values=array();
+        for ($i=1;$i<=12;$i++){
+            $sql="SELECT avg(morning) as morning, avg(evening) as evening  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$i."'";
+
+            $result=$this->DB->connect()->query($sql);
+            if ($result->num_rows==1){
+                $row=$result->fetch_assoc();
+                $month_values[]= number_format(($row["morning"]+$row["evening"]));
+
+            }else{
+                $month_values[]= 0;
+            }
+
+        }
+        return json_encode($month_values,JSON_NUMERIC_CHECK);
+
+    }
+
+    public function monthlyHerds()
+    {
+        $year=date('Y');
+        $month_herds=array();
+        for ($i=1;$i<=12;$i++){
+            $sql="SELECT  COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$i."'";
+
+            $result=$this->DB->connect()->query($sql);
+            if ($result->num_rows==1){
+                $row=$result->fetch_assoc();
+                $month_herds[]= $row['cow_id'];
+
+            }else{
+                $month_herds[]= 0;
+            }
+
+        }
+        return json_encode($month_herds,JSON_NUMERIC_CHECK);
+    }
     public function monRec($month)
     {
 

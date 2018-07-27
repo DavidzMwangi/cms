@@ -45,7 +45,7 @@
                 </li>
 
                 <li>
-                    <a href="#">Graph</a>
+                    <a href="monthlyGraph.php">Graph</a>
                 </li>
             </ul>
         </li>
