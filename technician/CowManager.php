@@ -18,9 +18,9 @@ class CowManager
         $this->db=$DB;
     }
 
-    public function addCow($nick_name,$dob,$breed_id)
+    public function addCow($cow_id,$nick_name,$dob,$breed_id)
     {
-        $sql="INSERT INTO cows (nick_name,DOB, breed_id) VALUES ('".$nick_name."', '".$dob."','".$breed_id."')";
+        $sql="INSERT INTO cows (cow_id,nick_name,DOB, breed_id) VALUES ('".$cow_id."','".$nick_name."', '".$dob."','".$breed_id."')";
 
         if($this->db->connect()->query($sql) == TRUE){
             return true;
@@ -56,4 +56,27 @@ class CowManager
         }
     }
 
+    public function deleteCow($id)
+
+    {
+        $sql = "DELETE FROM cows WHERE id='".$id."'";
+        if($this->db->connect()->query($sql)==true){
+            return true;
+        }else {
+            return false;
+        }
+
+
+    }
+
+//    public function deleteCalf ($ID){
+//
+//        $sql = "DELETE FROM calfs WHERE id= '".$ID."'";
+//        if ( $this->db->connect()->query($sql)==true){
+//            return true;
+//        }else{
+//            return false;
+//        }
+//
+//    }
 }

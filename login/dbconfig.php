@@ -4,6 +4,7 @@ define('USER', 'root');
 define('PASS', '');
 define('DB', 'cms');
 
+
 class DB
 {
     private $con;

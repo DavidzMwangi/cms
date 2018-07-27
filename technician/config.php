@@ -17,8 +17,9 @@ class DB_FACADE{
     }
 
 
-
-
+    /**
+     * @return mysqli|null
+     */
     public function connect()
     {
 //        if (!$this->conn) {
