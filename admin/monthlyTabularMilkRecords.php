@@ -87,13 +87,15 @@ $milk_record=new MilkRecord();
                 <div class="card-header">
 
                     <h3>All Milk Records</h3>
+
+                    <?php
+//                    echo $milk_record->totalMonthMilk(1);
+                    ?>
                 </div>
 
                 <div class="card-body">
 
-                    <?php
-//                    echo date('F')
-                    ?>
+
                     <table id="table_id" class="display">
                         <thead>
                         <tr>
