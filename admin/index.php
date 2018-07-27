@@ -60,11 +60,13 @@
 </head>
 <body>
 <div class="wrapper">
+
     <!-- sidebar -->
 
     <?php
     require_once '../admin/sidebar.php';
     ?>
+
 
 
     <!-- page content -->
