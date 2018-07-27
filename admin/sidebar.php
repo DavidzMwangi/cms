@@ -16,6 +16,7 @@
             </li> -->
 
         <li><a href=""><i class="fa fa-address-card mr-3"></i>Dashboard</a></li>
+        <li><a href=""><i class="fa fa-address-card mr-3"></i>View Cow</a></li>
 
         <li>
             <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Records</a>
@@ -31,11 +32,26 @@
                 </li>
             </ul>
         </li>
+
         <li>
-            <a href="#">Portfolio</a>
+            <a href="#monthMenu" data-toggle="collapse"  class="dropdown-toggle">Monthly Records</a>
+            <ul class="collapse show list-styled" id="monthMenu">
+                <li>
+                    <a href="../admin/monthlyTabularMilkRecords.php">Tabular View</a>
+                </li>
+
+                <li>
+                    <a href="#">Graph</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">View Cow</a>
         </li>
         <li>
-            <a href="#">Contact</a>
+            <a href="#">Portfolio</a>
+
         </li>
     </ul>
 </nav>

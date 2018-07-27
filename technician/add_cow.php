@@ -28,12 +28,14 @@ $cow_manager=new CowManager();
 
 if (isset($_POST['submit'])){
     //save the new cow
+    $cow_id=$_POST['cow_id'];
     $cow_nick_name=$_POST['cow_nick_name'];
     $dob=$_POST['dob'];
     $breed=$_POST['breed'];
 
 
-    if ($cow_manager->addCow($cow_nick_name,$dob,$breed)==true){
+
+    if ($cow_manager->addCow($cow_id,$cow_nick_name,$dob,$breed)==true){
         $save_status=true;
     }else{
         $save_status=false;
@@ -107,6 +109,13 @@ if (isset($_POST['submit'])){
 
                         ?>
                         <div class="row">
+
+                            <div class="col-md-4 col-sm-12 col-lg-4">
+                                <label for="cow_id">Cow Id</label>
+                                <input type="text" class="form-control" id="cow_id" name="cow_id" required>
+
+
+                            </div>
                             <div class="col-md-4 col-sm-12 col-lg-4">
                                 <label for="cow_nick_name">Cow Nick Name</label>
                                <input type="text" class="form-control" id="cow_nick_name" name="cow_nick_name" required>
@@ -120,6 +129,9 @@ if (isset($_POST['submit'])){
                             </div>
 
 
+                        </div>
+
+                        <div class="row">
                             <div class="col-md-4 col-sm-12 col-lg-4">
                                 <label for="breed">Breed</label>
                                 <select name="breed" id="breed" class="form-control" required >
@@ -171,6 +183,7 @@ if (isset($_POST['submit'])){
                     <table id="cows_table" class="display">
                         <thead>
                         <tr>
+                            <th>Cow ID</th>
                             <th>Cow NickName</th>
                             <th>Date of Birth</th>
                             <th>Breed</th>
@@ -189,6 +202,7 @@ if (isset($_POST['submit'])){
 
                         while($row=mysqli_fetch_array($result66)){
                             echo '<tr>
+                      <td >'.$row['cow_id'].'</td>
                       <td >'.$row['nick_name'].'</td>
                         <td>'.$row['DOB'].'</td>
                         <td>'.$cow_manager->breedResolver($row['breed_id']).'</td>
@@ -231,8 +245,13 @@ if (isset($_POST['submit'])){
                     <input type="hidden" id="edit_milk_record_id" name="edit_milk_record_id">
                     <div class="row">
                         <div class="col-md-4 col-lg-4 col-sm-12">
+                            <label for="edit_cow_id">Cow ID</label>
+                                <input type="text" class="form-control" name="edit_cow_id" id="edit_cow_id">
+                        </div>
+
+                        <div class="col-md-4 col-lg-4 col-sm-12">
                             <label for="edit_cow_nick_name">Cow Nick Name</label>
-                                <input type="text" class="form-control" name="edit_cow_nick_name" id="edit_cow_nick_name">
+                            <input type="text" class="form-control" name="edit_cow_nick_name" id="edit_cow_nick_name">
                         </div>
 
                         <div class="col-md-4 col-lg-4 col-sm-12">
@@ -241,6 +260,10 @@ if (isset($_POST['submit'])){
                             <input type="date" id="edit_dob" name="edit_dob" class="form-control" >
                         </div>
 
+
+                    </div>
+
+                    <div class="row">
                         <div class="col-md-4 col-lg-4 col-sm-12">
                             <label for="edit_breed">Breed </label>
 
@@ -249,7 +272,6 @@ if (isset($_POST['submit'])){
                             </select>
                         </div>
                     </div>
-
                 </div>
 
                 <!--Footer-->

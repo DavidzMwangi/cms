@@ -14,14 +14,14 @@ class MilkManager{
 
     public function milkRecords()
     {
-        return mysqli_query($this->db->connect(),"SELECT * FROM milking");
+        return mysqli_query($this->db->connect(),"SELECT * FROM milk_records");
 
 
     }
 
     public function cowNameResolver($cow_id)
     {
-        $sql="SELECT nick_name FROM cows WHERE id='".$cow_id."' ";
+        $sql="SELECT nick_name FROM cows WHERE cow_id='".$cow_id."' ";
         $query=mysqli_query($this->db->connect(),$sql);
         $row=mysqli_num_rows($query);
         if ($row==1){
@@ -35,7 +35,7 @@ class MilkManager{
 
     public function editMilk($milk_record_id,$morning_amount,$evening_amount)
     {
-        $sql="UPDATE milking SET evening_amount='".$evening_amount."' ,morning_amount='".$morning_amount."' WHERE id='".$milk_record_id."'";
+        $sql="UPDATE milk_records SET evening='".$evening_amount."' ,morning='".$morning_amount."' WHERE id='".$milk_record_id."'";
         if ($this->db->connect()->query($sql)==true){
             return true;
         }else{

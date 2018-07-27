@@ -30,7 +30,7 @@ class SaveMilk{
         }
 
         //determine whether there exist a record on the day so that you can update rather than create a new record
-        $sql11="SELECT morning_amount,evening_amount FROM milking WHERE cow_id='".$this->cow_id."' AND date='".$today."'";
+        $sql11="SELECT morning,evening FROM milk_records WHERE cow_id='".$this->cow_id."' AND date='".$today."'";
         $results11=mysqli_query($this->db->connect(),$sql11);
         $row11=mysqli_num_rows($results11);
 
@@ -38,7 +38,7 @@ class SaveMilk{
             //there is an already existing record update the record depending on what time is selected
             if ($this->milking_time==1){
                 //morning
-                $sqli22="UPDATE milking SET morning_amount='".$this->amount."' WHERE cow_id='".$this->cow_id."' AND date='".$today."'";
+                $sqli22="UPDATE milk_records SET morning='".$this->amount."' WHERE cow_id='".$this->cow_id."' AND date='".$today."'";
                 if ($this->db->connect()->query($sqli22)== true){
 
                    return true;
@@ -47,7 +47,7 @@ class SaveMilk{
                 }
             }else{
                 //evening
-                $sqli33="UPDATE milking SET evening_amount='".$this->amount."' WHERE cow_id='".$this->cow_id."' AND date='".$today."'";
+                $sqli33="UPDATE milk_records SET evening='".$this->amount."' WHERE cow_id='".$this->cow_id."' AND date='".$today."'";
                 if ($this->db->connect()->query($sqli33)==true){
                     return true;
                 }else{
@@ -63,7 +63,7 @@ class SaveMilk{
             //no record exist hence create a new record
             //save the record in the database
 
-            $sql="INSERT  INTO milking (cow_id,morning_amount,evening_amount,date) VALUES ('".$this->cow_id."','".$morning_milk_amount."','".$evening_milk_amount."','".$today."')";
+            $sql="INSERT  INTO milk_records (cow_id,morning,evening,date) VALUES ('".$this->cow_id."','".$morning_milk_amount."','".$evening_milk_amount."','".$today."')";
             if($this->db->connect()->query($sql) == TRUE){
                 return true;
             }else{return false;}
