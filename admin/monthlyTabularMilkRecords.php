@@ -125,6 +125,8 @@ $milk_record=new MilkRecord();
 
                     for ($i=1;$i<=12;$i++){
                         echo $milk_record->monRec($i);
+
+
                     }
 
 

@@ -51,62 +51,62 @@ class MilkRecord
 //        for ($i=1;$i<=12;$i++){
             switch ($month){
                 case 1:
-                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
                     $month_name="January";
                     break;
 
                 case 2:
-                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
                     $month_name="February";
 
                     break;
                 case 3:
-                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
                     $month_name="March";
 
                     break;
                 case 4:
-                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
                     $month_name="April";
 
                     break;
                 case 5:
-                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
                     $month_name="May";
 
                     break;
                 case 6:
-                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
                     $month_name="June";
 
                     break;
                 case 7:
-                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
                     $month_name="July";
 
                     break;
                 case 8:
-                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
                     $month_name="August";
 
                     break;
                 case 9:
-                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
                     $month_name="September";
 
                     break;
                 case 10:
-                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
                     $month_name="October";
 
                     break;
                 case 11:
-                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
                     $month_name="November";
 
                     break;
                 case 12:
-                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+                    $sql_months="SELECT avg(morning) as morning, avg(evening) as evening, COUNT(DISTINCT(cow_id)) as cow_id  FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
                     $month_name="December";
 
                     break;
@@ -122,7 +122,7 @@ class MilkRecord
                 return "<tr>
 
                         <td>".$month_name."</td>
-                        <td>".number_format($row['morning'],2)."</td>
+                        <td>".$row['cow_id']."</td>
                         <td>".number_format(($row['morning']+ $row['evening']),2)."</td>
                         <td>".number_format($row['morning'],2)."</td>
                         <td>".number_format($row['evening'],2)."</td>
