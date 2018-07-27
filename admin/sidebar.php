@@ -32,6 +32,20 @@
                 </li>
             </ul>
         </li>
+
+        <li>
+            <a href="#monthMenu" data-toggle="collapse"  class="dropdown-toggle">Monthly Records</a>
+            <ul class="collapse show list-styled" id="monthMenu">
+                <li>
+                    <a href="../admin/monthlyTabularMilkRecords.php">Tabular View</a>
+                </li>
+
+                <li>
+                    <a href="#">Graph</a>
+                </li>
+            </ul>
+        </li>
+
         <li>
             <a href="#">View Cow</a>
         </li>

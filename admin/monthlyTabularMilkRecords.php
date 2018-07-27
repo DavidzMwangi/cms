@@ -16,6 +16,10 @@
 //    $user->logout();
 //    header("location:login.php");
 //}
+
+require_once  "MilkRecord.php";
+$milk_record=new MilkRecord();
+
 //?>
 <head>
     <meta charset="utf-8" />
@@ -72,31 +76,61 @@
         <?php
         require_once '../admin/nav.php';
         ?>
-        <div class="months" style="display: none">
-            <span id="1">JAN</span>
-            <span id="2">FEB</span>
-            <span id="3">MAR</span>
-            <span id="4">APR</span>
-            <span id="5">MAY</span>
-            <span id="6">JUN</span>
-            <span id="7">JUL</span>
-            <span id="8">AUG</span>
-            <span id="9">SEP</span>
-            <span id="10">OCT</span>
-            <span id="11">NOV</span>
-            <span id="12">DEC</span>
-        </div>
 
+
+        <div class="container-fluid">
         <div class="card mt-5">
 
-            <div class="card-body">
-                <div id="chart">
+
+                <div class="card-header">
+
+                    <h3>All Milk Records</h3>
+                </div>
+
+                <div class="card-body">
+
+
+                    <table id="table_id" class="display">
+                        <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Total No of Herds</th>
+                            <th>Total Milk Amount(Litres)</th>
+                            <th>Average Amount per Day(litres)</th>
+                            <th>Herd Average per Day</th>
+                            <th>Herd Average per Month</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+
+                        <tr>
+                            <td>January</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+<!--                        --><?php
+//
+//                        foreach ($milk_record->monthlyRecords() as $a){
+//                            echo $a['id'] . '</br>' ;
+//
+//                        }
+
+//                        ?>
+
+                        </tbody>
+                    </table>
+                    <!--                <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" data-target="#fluidModalBottomDangerDemo" >Delete</button></a>-->
+
 
                 </div>
-            </div>
+
 
         </div>
-
+        </div>
     </div>
 </div>
 
@@ -109,6 +143,10 @@
 <script src="../assets/js/c3.min.js"></script>
 <script src="../assets/js/main.js"></script>
 <script src="js/charts.js"></script>
+
+<script>
+
+</script>
 </body>
 
 </html>
