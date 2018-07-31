@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,28 +19,29 @@
 
 
 <?php
-
-require_once 'BreedManager.php';
-
+require_once "BreedManager.php";
 $breed_manger=new BreedManager();
 
-require_once 'CowManager.php';
-$cow_manager=new CowManager();
+require_once "CalfManager.php";
+
+$calf_manger= new CalfManager();
+
+
+require_once "CowManager.php";
+$cow_manager= new CowManager();
 
 
 if (isset($_POST['submit'])){
-    //save the new cow
-    $cow_id=$_POST['cow_id'];
-    $cow_nick_name=$_POST['cow_nick_name'];
+    $name=$_POST['nick_name'];
     $dob=$_POST['dob'];
+    $weight=$_POST['birth_weight'];
     $breed=$_POST['breed'];
 
-
-
-    if ($cow_manager->addCow($cow_id,$cow_nick_name,$dob,$breed)==true){
-        $save_status=true;
-    }else{
-        $save_status=false;
+    if ($calf_manger->addCalf($name,$weight,$dob,$breed)){
+        $status=true;
+    }
+    else{
+        $status=false;
     }
 }
 ?>
@@ -76,7 +79,7 @@ if (isset($_POST['submit'])){
             <div class="card " style="margin-top: 25px">
                 <div class="card-header">
 
-                    <h3>Add Cow Record</h3>
+                    <h3>Add Calf Record</h3>
                     <hr>
                 </div>
 
@@ -85,12 +88,12 @@ if (isset($_POST['submit'])){
 
                     <form action="" method="post">
 
-                        <?php
-                        if (isset($save_status)){
-                            if ($save_status==true){
+<!--                        --><?php
+                        if (isset($status)){
+                            if ($status==true){
                                 ?>
                                 <!--                <div class="row">-->
-                                <div class="col-offset-4 col-md-4 col-lg-4 col-sm-12  alert-success" >
+                                <div class="col-offset-4 col-md-4 col-lg-6 col-sm-12  alert-success" >
                                     <h3>Record Saved successfully</h3>
                                 </div>
                                 <!--                </div>-->
@@ -103,48 +106,48 @@ if (isset($_POST['submit'])){
                                         <h3>Error saving the record</h3>
                                     </div>
                                 </div>
-                                <?php
+
+                        <?php
                             }
                         }
+//
+//                        ?>
 
-                        ?>
                         <div class="row">
-
-                            <div class="col-md-4 col-sm-12 col-lg-4">
-                                <label for="cow_id">Cow Id</label>
-                                <input type="text" class="form-control" id="cow_id" name="cow_id" required>
-
-
-                            </div>
-                            <div class="col-md-4 col-sm-12 col-lg-4">
-                                <label for="cow_nick_name">Cow Nick Name</label>
-                               <input type="text" class="form-control" id="cow_nick_name" name="cow_nick_name" required>
+                            <div class="col-md-3 col-sm-12 col-lg-3">
+                                <label for="nick_name">Calf Nick Name</label>
+                               <input type="text" class="form-control" id="nick_name" name="nick_name" required>
 
 
                             </div>
 
-                            <div class="col-md-4 col-sm-12 col-lg-4">
-                                <label for="dob">DateOf Birth</label>
+                            <div class="col-md-3 col-sm-12 col-lg-3">
+                                <label for="dob">Date of Birth</label>
                                 <input type="date" name="dob" class="form-control" id="dob">
                             </div>
 
+                            <div class="col-md-3 col-sm-12 col-lg-3">
+                                <label for="birth_weight">Birth Weight</label>
+                                <input type="number" name="birth_weight" class="form-control" id="birth_weight" min="1">
 
-                        </div>
+                            </div>
 
-                        <div class="row">
-                            <div class="col-md-4 col-sm-12 col-lg-4">
+
+                            <div class="col-md-3 col-sm-12 col-lg-3">
                                 <label for="breed">Breed</label>
                                 <select name="breed" id="breed" class="form-control" required >
                                     <option disabled selected>Select Cow Breed</option>
+                                    <option value="0" >a</option>
+                                    <option value="9" >b</option>
                                     <?php
 
 
 
-                                    $results=$breed_manger->allBreeds();
-                                    while ($row=mysqli_fetch_array($results)){
-                                        echo "<option value='$row[0]'>$row[1]</option>";
-
-                                    }
+//                                    $results=$breed_manger->allBreeds();
+//                                    while ($row=mysqli_fetch_array($results)){
+//                                        echo "<option value='$row[0]'>$row[1]</option>";
+//
+//                                    }
                                     ?>
 
                                 </select>
@@ -183,10 +186,10 @@ if (isset($_POST['submit'])){
                     <table id="cows_table" class="display">
                         <thead>
                         <tr>
-                            <th>Cow ID</th>
-                            <th>Cow NickName</th>
+                            <th>calf nick name</th>
                             <th>Date of Birth</th>
                             <th>Breed</th>
+                            <th>Birth Weight</th>
                             <th>Actions</th>
 
                         </tr>
@@ -197,15 +200,15 @@ if (isset($_POST['submit'])){
 
                         <?php
 
-                        $result66=$cow_manager->availableCows();
+                        $result66=$calf_manger->showCalf();
 
 
                         while($row=mysqli_fetch_array($result66)){
                             echo '<tr>
-                      <td >'.$row['cow_id'].'</td>
                       <td >'.$row['nick_name'].'</td>
                         <td>'.$row['DOB'].'</td>
                         <td>'.$cow_manager->breedResolver($row['breed_id']).'</td>
+                        <td>'.$row['Birth_weight'].'</td>
                        <td>
                        <a href="#"><button class="btn btn-outline-primary" onclick="getSelectedDetails('.$row['id'].','.$row['nick_name'].')" data-toggle="modal" data-target="#centralModalLGInfoDemo"  >Edit</button></a>
                          </td>
@@ -245,13 +248,8 @@ if (isset($_POST['submit'])){
                     <input type="hidden" id="edit_milk_record_id" name="edit_milk_record_id">
                     <div class="row">
                         <div class="col-md-4 col-lg-4 col-sm-12">
-                            <label for="edit_cow_id">Cow ID</label>
-                                <input type="text" class="form-control" name="edit_cow_id" id="edit_cow_id">
-                        </div>
-
-                        <div class="col-md-4 col-lg-4 col-sm-12">
                             <label for="edit_cow_nick_name">Cow Nick Name</label>
-                            <input type="text" class="form-control" name="edit_cow_nick_name" id="edit_cow_nick_name">
+                                <input type="text" class="form-control" name="edit_cow_nick_name" id="edit_cow_nick_name">
                         </div>
 
                         <div class="col-md-4 col-lg-4 col-sm-12">
@@ -260,10 +258,6 @@ if (isset($_POST['submit'])){
                             <input type="date" id="edit_dob" name="edit_dob" class="form-control" >
                         </div>
 
-
-                    </div>
-
-                    <div class="row">
                         <div class="col-md-4 col-lg-4 col-sm-12">
                             <label for="edit_breed">Breed </label>
 
@@ -272,6 +266,7 @@ if (isset($_POST['submit'])){
                             </select>
                         </div>
                     </div>
+
                 </div>
 
                 <!--Footer-->
@@ -308,12 +303,7 @@ if (isset($_POST['submit'])){
 
     });
 
-    function getSelectedDetails(id,nickname) {
-        //'.$row['id'].','.$row['nick_name'].','.$row['DOB'].','.$row['breed_id'].'
-        alert(nickname)
-            // $('#edit_cow_nick_name').val(nick_name);
-            // $('#edit_dob').val(dob);
-    }
+
 </script>
 
 </body>

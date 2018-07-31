@@ -1,3 +1,4 @@
+<!-- sidebar -->
 <nav id="sidebar">
     <div class="sidebar-header">
         <img src="../assets/images/profile.jpeg" class="rounded-circle " height="100px;" width="100px">
@@ -26,17 +27,37 @@
             <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Records</a>
             <ul class="collapse show list-styled" id="pageSubmenu">
                 <li>
-                    <a href="#">Daily</a>
+                    <a href="#" onclick="loadTodaysData(event)" > Daily</a>
                 </li>
                 <li>
                     <a href="#" onclick="loadMonthlyData(event)">Monthly</a>
                 </li>
                 <li>
-                    <a href="#">Page 3</a>
+                    <a href="#" onclick="loadMonthlyAverageData(event)">Monthly Average For Cow</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadYearlyData(event)">Year</a>
                 </li>
             </ul>
         </li>
 
+        <li>
+            <a href="#monthMenu" data-toggle="collapse"  class="dropdown-toggle">Monthly Records</a>
+            <ul class="collapse show list-styled" id="monthMenu">
+                <li>
+                    <a href="../admin/monthlyTabularMilkRecords.php">Tabular View</a>
+                </li>
+
+                <li>
+                    <a href="monthlyGraph.php">Graph</a>
+                </li>
+            </ul>
+        </li>
+
+
+        <li>
+            <a href="#">View Cow</a>
+        </li>
         <li>
             <a href="#">Portfolio</a>
 
