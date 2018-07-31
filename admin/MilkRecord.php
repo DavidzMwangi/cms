@@ -58,6 +58,10 @@ class MilkRecord
                 $month_values[]= 0;
             }
 
+
+
+
+
         }
         return json_encode($month_values,JSON_NUMERIC_CHECK);
 
