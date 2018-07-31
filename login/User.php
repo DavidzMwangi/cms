@@ -15,30 +15,17 @@ class User
     {
         $pass = md5($pass);
         $result = mysqli_query($this->con, "Select * from users where username='$username' and password='$pass'");
-//        $data = mysqli_fetch_array($check);
-//        $result = mysqli_num_rows($check);
-//        if ($result == 1) {
-//            $_SESSION['login'] = true;
-//            $_SESSION['id'] = $data['id'];
-//            if ($data['USER_TYPE'] == 0) {
-//                $_SESSION['user_type'] = 'technician';
-//            } else {
-//                $_SESSION['user_type'] = 'admin';
-//            }
-//            return true;
-//        } else {
-//            return false;
-//        }
+
 
         if (mysqli_num_rows($result) > 0) {
             $data = mysqli_fetch_assoc($result);
 
             $_SESSION['login'] = true;
             $_SESSION['id'] = $data['id'];
-            if ($data['USER_TYPE'] == 0) {
-                $_SESSION['user_type'] = 'technician';
-            } else {
+            if ($data['user_type'] == 1) {
                 $_SESSION['user_type'] = 'admin';
+            } else {
+                $_SESSION['user_type'] = 'technician';
             }
             return true;
 

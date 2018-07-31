@@ -19,14 +19,7 @@
 //}
 
 
-require_once "../admin/TechnicianManager.php";
-$technician_manager=new TechnicianManager();
 
-if($technician_manager->addTechnician("username","1234")){
-    echo "saved";
-}else{
-    echo "unsaved";
-}
 
 //?>
 <head>
@@ -84,21 +77,60 @@ if($technician_manager->addTechnician("username","1234")){
 <?php
 require_once 'nav.php';
 ?>
-        <div class="months" style="display: none">
-            <span id="1">JAN</span>
-            <span id="2">FEB</span>
-            <span id="3">MAR</span>
-            <span id="4">APR</span>
-            <span id="5">MAY</span>
-            <span id="6">JUN</span>
-            <span id="7">JUL</span>
-            <span id="8">AUG</span>
-            <span id="9">SEP</span>
-            <span id="10">OCT</span>
-            <span id="11">NOV</span>
-            <span id="12">DEC</span>
+
+
+        <?php
+
+
+        if(isset($_POST['submit'])){
+            $username=$_POST['username'];
+            $password=$_POST['password'];
+
+
+            require_once "../admin/TechnicianManager.php";
+            $technician_manager=new TechnicianManager();
+
+            if($technician_manager->addTechnician($username,$password)){
+               $status=true;
+            }else{
+               $status=false;
+            }
+
+        }
+        ?>
+<div class="container-fluid">
+
+
+    <p></p>
+    <div class="row">
+
+        <div class="col-md-6 offset-md-3">
+
+        <?php
+
+        if (isset($status) && $status==true){
+
+            ?>
+            <div class="alert alert-success">
+
+                <h5>Record Saved</h5>
+            </div>
+
+            <?php
+        }else if (isset($status) && $status==false){
+            ?>
+            <div class="alert alert-danger">
+
+            <h5>Error saving the record</h5>
+            </div>
+            <?php
+        }else{
+            
+        }
+        ?>
         </div>
-<div class="container">
+
+    </div>
     <div class="row">
         <div class="col-md-6 offset-md-3">
 

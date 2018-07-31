@@ -76,10 +76,10 @@ if (isset($_POST['submit'])) {
                                    name="password" required>
                         </div>
                         <div>
-                            <button class="btn btn-lg btn-success btn-block" type="submit" name="submit">Sign in
-                            </button>
+                            <button class="btn btn     </button>
                         </div>
-                    </form>
+                  -lg btn-primary btn-block" type="submit" name="submit">Sign in
+                         </form>
 
                 </div>
             </div>
