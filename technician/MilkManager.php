@@ -19,6 +19,15 @@ class MilkManager{
 
     }
 
+    public function SingleDailyMilkRecords()
+    {
+        $today=date('Y-m-d');
+
+        $sql="SELECT * FROM milking WHERE date='".$today."'";
+        return mysqli_query($this->db->connect(),$sql);
+
+
+    }
     public function cowNameResolver($cow_id)
     {
         $sql="SELECT nick_name FROM cows WHERE cow_id='".$cow_id."' ";
