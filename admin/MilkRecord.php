@@ -82,6 +82,24 @@ class MilkRecord
         }
         return json_encode($month_herds,JSON_NUMERIC_CHECK);
     }
+
+    public function monthlySum($month)
+    {
+        $year=date('Y');
+        $sql="SELECT sum(morning) as morning,sum(evening) as evening FROM milk_records WHERE YEAR(date)='".$year."' AND MONTH(date)='".$month."'";
+
+        $result=$this->DB->connect()->query($sql);
+        if ($result->num_rows==1){
+            $row=$result->fetch_assoc();
+
+            $month_sum=$row['morning']+$row['evening'];
+
+            return $month_sum;
+        }else{
+            return 0;
+        }
+
+    }
     public function monRec($month)
     {
 
@@ -163,7 +181,7 @@ class MilkRecord
 
                         <td>".$month_name."</td>
                         <td>".$row['cow_id']."</td>
-                        <td>".number_format(($row['morning']+ $row['evening']),2)."</td>
+                        <td>".number_format($this->monthlySum($month),2)."</td>
                         <td>".number_format($row['morning'],2)."</td>
                         <td>".number_format($row['evening'],2)."</td>
                         <td>".number_format(($row['morning']+ $row['evening'])/2,2)."</td>
