@@ -16,10 +16,8 @@
 //    header("location:login.php");
 //}
 
-////
-//require_once '../technician/CowManager.php';
-//$cow_manager=new CowManager();
-
+ require_once "../technician/CowManager.php";
+$cow_manager=new CowManager();
 
 require_once "../technician/CalfManager.php";
 $calf_manager=new CalfManager();
@@ -27,7 +25,7 @@ $calf_manager=new CalfManager();
 
 if (isset($_POST['delete_submit'])){
     $id= $_POST['delete_calf'];
-    if ($cow_manager->deleteCalf($ID)){
+    if ($calf_manager->deleteCalf($id)){
         $status_delete= true;
 
     }else{
@@ -112,6 +110,7 @@ if (isset($_POST['delete_submit'])){
                             <th>Calf_Id</th>
                             <th>Birth Weight</th>
                             <th>Breed</th>
+                            <th>Action</th>
 
                         </tr>
                         </thead>
@@ -120,12 +119,13 @@ if (isset($_POST['delete_submit'])){
 
 //                        $result66=$cow_manager->availableCows();
 
-
-                        while($row=mysqli_fetch_array($calf_manager->allCalves())){
+                            $result=$calf_manager->allCalves();
+                        while($row=mysqli_fetch_array($result)){
                             echo '<tr>
-                      <td >'.$row['nick_name'].'</td>
-                        <td>'.$row['id'].'</td>
-                        <td>'.$cow_manager->breedResolver($row['breed_id']).'</td>
+                      <td >'.$row['nickname'].'</td>
+                        <td>'.$row['calf_id'].'</td>
+                        <td>'.$row['birth_weight'].'</td>
+                        <td>'.$cow_manager->breedResolver($row['id']).'</td>
                        <td>
                        <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" onclick="deleteF('.$row['id'].')" data-target="#centralModalLGInfoDemo"  >delete</button></a>
                          </td>
@@ -194,6 +194,7 @@ if (isset($_POST['delete_submit'])){
         });
 
         function deleteF(id) {
+
             $('#delete_calf').val(id)
         }
     </script>

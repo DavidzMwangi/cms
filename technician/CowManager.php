@@ -51,11 +51,26 @@ class CowManager
             $record=mysqli_fetch_assoc($query);
             return $record['name'];
         }else{
-            return ' ';
+            return null;
 //                return '<span class="alert-danger">Unknown Cow</span>';
         }
     }
 
+    public function singleCow($cow_id)
+    {
+        $sql="SELECT * FROM cows WHERE id='".$cow_id."'";
+
+        $result=mysqli_query($this->db->connect(),$sql);
+        $row=mysqli_num_rows($result);
+        if ($row==1){
+            $record=mysqli_fetch_assoc($result);
+            return $record['breed_id'];
+        }else{
+            return null;
+//                return '<span class="alert-danger">Unknown Cow</span>';
+        }
+
+    }
     public function deleteCow($id)
 
     {
