@@ -11,28 +11,20 @@
 //    if (!$user->isAdmin()){
 //        header("location:../index.php");
 //    }
-//}//if (isset($_REQUEST['q'])){
+//}
+//if (isset($_REQUEST['q'])){
 //    $user->logout();
 //    header("location:login.php");
 //}
 
- require_once "../technician/CowManager.php";
+
+require_once '../technician/CowManager.php';
 $cow_manager=new CowManager();
 
-require_once "../technician/CalfManager.php";
-$calf_manager=new CalfManager();
+require_once '../technician/MilkManager.php';
+$milk_manager=new MilkManager();
 
 
-if (isset($_POST['delete_submit'])){
-    $id= $_POST['delete_calf'];
-    if ($calf_manager->deleteCalf($id)){
-        $status_delete= true;
-
-    }else{
-        $status_delete= false;
-
-    }
-}
 
 //?>
 <head>
@@ -99,36 +91,41 @@ if (isset($_POST['delete_submit'])){
 
 
                 <div class="card-header">
-                    <h3>All Calfs</h3>
+                    <h3>Daily Milk Records</h3>
                 </div>
                 <div class="card-body">
 
                     <table id="table_id" class="display">
                         <thead>
                         <tr>
-                            <th> NickName</th>
-                            <th>Calf_Id</th>
-                            <th>Birth Weight</th>
-                            <th>Breed</th>
-                            <th>Action</th>
-
+                            <th>Cow ID</th>
+                            <th>Cow NickName</th>
+                            <th>Cow Breed</th>
+                            <th>Morning Amount</th>
+                            <th>Evening Amount</th>
+                            <th>Average Milk</th>
+                            <th>Total Milk</th>
                         </tr>
                         </thead>
+<!--                                            <td>'.$cow_manager->breedResolver($cow_manager->singleCow($row['cow_id'])['breed_id']).'</td>-->
+
                         <tbody>
                         <?php
 
-//                        $result66=$cow_manager->availableCows();
+                        $result66=$milk_manager->SingleDailyMilkRecords();
 
-                            $result=$calf_manager->allCalves();
-                        while($row=mysqli_fetch_array($result)){
-                            echo '<tr>
-                      <td >'.$row['nickname'].'</td>
-                        <td>'.$row['calf_id'].'</td>
-                        <td>'.$row['birth_weight'].'</td>
-                        <td>'.$cow_manager->breedResolver($row['id']).'</td>
-                       <td>
-                       <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" onclick="deleteF('.$row['id'].')" data-target="#centralModalLGInfoDemo"  >delete</button></a>
-                         </td>
+
+                        while($row=mysqli_fetch_array($result66)){
+                            echo $cow_manager->breedResolver($cow_manager->singleCow($row['cow_id'])) . '<tr>
+                                                  <td >'.$row['cow_id'].'</td>
+                                                  <td >'.$row['id'].'</td>
+                                                 <td>' .'</td>
+
+                        <td>'.$row['morning_amount'].'</td>
+                        <td>'.$row['evening_amount'].'</td>
+                        <td>'.(($row['evening_amount']+$row['morning_amount'])/2).'</td>
+                        <td>'.(($row['evening_amount']+$row['morning_amount'])).'</td>
+                      
                         </tr>';
                         }
                         ?>
@@ -153,7 +150,7 @@ if (isset($_POST['delete_submit'])){
             <form action="" method="post">
                 <div class="modal-header">
                     <p class="heading lead">delete</p>
-                    <input type="hidden" id="delete_calf" name="delete_calf">
+                    <input type="hidden" id="cow_to_delete" name="cow_to_delete">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" class="white-text">&times;</span>
                     </button>
@@ -194,8 +191,7 @@ if (isset($_POST['delete_submit'])){
         });
 
         function deleteF(id) {
-
-            $('#delete_calf').val(id)
+            $('#cow_to_delete').val(id)
         }
     </script>
 </body>

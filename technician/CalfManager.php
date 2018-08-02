@@ -47,6 +47,15 @@ class CalfManager
         return mysqli_query($this->db->connect(),$sql);
 
     }
-    
+    public function deleteCalf ($ID){
+
+        $sql = "DELETE FROM calf WHERE id= '".$ID."'";
+        if ( $this->db->connect()->query($sql)==true){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
 
 }
