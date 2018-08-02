@@ -19,14 +19,7 @@
 //}
 
 
-require_once "../admin/TechnicianManager.php";
-$technician_manager=new TechnicianManager();
 
-if($technician_manager->addTechnician("username","1234")){
-    echo "saved";
-}else{
-    echo "unsaved";
-}
 
 //?>
 <head>
@@ -73,130 +66,97 @@ if($technician_manager->addTechnician("username","1234")){
 <body>
 <div class="wrapper">
     <!-- sidebar -->
-    <nav id="sidebar">
-        <div class="sidebar-header">
-            <img src="../assets/images/profile.jpeg" class="rounded-circle " height="100px;" width="100px">
-            <div class="d-block" style="color: white; padding-left: 30px">Admin </div>
-        </div>
-
-        <ul class="list-styled components">
-            <p>Menu </p>
-            <!-- <li class="active">
-                    <a href="#homesubmenu" data-toggle="collapse" aria-expanded="false"  class="dropdown-toggle">Home</a>
-                    <ul class="collapse list-styled" id="homesubmenu">
-                      <li><a href="">Home 1</a></li>
-                      <li><a href="">Home 2</a></li>
-                      <li><a href="">Home 3</a></li>
-                    </ul>
-                </li> -->
-
-            <li><a href=""><i class="fa fa-address-card mr-3"></i>Dashboard</a></li>
-
-            <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Records</a>
-                <ul class="collapse show list-styled" id="pageSubmenu">
-                    <li>
-                        <a href="#">Daily</a>
-                    </li>
-                    <li>
-                        <a href="#" onclick="loadMonthlyData(event)">Monthly</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 3</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="#monthMenu" data-toggle="collapse"  class="dropdown-toggle">Monthly Records</a>
-                <ul class="collapse show list-styled" id="monthMenu">
-                    <li>
-                        <a href="#">Tabular View</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Graph</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="#">Portfolio</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
-    </nav>
-
+    <?php
+    require_once 'sidebar.php';
+    ?>
 
     <!-- page content -->
     <div id="content" class="w-100 ml-2">
 
 
-        <nav class="navbar navbar-expand-lg navbar-dark rounded" style="background-color: #6d7fcc;">
-            <div class="container-fluid">
-
-                <span id="sidebarCollapse" style="cursor: pointer;"><i class="fa fa-bars fa-2x mr-2 text-light" ></i></span>
-
-                <a class="navbar-brand" href="#"><h3>Admin Dashboard</h3></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
+<?php
+require_once 'nav.php';
+?>
 
 
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </div>
+        <?php
+
+
+        if(isset($_POST['submit'])){
+            $username=$_POST['username'];
+            $password=$_POST['password'];
+
+
+            require_once "../admin/TechnicianManager.php";
+            $technician_manager=new TechnicianManager();
+
+            if($technician_manager->addTechnician($username,$password)){
+               $status=true;
+            }else{
+               $status=false;
+            }
+
+        }
+        ?>
+<div class="container-fluid">
+
+
+    <p></p>
+    <div class="row">
+
+        <div class="col-md-6 offset-md-3">
+
+        <?php
+
+        if (isset($status) && $status==true){
+
+            ?>
+            <div class="alert alert-success">
+
+                <h5>Record Saved</h5>
             </div>
-        </nav>
 
-        <div class="months" style="display: none">
-            <span id="1">JAN</span>
-            <span id="2">FEB</span>
-            <span id="3">MAR</span>
-            <span id="4">APR</span>
-            <span id="5">MAY</span>
-            <span id="6">JUN</span>
-            <span id="7">JUL</span>
-            <span id="8">AUG</span>
-            <span id="9">SEP</span>
-            <span id="10">OCT</span>
-            <span id="11">NOV</span>
-            <span id="12">DEC</span>
+            <?php
+        }else if (isset($status) && $status==false){
+            ?>
+            <div class="alert alert-danger">
+
+            <h5>Error saving the record</h5>
+            </div>
+            <?php
+        }else{
+            
+        }
+        ?>
         </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+
 
         <div class="card mt-5">
 
             <div class="card-body">
-                <div id="chart">
+                <form method="post" >
 
+
+                        <div class="form-group">
+
+                            <input type="text" name="username" class="form-control" placeholder="username" required >
+                        </div>
+
+
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="password" required >
+                        </div>
+
+                    <div >
+<!--                        <div class="col-sm-12 col-md-6 col-lg-4">-->
+                        <button class ="btn btn-primary" type="submit" name="submit">Register</button>
+<!--                <div id="chart">-->
+
+                </div>
                 </div>
             </div>
 
@@ -204,8 +164,8 @@ if($technician_manager->addTechnician("username","1234")){
 
     </div>
 </div>
-
-
+</div>
+</div>
 <!-- js scripts -->
 <script src="../assets/js/jquery.slim.min.js"></script>
 <script src="../assets/js/popper.min.js"></script>

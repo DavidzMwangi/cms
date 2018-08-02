@@ -59,7 +59,7 @@
             <a href="#">View Cow</a>
         </li>
         <li>
-            <a href="#">Portfolio</a>
+            <a href="manage_technicians.php">Manage Accounts</a>
 
         </li>
     </ul>
