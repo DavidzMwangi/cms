@@ -36,8 +36,9 @@ if (isset($_POST['submit'])){
     $dob=$_POST['dob'];
     $weight=$_POST['birth_weight'];
     $breed=$_POST['breed'];
+    $calf_id=$_POST['calf_id'];
 
-    if ($calf_manger->addCalf($name,$weight,$dob,$breed)){
+    if ($calf_manger->addCalf($name,$weight,$dob,$breed,$calf_id)){
         $status=true;
     }
     else{
@@ -122,6 +123,13 @@ if (isset($_POST['submit'])){
                             </div>
 
                             <div class="col-md-3 col-sm-12 col-lg-3">
+                                <label for="calf_id">Calf ID</label>
+                                <input type="text" class="form-control" id="calf_id" name="calf_id" required>
+
+
+                            </div>
+
+                            <div class="col-md-3 col-sm-12 col-lg-3">
                                 <label for="dob">Date of Birth</label>
                                 <input type="date" name="dob" class="form-control" id="dob">
                             </div>
@@ -137,17 +145,16 @@ if (isset($_POST['submit'])){
                                 <label for="breed">Breed</label>
                                 <select name="breed" id="breed" class="form-control" required >
                                     <option disabled selected>Select Cow Breed</option>
-                                    <option value="0" >a</option>
-                                    <option value="9" >b</option>
+
                                     <?php
 
 
 
-//                                    $results=$breed_manger->allBreeds();
-//                                    while ($row=mysqli_fetch_array($results)){
-//                                        echo "<option value='$row[0]'>$row[1]</option>";
-//
-//                                    }
+                                    $results=$breed_manger->allBreeds();
+                                    while ($row=$results->fetch_array()){
+                                        echo "<option value='$row[0]'>$row[1]</option>";
+
+                                    }
                                     ?>
 
                                 </select>
@@ -203,12 +210,12 @@ if (isset($_POST['submit'])){
                         $result66=$calf_manger->showCalf();
 
 
-                        while($row=mysqli_fetch_array($result66)){
+                        while($row=$result66->fetch_array()){
                             echo '<tr>
                       <td >'.$row['nick_name'].'</td>
-                        <td>'.$row['DOB'].'</td>
+                        <td>'.$row['dob'].'</td>
                         <td>'.$cow_manager->breedResolver($row['breed_id']).'</td>
-                        <td>'.$row['Birth_weight'].'</td>
+                        <td>'.$row['birth_weight'].'</td>
                        <td>
                        <a href="#"><button class="btn btn-outline-primary" onclick="getSelectedDetails('.$row['id'].','.$row['nick_name'].')" data-toggle="modal" data-target="#centralModalLGInfoDemo"  >Edit</button></a>
                          </td>

@@ -141,7 +141,7 @@ if (isset($_POST['submit'])){
 
 
                                     $results=$breed_manger->allBreeds();
-                                    while ($row=mysqli_fetch_array($results)){
+                                    while ($row=$results->fetch_array()){
                                         echo "<option value='$row[0]'>$row[1]</option>";
 
                                     }

@@ -115,7 +115,7 @@ $milk_manager=new MilkManager();
                         $result66=$milk_manager->SingleDailyMilkRecords();
 
 
-                        while($row=mysqli_fetch_array($result66)){
+                        while($row=$result66->fetch_array()){
                             echo $cow_manager->breedResolver($cow_manager->singleCow($row['cow_id'])) . '<tr>
                                                   <td >'.$row['cow_id'].'</td>
                                                   <td >'.$row['id'].'</td>

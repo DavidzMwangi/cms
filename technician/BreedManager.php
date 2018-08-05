@@ -22,7 +22,7 @@ class BreedManager
 
 //
         $sql="SELECT id,name FROM breed";
-        return mysqli_query($this->db->connect(),$sql);
+        return $this->db->connect()->query($sql);
         
     }
 

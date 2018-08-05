@@ -220,6 +220,7 @@ if (isset($_POST['edit_submit'])){
                     </tr>
                     </thead>
                     <tbody>
+<!--                    <td >'.$data->cowNameResolver($result['cow_id']).'</td>-->
 
                     <?php
 
@@ -227,7 +228,7 @@ if (isset($_POST['edit_submit'])){
 
                     while ($result=mysqli_fetch_array($querty)){
                         echo '<tr>
-                        <td >'.$data->cowNameResolver($result['cow_id']).'</td>
+                        <td >'.$result['cow_id'].'</td>
                         <td>'.$result['date'].'</td>
                         <td>'.$result['morning'].'</td>
                         <td>'.$result['evening'].'</td>
@@ -370,7 +371,9 @@ if (isset($_POST['edit_submit'])){
 
     $(document).ready(function () {
         $('#cow_name').select2();
-        $('#table_id').DataTable();
+        $('#table_id').DataTable({
+            'pageLength':20
+        });
 
 
     });
