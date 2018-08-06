@@ -54,10 +54,6 @@
             </ul>
         </li>
 
-
-        <li>
-            <a href="#">View Cow</a>
-        </li>
         <li>
             <a href="manage_technicians.php">Manage Accounts</a>
 

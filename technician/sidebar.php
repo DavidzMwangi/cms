@@ -11,9 +11,9 @@
         <li>
             <a href="add_calf_weight.php">Add Calf Weight</a>
         </li>
-<!--        <li>-->
-<!--            <a href="#">Page 3</a>-->
-<!--        </li>-->
+        <li>
+            <a href="calf_milk_history.php">Milk Amount History</a>
+        </li>
     </ul>
 </li>
 <li>
