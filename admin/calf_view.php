@@ -120,9 +120,9 @@ if (isset($_POST['delete_submit'])){
 //                        $result66=$cow_manager->availableCows();
 
                             $result=$calf_manager->allCalves();
-                        while($row=mysqli_fetch_array($result)){
+                        while($row=$result->fetch_array()){
                             echo '<tr>
-                      <td >'.$row['nickname'].'</td>
+                      <td >'.$row['nick_name'].'</td>
                         <td>'.$row['calf_id'].'</td>
                         <td>'.$row['birth_weight'].'</td>
                         <td>'.$cow_manager->breedResolver($row['id']).'</td>

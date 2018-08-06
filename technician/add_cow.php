@@ -51,14 +51,7 @@ if (isset($_POST['submit'])){
 
         <ul class="list-styled components">
             <p>Dummy heading</p>
-            <!-- <li class="active">
-                 <a href="#homesubmenu" data-toggle="collapse" aria-expanded="false"  class="dropdown-toggle">Home</a>
-                 <ul class="collapse list-styled" id="homesubmenu">
-                   <li><a href="">Home 1</a></li>
-                   <li><a href="">Home 2</a></li>
-                   <li><a href="">Home 3</a></li>
-                 </ul>
-             </li>-->
+
 
             <?php
             require_once 'sidebar.php';
@@ -141,7 +134,7 @@ if (isset($_POST['submit'])){
 
 
                                     $results=$breed_manger->allBreeds();
-                                    while ($row=mysqli_fetch_array($results)){
+                                    while ($row=$results->fetch_array()){
                                         echo "<option value='$row[0]'>$row[1]</option>";
 
                                     }

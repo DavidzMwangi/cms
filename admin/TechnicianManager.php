@@ -27,9 +27,15 @@ class TechnicianManager
         if ($this->DB->connect()->query($sql) == true) {
             return true;
         } else {
-            echo false;
+            return false;
         }
 
 
+    }
+
+    public function allTechnicians()
+    {
+        $sql="SELECT * FROM users WHERE user_type=0";
+        return $this->DB->connect()->query($sql);
     }
 }

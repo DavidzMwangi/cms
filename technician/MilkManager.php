@@ -23,8 +23,8 @@ class MilkManager{
     {
         $today=date('Y-m-d');
 
-        $sql="SELECT * FROM milking WHERE date='".$today."'";
-        return mysqli_query($this->db->connect(),$sql);
+        $sql="SELECT * FROM milk_records WHERE date='".$today."'";
+        return $this->db->connect()->query($sql);
 
 
     }

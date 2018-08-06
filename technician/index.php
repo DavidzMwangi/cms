@@ -9,8 +9,18 @@
      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css"  href="css/main.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/DataTables/datatables.css">
+
 </head>
+<?php
+
+
+require_once "CalfManager.php";
+
+$calf_manger= new CalfManager();
+
+
+?>
 <body>
     <div class="wrapper">
         <!-- sidebar -->
@@ -44,11 +54,59 @@
             ?>
             <div class="container-fluid">
 
-               <div class="row">
-                   <div class="col-md-12 col-lg-12 col-sm-12">
+                <div class="card " style="margin-top: 25px">
+                    <div class="card-header">
 
-                   </div>
-               </div>
+                        <h3>Current Milking Schedule</h3>
+                        <hr>
+                    </div>
+
+                    <div class="card-body">
+
+
+                        <table id="cows_table" class="display">
+                            <thead>
+                            <tr>
+                                <th>Calf Id</th>
+                                <th>Calf Weight</th>
+                                <th>Week</th>
+                                <th>Milk Amount</th>
+                                <th>Creation Date</th>
+                                <th>Actions</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+
+
+
+                            <?php
+
+                            $result66=$calf_manger->activeCalfMilkRecords();
+
+
+                            while($row=$result66->fetch_array()){
+                                echo '<tr>
+                      <td >'.$row['calf_id'].'</td>
+                        <td>'.$row['calf_weight'].'</td>
+                        <td>'.$row['week'].'</td>
+                        <td>'.$row['milk_amount'].'</td>
+                        <td>'.$row['created_at'].'</td>
+                       <td>
+                       <a href="../technician/add_calf_weight.php"><button class="btn btn-outline-primary"   >Update Calf Weight</button></a>
+                         </td>
+                        </tr>';
+                            }
+                            ?>
+
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -59,5 +117,17 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript" charset="utf8" src="../assets/plugins/DataTables/datatables.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('#cows_table').DataTable();
+
+
+        });
+
+
+    </script>
 </body>
 </html>

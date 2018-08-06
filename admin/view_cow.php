@@ -1,4 +1,5 @@
-<!--<!DOCTYPE html>-->
+<!DOCTYPE html>
+<html>
 <?php
 //session_start();
 //include_once '../login/user.php';
