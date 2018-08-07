@@ -70,6 +70,9 @@ class CalfManager
         }else if ($result->num_rows>1){
             //unlikely to happen but in case it does select the last record that is in the result
             $num_rows=$result->num_rows;
+            $all_records=$result->fetch_array();
+//            $previous_week_record=end($all_records);
+//            $previous_week_record=array_pop($all_records);
             //TODO get the last record from the array of result
 
         }else{

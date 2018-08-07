@@ -174,6 +174,7 @@ $calf_manager=new CalfManager();
         var url='utils.php?calf_id='+ calf_id;
         axios.get(url)
             .then(function (res) {
+
                 console.log(res.data)
             })
             .catch(function (reason) {
