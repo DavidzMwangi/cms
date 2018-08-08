@@ -101,6 +101,10 @@ $calf_manager=new CalfManager();
             <div class="card " style="margin-top: 25px">
                 <div class="card-header">
 
+                    <?php
+                   echo $calf_manager->weekCalculator('cow11');
+
+                    ?>
                     <h3>Calf Records</h3>
                     <hr>
                 </div>
@@ -108,7 +112,7 @@ $calf_manager=new CalfManager();
                 <div class="card-body">
 
 
-                    <table id="cows_table" class="display">
+                    <table id="calf_table" class="display">
                         <thead>
                         <tr>
                             <th>Calf Id</th>
@@ -161,8 +165,8 @@ $calf_manager=new CalfManager();
 
     $(document).ready(function () {
         $('#cow_name').select2();
-        $('#cows_table').DataTable({
-            'pageLength':20
+       window.calf_table= $('#calf_table').DataTable({
+            'pageLength':10
         });
 
 
@@ -172,9 +176,17 @@ $calf_manager=new CalfManager();
         //get the calf record
 
         var url='utils.php?calf_id='+ calf_id;
+        calf_table.clear().draw();
         axios.get(url)
             .then(function (res) {
-                console.log(res.data)
+
+                $.each(res.data,function (key,value) {
+
+                    calf_table.row.add([value[1],value[2],value[3],value[4],value[6]]);
+                    // console.log(value[1])
+
+                });
+                calf_table.draw();
             })
             .catch(function (reason) {
                 console.log("error")

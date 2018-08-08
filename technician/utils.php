@@ -13,11 +13,11 @@ if (isset($_GET['calf_id'])){
 
    $result= $DB->connect()->query($sql);
    if ($result->num_rows>0){
-       $records=$result->fetch_array();
-       return json_encode($result->num_rows);
+       $records=$result->fetch_all();
+       echo json_encode($records);
 
    }else{
-       return json_encode(null);
+       echo json_encode(null);
 
    }
 //    echo $_GET['calf_id'];
