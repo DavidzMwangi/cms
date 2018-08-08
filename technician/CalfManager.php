@@ -59,8 +59,30 @@ class CalfManager
 
     }
 
-    public function addCalfMilk($calf_id,$week,$calf_weight)
+    public function weekCalculator($calf_id)
     {
+        //get the date today
+        $today_date=date("m/d/Y");
+        $calf=$this->calfRecord($calf_id)[3];
+        $calf_dob=date("m/d/Y",strtotime($calf));
+
+
+        $today_date = (string)$today_date;
+
+        $today_f=DateTime::createFromFormat('m/d/Y',$today_date);
+        $dob_f=DateTime::createFromFormat('m/d/Y',$calf_dob);
+
+      return   floor($today_f->diff($dob_f)->days/7);
+
+
+    }
+
+    public function addCalfMilk($calf_id,$calf_weight)
+
+    {
+
+
+        $week=$this->weekCalculator($calf_id);
         $sq1l="SELECT * FROM calf_weight_milk WHERE calf_id='".$calf_id."' AND is_active=true";
         //check if the record is single or are several rows
         $result=$this->db->connect()->query($sq1l);
@@ -72,8 +94,7 @@ class CalfManager
             $num_rows=$result->num_rows;
             $all_records=$result->fetch_array();
 //            $previous_week_record=end($all_records);
-//            $previous_week_record=array_pop($all_records);
-            //TODO get the last record from the array of result
+            $previous_week_record=array_pop($all_records);
 
         }else{
             //no record is found meaning the calf has completed the period of being given milk or its the new instance of the calf
@@ -131,5 +152,14 @@ class CalfManager
     {
         $sql="SELECT * FROM calf_weight_milk WHERE is_active=true";
         return $this->db->connect()->query($sql);
+    }
+
+    public function calfRecord($calf_id)
+    {
+        $sql="SELECT * FROM calf WHERE calf_id='".$calf_id."'";
+        $query=$this->db->connect()->query($sql);
+
+        $result=$query->fetch_row();
+        return $result;
     }
 }

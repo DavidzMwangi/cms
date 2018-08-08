@@ -24,11 +24,16 @@ $calf_manager=new CalfManager();
 
 if (isset($_POST['submit'])){
 
+
+
+//    $data=$_POST['week'];
+//    $week=substr($data,strpos($data,"W")+1);
+
+
     $calf_id=$_POST['calf_id'];
-    $week=$_POST['week'];
     $calf_weight=$_POST['calf_weight'];
 
-  switch ($calf_manager->addCalfMilk($calf_id,$week,$calf_weight)){
+  switch ($calf_manager->addCalfMilk($calf_id,$calf_weight)){
       case 1:
           $status=1;
           break;
@@ -137,13 +142,11 @@ if (isset($_POST['submit'])){
 
                             </div>
 
-                            <div class="col-md-4 col-sm-12 col-lg-4">
-                                <label for="week">Week</label>
-                                <select id="week" name="week" class="form-control" required>
-                                    <option selected disabled>Select Current Week</option>
-                                    <option value="1">One</option>
-                                </select>
-                            </div>
+<!--                            <div class="col-md-4 col-sm-12 col-lg-4">-->
+<!--                                <label for="week">Week</label>-->
+<!--                                <input type="week" class="form-control" id="week" name="week">-->
+<!---->
+<!--                            </div>-->
 
 
                             <div class="col-md-4 col-sm-12 col-lg-4">

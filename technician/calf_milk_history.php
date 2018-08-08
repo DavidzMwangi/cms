@@ -101,6 +101,10 @@ $calf_manager=new CalfManager();
             <div class="card " style="margin-top: 25px">
                 <div class="card-header">
 
+                    <?php
+                   echo $calf_manager->weekCalculator('cow11');
+
+                    ?>
                     <h3>Calf Records</h3>
                     <hr>
                 </div>
