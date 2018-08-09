@@ -22,6 +22,23 @@ if (isset($_GET['calf_id'])){
    }
 //    echo $_GET['calf_id'];
 }else{
-    echo "kimoda";
+    echo null;
+}
+
+
+if (isset($_GET['edit_cow_id'])){
+
+    //get the record of the cow
+    $sql22="SELECT * FROM cows WHERE id='".$_GET['edit_cow_id']."'";
+
+
+    $result1=$DB->connect()->query($sql22);
+    if ($result1->num_rows>0){
+        $records1=$result1->fetch_assoc();
+        echo json_encode($records1);
+    }else{
+        echo json_encode(null);
+    }
+
 }
 ?>
