@@ -31,6 +31,15 @@ class CowManager
 
         }
 
+    public function updateCow($cow_id,$nickname,$dob)
+    {
+        $sql="UPDATE cows SET nick_name='".$nickname."',DOB='".$dob."' WHERE cow_id='".$cow_id."'";
+        if($this->db->connect()->query($sql)){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public function availableCows()
     {
 
