@@ -93,11 +93,14 @@ $milk_manager=new MilkManager();
 
 
                 <div class="card-header">
-                    <h3>Select Date</h3>
+                    <h3>Specific Date Milk Production</h3>
                 </div>
                 <div class="card-body">
+                    <div class="form-group col-md-4 col-sm-12 col-lg-4">
+                        <label for="datepicker">Select Date</label>
+                        <input data-provide="datepicker"  id="datepicker" class="form-control">
+                    </div>
 
-                   <input data-provide="datepicker"  id="datepicker" class="form-control">
                 </div>
 
             </div>
@@ -105,7 +108,7 @@ $milk_manager=new MilkManager();
 
 
                 <div class="card-header">
-                    <h3>Daily Milk Records</h3>
+                    <h3> Milk Records</h3>
                 </div>
                 <div class="card-body">
 
@@ -113,36 +116,16 @@ $milk_manager=new MilkManager();
                         <thead>
                         <tr>
                             <th>Cow ID</th>
-                            <th>Cow NickName</th>
-                            <th>Cow Breed</th>
+<!--                            <th>Cow NickName</th>-->
+<!--                            <th>Cow Breed</th>-->
                             <th>Morning Amount</th>
                             <th>Evening Amount</th>
                             <th>Average Milk</th>
                             <th>Total Milk</th>
                         </tr>
                         </thead>
-                        <!--                                            <td>'.$cow_manager->breedResolver($cow_manager->singleCow($row['cow_id'])['breed_id']).'</td>-->
 
                         <tbody>
-                        <?php
-
-                        $result66=$milk_manager->SingleDailyMilkRecords();
-
-
-                        while($row=$result66->fetch_array()){
-                            echo $cow_manager->breedResolver($cow_manager->singleCow($row['cow_id'])) . '<tr>
-                                                  <td >'.$row['cow_id'].'</td>
-                                                  <td >'.$row['id'].'</td>
-                                                 <td>' .'</td>
-
-                        <td>'.$row['morning_amount'].'</td>
-                        <td>'.$row['evening_amount'].'</td>
-                        <td>'.(($row['evening_amount']+$row['morning_amount'])/2).'</td>
-                        <td>'.(($row['evening_amount']+$row['morning_amount'])).'</td>
-                      
-                        </tr>';
-                        }
-                        ?>
                         </tbody>
 
                     </table>
@@ -197,28 +180,15 @@ $milk_manager=new MilkManager();
     <script src="../assets/js/c3.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script type="text/javascript" charset="utf8" src="../assets/plugins/DataTables/datatables.js"></script>
+    <script type="text/javascript" src="../assets/plugins/axios/axios.min.js"></script>
 
 <!--    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
 
     <script src="../assets/plugins/jQueryUI/jquery-ui.js"></script>
-    <script>
 
-        $( "#datepicker" ).datepicker({
-            dateFormat: 'yy-mm-dd',
-            onSelect:function(date){
-
-                    alert(date)
-
-
-            }
-        });
-
-      // var a=  $.datepicker.formatDate( "yy-mm-dd", dater );
-      //   alert(a)
-    </script>
     <script>
         $(document).ready(function () {
-            $('#table_id').DataTable({
+          window.milk_table=  $('#table_id').DataTable({
 
             });
 
@@ -229,6 +199,38 @@ $milk_manager=new MilkManager();
         function deleteF(id) {
             $('#cow_to_delete').val(id)
         }
+    </script>
+
+    <script>
+
+        $( "#datepicker" ).datepicker({
+            dateFormat: 'yy-mm-dd',
+            onSelect:function(date){
+
+                milk_table.clear().draw();
+                var url='utils.php?specific_date_milk='+date;
+                axios.get(url)
+                    .then(function (res) {
+
+                        $.each(res.data,function (key,value) {
+                            //divide by 10 to prevent many decimals
+                            var total= (Number(value[2])*10+  Number(value[3])*10)/10;
+                            var average=(Number(value[2])*10+Number(value[3])*10)/20;
+                            milk_table.row.add([value[1],value[2],value[3],average,total])
+                        });
+
+                        milk_table.draw();
+
+                        // console.log(res.data)
+                    })
+                    .catch(function (reason) {
+                        alert('There was an error loading the data. Please retry')
+                    });
+
+            }
+        });
+
+      //   alert(a)
     </script>
 </body>
 
