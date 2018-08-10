@@ -58,4 +58,15 @@ if (isset($_GET['all_breeds'])){
 
     echo  json_encode($result44->fetch_all());
 }
+
+if (isset($_GET['edit_calf_id_id'])){
+
+    $id_id=$_GET['edit_calf_id_id'];
+
+    $sql55="SELECT * FROM calf WHERE id='".$id_id."'";
+
+   $query55= $DB->connect()->query($sql55);
+   echo json_encode($query55->fetch_assoc());
+}
+
 ?>

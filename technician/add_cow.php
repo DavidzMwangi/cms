@@ -45,11 +45,12 @@ if (isset($_POST['submit'])){
 
 if (isset($_POST['edit_submit'])){
     //get the values
+    $old_cow_id=$_POST['edit_cow_record_id'];
     $cow_id=$_POST['edit_cow_id'];
     $nick_name=$_POST['edit_cow_nick_name'];
     $dob=$_POST['edit_dob'];
     $breed_id=$_POST['edit_breed'];
-    if ($cow_manager->updateCow($cow_id,$nick_name,$dob,$breed_id)){
+    if ($cow_manager->updateCow($old_cow_id,$cow_id,$nick_name,$dob,$breed_id)){
             $edit_status=true;
     }else{
             $edit_status=false;
@@ -59,18 +60,11 @@ if (isset($_POST['edit_submit'])){
 <div class="wrapper">
     <!-- sidebar -->
     <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3>NAV HEADER</h3>
-        </div>
-
-        <ul class="list-styled components">
-            <p>Dummy heading</p>
 
 
             <?php
             require_once 'sidebar.php';
             ?>
-        </ul>
     </nav>
 
     <!-- page content -->
@@ -339,7 +333,6 @@ if (isset($_POST['edit_submit'])){
         var url='utils.php?edit_cow_id='+cow_id;
         axios.get(url)
             .then(function (res) {
-
                 $("#edit_cow_id").val(res.data['cow_id']);
                 $('#edit_cow_nick_name').val(res.data['nick_name']);
                 $('#edit_dob').val(res.data['DOB']);
