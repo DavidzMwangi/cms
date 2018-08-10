@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d9bedd4-717e-49d8-84e8-258c78f147e5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/technician/CalfManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/CalfManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technician/CowManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/CowManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technician/add_calf.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/add_calf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technician/add_calf_weight.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/add_calf_weight.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technician/add_cow.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/add_cow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technician/breed.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/breed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technician/calf_milk_history.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/calf_milk_history.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technician/calf_weekly_milk_schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/calf_weekly_milk_schedule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technician/daily_milk.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/daily_milk.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technician/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/technician/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/nav.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/technician/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/technician/utils.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/utils.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,47 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="add_cow.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/technician/add_cow.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="67" selection-start-line="67" selection-end-line="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_milk_record.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/technician/add_milk_record.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1151">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="breed.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/technician/breed.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="daily_milk.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="daily_milk.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/technician/daily_milk.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="80" column="12" lean-forward="true" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calf_milk_history.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/technician/calf_milk_history.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="170">
+              <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
             </state>
           </provider>
         </entry>
@@ -99,17 +54,56 @@
       <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/technician/sidebar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="-187">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_calf_weight.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/technician/add_calf_weight.php">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="782">
+              <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/sidebar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/nav.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+              <folding>
+                <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/technician/nav.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -136,7 +130,6 @@
         <option value="$PROJECT_DIR$/login/dbconfig.php" />
         <option value="$PROJECT_DIR$/admin/index.php" />
         <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/login/User.php" />
         <option value="$PROJECT_DIR$/technician/index.html" />
         <option value="$PROJECT_DIR$/technician/footer.php" />
         <option value="$PROJECT_DIR$/technician/save_milk.php" />
@@ -146,7 +139,6 @@
         <option value="$PROJECT_DIR$/technician/CowManager.php" />
         <option value="$PROJECT_DIR$/technician/CalfManager.php" />
         <option value="$PROJECT_DIR$/technician/add_calf.php" />
-        <option value="$PROJECT_DIR$/technician/sidebar.php" />
         <option value="$PROJECT_DIR$/technician/add_calf_weight.php" />
         <option value="$PROJECT_DIR$/technician/add_cow.php" />
         <option value="$PROJECT_DIR$/technician/breed.php" />
@@ -154,6 +146,9 @@
         <option value="$PROJECT_DIR$/technician/calf_weekly_milk_schedule.php" />
         <option value="$PROJECT_DIR$/technician/index.php" />
         <option value="$PROJECT_DIR$/technician/daily_milk.php" />
+        <option value="$PROJECT_DIR$/login/User.php" />
+        <option value="$PROJECT_DIR$/technician/sidebar.php" />
+        <option value="$PROJECT_DIR$/technician/nav.php" />
       </list>
     </option>
   </component>
@@ -188,17 +183,6 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="cms" type="cbb8eebc:String" user="cms" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="cms" type="cbb8eebc:String" user="cms" />
-              <item name="assets" type="cbb8eebc:String" user="assets" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="cms" type="cbb8eebc:String" user="cms" />
-              <item name="assets" type="cbb8eebc:String" user="assets" />
-              <item name="font-awesome-4.7.0" type="cbb8eebc:String" user="font-awesome-4.7.0" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
@@ -309,12 +293,12 @@
       <workItem from="1533632111698" duration="1171000" />
       <workItem from="1533720997878" duration="7758000" />
       <workItem from="1533795878562" duration="7657000" />
-      <workItem from="1533831923714" duration="8715000" />
+      <workItem from="1533831923714" duration="12480000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81704000" />
+    <option name="totallyTimeSpent" value="85469000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -327,9 +311,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19213313" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19213313" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -338,7 +321,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32978722" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32978722" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="CSS Styles" order="10" weight="0.32991454" />
@@ -358,13 +341,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/technician/old_index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2244">
-          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/technician/sidebar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -514,9 +490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/technician/nav.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/technician/SaveMilk.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -573,27 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/technician/add_calf.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -604,13 +556,6 @@
             <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
@@ -672,8 +617,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/technician/daily_milk.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="80" column="12" lean-forward="true" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
+        <state relative-caret-position="170">
+          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/nav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/technician/nav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
         </state>
       </provider>
     </entry>

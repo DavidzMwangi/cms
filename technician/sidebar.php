@@ -3,15 +3,15 @@
 </div>
 
 <ul class="list-styled components">
-    <p>Dummy heading</p>
-    <!-- <li class="active">
-         <a href="#homesubmenu" data-toggle="collapse" aria-expanded="false"  class="dropdown-toggle">Home</a>
-         <ul class="collapse list-styled" id="homesubmenu">
-           <li><a href="">Home 1</a></li>
-           <li><a href="">Home 2</a></li>
-           <li><a href="">Home 3</a></li>
-         </ul>
-     </li>-->
+
+    <?php
+    if (isset($_SESSION['username'])){
+        echo '<p>'.$_SESSION['username'].'</p>';
+    }else{
+        echo '<p>Not Logged In</p>';
+    }
+    ?>
+
 
 
     <li><a href="index.php"> <i class="fa fa-desktop mr-3"> </i>Dashboard</a></li>
