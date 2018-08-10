@@ -21,7 +21,8 @@
         <li>
             <a href="../admin/view_cow.php"><i class="fa fa-address-card mr-3"></i>View Cow</a>
         </li>
-        <li><a href="../admin/daily_milk_production.php"><i class="fa fa-address-card mr-3"></i>Daily Milk Production</a></li>
+        <li><a href="../admin/daily_milk_production.php"><i class="fa fa-address-card mr-3"></i>Today Milk Production</a></li>
+        <li><a href="../admin/milk_production.php"><i class="fa fa-address-card mr-3"></i>Milk Production</a></li>
 
         <li>
             <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Records</a>
