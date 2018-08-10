@@ -98,7 +98,7 @@ $milk_manager=new MilkManager();
                 <div class="card-body">
                     <div class="form-group col-md-4 col-sm-12 col-lg-4">
                         <label for="datepicker">Select Date</label>
-                        <input data-provide="datepicker"  id="datepicker" class="form-control">
+                        <input data-provide="datepicker"  id="datepicker" placeholder="Click here to select date" class="form-control">
                     </div>
 
                 </div>

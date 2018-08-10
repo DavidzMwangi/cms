@@ -7,26 +7,20 @@
 
     <ul class="list-styled components">
         <p>Menu </p>
-        <!-- <li class="active">
-                <a href="#homesubmenu" data-toggle="collapse" aria-expanded="false"  class="dropdown-toggle">Home</a>
-                <ul class="collapse list-styled" id="homesubmenu">
-                  <li><a href="">Home 1</a></li>
-                  <li><a href="">Home 2</a></li>
-                  <li><a href="">Home 3</a></li>
-                </ul>
-            </li> -->
 
-        <li><a href=""><i class="fa fa-address-card mr-3"></i>Dashboard</a></li>
-        <li><a href="../admin/calf_view.php"><i class="fa fa-address-card mr-3"></i>View Calf</a></li>
+
+        <li><a href=""><i class="fa fa-dashboard mr-3"></i>Dashboard</a></li>
+        <li><a href="../admin/calf_view.php"><i class="fa fa-share mr-3"></i>View Calf</a></li>
         <li>
-            <a href="../admin/view_cow.php"><i class="fa fa-address-card mr-3"></i>View Cow</a>
+            <a href="../admin/view_cow.php"><i class="fa fa-share mr-3"></i>View Cow</a>
         </li>
-        <li><a href="../admin/daily_milk_production.php"><i class="fa fa-address-card mr-3"></i>Today Milk Production</a></li>
-        <li><a href="../admin/milk_production.php"><i class="fa fa-address-card mr-3"></i>Milk Production</a></li>
+        <li><a href="../admin/daily_milk_production.php"><i class="fa fa-database mr-3"></i>Today Milk Production</a></li>
+        <li><a href="../admin/milk_production.php"><i class="fa fa-database mr-3"></i>Milk Production</a></li>
 
         <li>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Records</a>
-            <ul class="collapse show list-styled" id="pageSubmenu">
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-reddit mr-3"></i>Records</a>
+<!--            <ul class="collapse show list-styled" id="pageSubmenu">-->
+            <ul class="collapse list-styled" id="pageSubmenu">
                 <li>
                     <a href="#" onclick="loadTodaysData(event)" > Daily</a>
                 </li>
@@ -43,8 +37,9 @@
         </li>
 
         <li>
-            <a href="#monthMenu" data-toggle="collapse"  class="dropdown-toggle">Monthly Records</a>
-            <ul class="collapse show list-styled" id="monthMenu">
+
+            <a href="#monthMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-database mr-3"></i>Monthly Records</a>
+            <ul class="collapse  list-styled" id="monthMenu">
                 <li>
                     <a href="../admin/monthlyTabularMilkRecords.php">Tabular View</a>
                 </li>
@@ -56,7 +51,12 @@
         </li>
 
         <li>
-            <a href="manage_technicians.php">Manage Accounts</a>
+            <a href="manage_technicians.php"><i class="fa fa-users mr-3"></i>Manage Accounts</a>
+
+        </li>
+
+        <li>
+            <a href="../logout.php"><i class="fa fa-lock mr-3"></i>Logout</a>
 
         </li>
     </ul>
