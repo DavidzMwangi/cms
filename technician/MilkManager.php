@@ -42,9 +42,9 @@ class MilkManager{
         }
     }
 
-    public function editMilk($milk_record_id,$morning_amount,$evening_amount)
+    public function editMilk($milk_record_id,$morning_amount,$evening_amount,$cow_id)
     {
-        $sql="UPDATE milk_records SET evening='".$evening_amount."' ,morning='".$morning_amount."' WHERE id='".$milk_record_id."'";
+        $sql="UPDATE milk_records SET evening='".$evening_amount."' ,morning='".$morning_amount."', cow_id='".$cow_id."' WHERE id='".$milk_record_id."'";
         if ($this->db->connect()->query($sql)==true){
             return true;
         }else{

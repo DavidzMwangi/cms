@@ -51,8 +51,8 @@ if (isset($_POST['edit_submit'])){
     $edit_milk_record_id=$_POST['edit_milk_record_id'];
     $edit_morning_amount=$_POST['edit_morning_amount'];
     $edit_evening_amount=$_POST['edit_evening_amount'];
-
-    if ($data->editMilk($edit_milk_record_id,$edit_morning_amount,$edit_evening_amount)){
+    $edit_cow_id=$_POST['edit_cow_id'];
+    if ($data->editMilk($edit_milk_record_id,$edit_morning_amount,$edit_evening_amount,$edit_cow_id)){
         $edit_status=true;
     }else{
         //error occurred
@@ -64,25 +64,11 @@ if (isset($_POST['edit_submit'])){
 <div class="wrapper">
     <!-- sidebar -->
     <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3>NAV HEADER</h3>
-        </div>
-
-        <ul class="list-styled components">
-            <p>Dummy heading</p>
-            <!-- <li class="active">
-                 <a href="#homesubmenu" data-toggle="collapse" aria-expanded="false"  class="dropdown-toggle">Home</a>
-                 <ul class="collapse list-styled" id="homesubmenu">
-                   <li><a href="">Home 1</a></li>
-                   <li><a href="">Home 2</a></li>
-                   <li><a href="">Home 3</a></li>
-                 </ul>
-             </li>-->
 
             <?php
             require_once 'sidebar.php';
             ?>
-        </ul>
+
     </nav>
 
     <!-- page content -->
@@ -151,7 +137,7 @@ if (isset($_POST['edit_submit'])){
                            <div class="col-md-4 col-sm-12 col-lg-4">
                                <label for="cow_name">Cow ID</label>
                                <select id="cow_name" name="cow" class="form-control" required>
-                                   <option selected disabled>Select a cow</option>
+<!--                                   <option selected readonly>Select a cow</option>-->
                                    <?php
                                    $sql="SELECT cow_id,nick_name FROM cows ";
                                    $results=mysqli_query($DB->connect(),$sql);
@@ -169,7 +155,7 @@ if (isset($_POST['edit_submit'])){
                            <div class="col-md-4 col-sm-12 col-lg-4">
                                <label for="cow_name">Milking Time</label>
                                <select id="cow_name" name="milking_time" class="form-control" required>
-                                   <option selected disabled>Select Milking Time</option>
+<!--                                   <option selected disabled>Select Milking Time</option>-->
                                    <option value="1" >Morning</option>
                                    <option value="2">Evening</option>
                                </select>
@@ -178,7 +164,7 @@ if (isset($_POST['edit_submit'])){
 
                            <div class="col-md-4 col-sm-12 col-lg-4">
                                <label for="cow_name">Amount in litres</label>
-                               <input class="form-control" placeholder="Milk Produced (ltrs)" name="litres_amount" type="number" min="0" required>
+                               <input class="form-control" placeholder="Milk Produced (ltrs)" name="litres_amount" type="number" min="0" step="any" required>
                            </div>
                        </div>
                        <p></p>
@@ -212,7 +198,7 @@ if (isset($_POST['edit_submit'])){
                 <table id="table_id" class="display">
                     <thead>
                     <tr>
-                        <th>Cow NickName</th>
+                        <th>Cow ID</th>
                         <th>Milking Date</th>
                         <th>Morning Amount(Litres)</th>
                         <th>Evening Amount(Litres)</th>
@@ -276,20 +262,19 @@ if (isset($_POST['edit_submit'])){
                 <input type="hidden" id="edit_milk_record_id" name="edit_milk_record_id">
                 <div class="row">
                     <div class="col-md-4 col-lg-4 col-sm-12">
-                       <label for="cow_name">Cow Nick Name</label>
-                        <span id="cow_name"></span>
-<!--                        <input type="date" name="date" class="form-control" id="date" required>-->
+                       <label for="edit_cow_id">Cow Id</label>
+                        <input type="text" name="edit_cow_id" class="form-control" id="edit_cow_id" required>
                     </div>
 
                     <div class="col-md-4 col-lg-4 col-sm-12">
                         <label for="morning_amount">Morning Amount</label>
 
-                        <input type="number" id="morning_amount" name="edit_morning_amount" min="0" class="form-control" >
+                        <input type="number" id="morning_amount" name="edit_morning_amount" min="0" step="any" class="form-control" >
                     </div>
 
                     <div class="col-md-4 col-lg-4 col-sm-12">
                        <label for="evening_amount">Evening Amount </label>
-                        <input type="number" class="form-control" id="evening_amount" name="edit_evening_amount" min="0">
+                        <input type="number" class="form-control" id="evening_amount" step="any" name="edit_evening_amount" min="0">
 
                     </div>
                 </div>
@@ -367,6 +352,8 @@ if (isset($_POST['edit_submit'])){
 <script src="js/main.js"></script>
 <script src="../assets/plugins/select2/select2.js"></script>
 <script type="text/javascript" charset="utf8" src="../assets/plugins/DataTables/datatables.js"></script>
+<script type="text/javascript" src="../assets/plugins/axios/axios.min.js"></script>
+
 <script>
 
     $(document).ready(function () {
@@ -379,12 +366,27 @@ if (isset($_POST['edit_submit'])){
     });
 
     function getSelectedDetails(milk_record_id,morning_amount,evening_amount) {
-        // alert
+
         $('#morning_amount').val(morning_amount);
         $('#evening_amount').val(evening_amount);
         $('#edit_milk_record_id').val(milk_record_id);
         // $('#cow_name').val(id)
+        getEditRecord(milk_record_id);
+    }
 
+    function getEditRecord(id)
+    {
+        var url='utils.php?edit_milk_record_id='+id;
+
+        axios.get(url)
+            .then(function (res) {
+
+                $('#edit_cow_id').val(res.data['cow_id']);
+                // console.log(res.data)
+            })
+            .catch(function (reason) {
+                alert("An error has occurred")
+            })
     }
 </script>
 

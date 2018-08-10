@@ -41,4 +41,32 @@ if (isset($_GET['edit_cow_id'])){
     }
 
 }
+
+if (isset($_GET['edit_milk_record_id'])){
+    $milk_record_id=$_GET['edit_milk_record_id'];
+    $sql33="SELECT * FROM milk_records WHERE id='".$milk_record_id."'";
+
+    $result33=$DB->connect()->query($sql33);
+    $record33=$result33->fetch_assoc();
+
+    echo json_encode($record33);
+}
+
+if (isset($_GET['all_breeds'])){
+    $sql44="SELECT id,name FROM breed";
+    $result44=$DB->connect()->query($sql44);
+
+    echo  json_encode($result44->fetch_all());
+}
+
+if (isset($_GET['edit_calf_id_id'])){
+
+    $id_id=$_GET['edit_calf_id_id'];
+
+    $sql55="SELECT * FROM calf WHERE id='".$id_id."'";
+
+   $query55= $DB->connect()->query($sql55);
+   echo json_encode($query55->fetch_assoc());
+}
+
 ?>

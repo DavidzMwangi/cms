@@ -30,6 +30,18 @@ class CalfManager
 
     }
 
+
+    public function updateCalf($old_calf_id,$calf_id,$calf_weight,$nickname,$breed_id,$dob)
+    {
+
+        $sql="UPDATE calf SET calf_id='".$calf_id."', birth_weight='".$calf_weight."', nick_name='".$nickname."', breed_id='".$breed_id."',dob='".$dob."' WHERE calf_id='".$old_calf_id."'";
+
+        if ($this->db->connect()->query($sql)){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public function showCalf()
     {
         $sql="SELECT * FROM calf ";
