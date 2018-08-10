@@ -80,11 +80,15 @@ $milk_record=new MilkRecord();
 
 
         <div class="card mt-5">
+            <div class="card-header">
 
+                <h3 >Monthly Records Graph</h3>
+            </div>
             <div class="card-body">
 
 
                 <div id="chart">
+
                     <canvas id="myChart" width="400" height="200"></canvas>
 
                 </div>
@@ -131,6 +135,7 @@ $milk_record=new MilkRecord();
             // pointStrokeColor: "#ff0",
             // pointHighlightFill: "#fff000",
             // pointHighlightStroke: "rgba(220,220,220,1)",
+            backgroundColor:"rgba(0,128,0,0.5)",
             data:<?php
             echo $milk_record->monthlyHerds()
             ?>,
@@ -138,7 +143,7 @@ $milk_record=new MilkRecord();
 
             // data: [65, 59, 4, 81, 56, 55, 40,56, 55, 40,56, 55]
         }, {
-            label: "Total Milk Production",
+            label: "Total Milk Production (Litres)",
             //new option, type will default to bar as that what is used to create the scale
             type: "bar",
             // fillColor: "rgba(220,20,220,0.2)",

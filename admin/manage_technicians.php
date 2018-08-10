@@ -192,7 +192,9 @@ require_once 'nav.php';
                       <td >'.$row['username'].'</td>
                         <td>'.$row['created_at'].'</td>
                        <td>
-                       <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" onclick="deleteF('.$row['id'].')" data-target="#centralModalLGInfoDemo"  >Delete</button></a>
+                       <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" onclick="deleteF('.$row['id'].')" data-target="#centralModalLGInfoDemo"  >Delete</button>
+                            <button class="btn btn-primary">Change Password</button>
+                       </a>
                          </td>
                         </tr>';
                 }
