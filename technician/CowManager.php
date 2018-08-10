@@ -31,9 +31,9 @@ class CowManager
 
         }
 
-    public function updateCow($cow_id,$nickname,$dob)
+    public function updateCow($cow_id,$nickname,$dob,$breed_id)
     {
-        $sql="UPDATE cows SET nick_name='".$nickname."',DOB='".$dob."' WHERE cow_id='".$cow_id."'";
+        $sql="UPDATE cows SET nick_name='".$nickname."',DOB='".$dob."', breed_id='".$breed_id."' WHERE cow_id='".$cow_id."'";
         if($this->db->connect()->query($sql)){
             return true;
         }else{
@@ -61,7 +61,6 @@ class CowManager
             return $record['name'];
         }else{
             return null;
-//                return '<span class="alert-danger">Unknown Cow</span>';
         }
     }
 
