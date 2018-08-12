@@ -22,7 +22,8 @@
 <!--            <ul class="collapse show list-styled" id="pageSubmenu">-->
             <ul class="collapse list-styled" id="pageSubmenu">
                 <li>
-                    <a href="#" onclick="loadTodaysData(event)" > Daily</a>
+                    <a href="daily_graph.php"  > Daily</a>
+<!--                    <a href="index.php?daily" onclick="loadTodaysData(event)" > Daily</a>-->
                 </li>
                 <li>
                     <a href="#" onclick="loadMonthlyData(event)">Monthly</a>
@@ -31,7 +32,8 @@
                     <a href="#" onclick="loadMonthlyAverageData(event)">Monthly Average For Cow</a>
                 </li>
                 <li>
-                    <a href="#" onclick="loadYearlyData(event)">Year</a>
+                    <a href="year_graph.php" >Year</a>
+<!--                    <a href="#" onclick="loadYearlyData(event)">Year</a>-->
                 </li>
             </ul>
         </li>
@@ -61,3 +63,5 @@
         </li>
     </ul>
 </nav>
+
+

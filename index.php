@@ -2,7 +2,16 @@
 <?php
 include_once 'header.php';
 ?>
-<body class="index-body" background= "pics/pic.jpeg">
+
+<style type="text/css">
+    #body_body{
+        background-image: url("pics/pic.jpeg");
+        position: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<body class="index-body"  id="body_body" >
 <div class="container" >
   <nav class="navbar">
     <div class="container-fluid">
