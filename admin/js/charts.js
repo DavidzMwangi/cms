@@ -41,7 +41,7 @@ function loadMonthlyData(event, month) {
 
             data.forEach(function (obj) {
                 data1.push((parseFloat(obj.morning) + parseFloat(obj.evening))/ 2.0);
-                var date = new Date(obj.date)
+                var date = new Date(obj.date);
                 data2.push(date.getDate());
             });
             console.log(data1);
@@ -86,7 +86,7 @@ function loadMonthlyAverageData(event,month) {
     }
     $('.months').css('display', 'block');
     $('#' + (1+ new Date().getMonth())).addClass('active');
-    var xmlhttp = new XMLHttpRequest()
+    var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
             var data = JSON.parse(xmlhttp.responseText);
