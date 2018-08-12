@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
+
 <div class="sidebar-header">
     <h3>CMS</h3>
 </div>

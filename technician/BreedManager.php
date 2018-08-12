@@ -21,7 +21,7 @@ class BreedManager
     {
 
 //
-        $sql="SELECT id,name FROM breed";
+        $sql="SELECT id,name FROM breed WHERE deleted_at IS null ";
         return $this->db->connect()->query($sql);
         
     }
@@ -33,5 +33,16 @@ class BreedManager
 
 
         return $this->db->connect()->query($sql);
+    }
+
+    public function deleteBreed($breed_id)
+    {
+        $now=date("Y-m-d h:i:s");
+        $sql="UPDATE breed SET deleted_at='".$now."' WHERE id='".$breed_id."'";
+        if ($this->db->connect()->query($sql)){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

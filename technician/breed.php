@@ -1,20 +1,5 @@
 <?php
-session_start();
-include_once '../login/user.php';
-$user = new User;
-$id = $_SESSION['id'];
-if (!$user->session()){
-    header("location:../login.php");
-}
-else{
-    if (!$user->isAdmin()){
-        header("location:../index.php");
-    }
-}
-if (isset($_REQUEST['q'])){
-    $user->logout();
-    header("location:login.php");
-}
+require_once 'authcontroller.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -48,6 +33,19 @@ if (isset($_POST['submit'])){
         $status=false;
     }
 
+
+
+}
+
+if (isset($_POST['delete_submit'])){
+
+    $breed_id=$_POST['delete_breed'];
+
+    if ($breed_manager->deleteBreed($breed_id)){
+        $delete_status=true;
+    }else{
+        $delete_status=false;
+    }
 }
 ?>
 <div class="wrapper">
@@ -68,6 +66,50 @@ if (isset($_POST['submit'])){
         ?>
 
         <div class="container-fluid">
+
+            <?php
+
+            if (isset($status)){
+                if ( $status){
+
+                    ?>
+                    <div class="alert alert-success">
+
+                        <h5>Breed Saved</h5>
+                    </div>
+
+                    <?php
+                }else {
+                    ?>
+                    <div class="alert alert-danger">
+
+                        <h5>Error saving the breed</h5>
+                    </div>
+                    <?php
+                }
+            }
+
+            if (isset($delete_status)){
+                if ( $delete_status){
+
+                    ?>
+                    <div class="alert alert-success">
+
+                        <h5>Breed Deleted</h5>
+                    </div>
+
+                    <?php
+                }else {
+                    ?>
+                    <div class="alert alert-danger">
+
+                        <h5>Error deleting breed record</h5>
+                    </div>
+                    <?php
+                }
+            }
+            ?>
+
             <div class="card " style="margin-top: 25px">
                 <div class="card-header">
 
@@ -133,11 +175,11 @@ if (isset($_POST['submit'])){
 //
                         $querty=$breed_manager->allBreeds();
 
-                        while ($result=mysqli_fetch_array($querty)){
+                        while ($result=$querty->fetch_array()){
                             echo '<tr>
                         <td>'.$result['name'].'</td>
                         <td>
-                       <a href="#"><button class="btn btn-outline-danger"  data-toggle="modal" data-target="#centralModalLGInfoDemo" >Delete</button></a>
+                       <a href="#"><button class="btn btn-outline-danger" onclick="deleteBreed('.$result['id'].')" data-toggle="modal" data-target="#centralModalLGInfoDemo" >Delete</button></a>
                          </td>
                         </tr>';
                         }
@@ -155,7 +197,41 @@ if (isset($_POST['submit'])){
     </div>
 </div>
 
-<div class="modal fade" id="centralModalLGInfoDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade bottom" id="centralModalLGInfoDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-full-height modal-bottom modal-notify modal-danger" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <form action="" method="post">
+                <div class="modal-header">
+                    <p class="heading lead">Delete Breed</p>
+                    <input type="hidden" id="delete_breed" name="delete_breed">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <h3>Do you want to delete this breed?</h3>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" name="delete_submit" type="submit">Delete
+
+                        </button>
+                        <a role="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="modal fade" id="sifu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-notify modal-info" role="document">
         <!--Content-->
         <div class="modal-content">
@@ -275,7 +351,9 @@ if (isset($_POST['submit'])){
 
     });
 
-
+    function deleteBreed(id) {
+        $('#delete_breed').val(id);
+    }
 </script>
 
 </body>
