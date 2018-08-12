@@ -1,7 +1,7 @@
 <?php
 session_start();
 //session_destroy();
-include_once 'login/User.php';
+require_once 'login/User.php';
 $user = new User;
 if ($user->isloggedIn()) {
     if ($user->isAdmin())

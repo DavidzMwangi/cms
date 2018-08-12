@@ -7,8 +7,8 @@ if (!$user->session()){
     header("location:../login.php");
 }
 else{
-    if (!$user->isAdmin()){
-        header("location:../index.php");
+    if ($user->isAdmin()){
+        header("location:../admin/index.php");
     }
 }
 if (isset($_REQUEST['q'])){

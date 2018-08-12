@@ -177,7 +177,7 @@ if (isset($_POST['delete_submit'])){
         </div>
     </div>
 
-
+</div>
     <!-- js scripts -->
     <script src="../assets/js/jquery.slim.min.js"></script>
     <script src="../assets/js/popper.min.js"></script>
