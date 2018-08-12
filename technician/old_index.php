@@ -4,7 +4,7 @@
 
 require_once 'sidebar.php';
 
-$sidebar=new SideBar();
+//$sidebar=new SideBar();
 
 ?>
 <head>

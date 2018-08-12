@@ -115,7 +115,12 @@ if (isset($_REQUEST['q'])){
 <script src="../assets/js/c3.min.js"></script>
 <script src="../assets/js/main.js"></script>
 <script src="js/charts.js"></script>
+<script type="text/javascript">
 
+    $(document).ready(function () {
+        loadYearlyData(event)
+    })
+</script>
 </body>
 
 </html>

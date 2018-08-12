@@ -58,6 +58,7 @@ if (isset($_REQUEST['q'])){
         }
     </style>
 
+
 </head>
 <body>
 <div class="wrapper">
@@ -116,6 +117,12 @@ if (isset($_REQUEST['q'])){
 <script src="../assets/js/main.js"></script>
 <script src="js/charts.js"></script>
 
+<script type="text/javascript">
+    $(document).ready(function ()
+    {
+        loadTodaysData(event)
+    })
+</script>
 </body>
 
 </html>

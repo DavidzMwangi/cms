@@ -1,3 +1,4 @@
+
 function loadYearlyData(event) {
     event.preventDefault();
     $('.months').css('display', 'none');
@@ -106,13 +107,15 @@ function loadMonthlyAverageData(event,month) {
 
 }
 function loadTodaysData(event, date) {
+    // window.location.href='http://localhost/cms/admin/index.php';
+    // alert('hi');
     event.preventDefault();
     $('.months').css('display', 'none');
     var url = 'getdailydata.php';
     if (date !== undefined) {
         url = url + '?q=' + date
     }
-    var xmlhttp = new XMLHttpRequest()
+    var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
             var data = JSON.parse(xmlhttp.responseText);

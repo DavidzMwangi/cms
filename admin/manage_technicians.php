@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <?php
-//session_start();
-//include_once '../login/user.php';
-//$user = new User;
-//$id = $_SESSION['id'];
-//if (!$user->session()){
-//    header("location:../login.php");
-//}
-//else{
-//    if (!$user->isAdmin()){
-//        header("location:../index.php");
-//    }
-//}
-//if (isset($_REQUEST['q'])){
-//    $user->logout();
-//    header("location:login.php");
-//}
+session_start();
+include_once '../login/user.php';
+$user = new User;
+$id = $_SESSION['id'];
+if (!$user->session()){
+    header("location:../login.php");
+}
+else{
+    if (!$user->isAdmin()){
+        header("location:../index.php");
+    }
+}
+if (isset($_REQUEST['q'])){
+    $user->logout();
+    header("location:login.php");
+}
 
 
 
@@ -193,7 +193,7 @@ require_once 'nav.php';
                         <td>'.$row['created_at'].'</td>
                        <td>
                        <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" onclick="deleteF('.$row['id'].')" data-target="#centralModalLGInfoDemo"  >Delete</button>
-                            <button class="btn btn-primary">Change Password</button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#changePassword">Change Password</button>
                        </a>
                          </td>
                         </tr>';
@@ -213,6 +213,72 @@ require_once 'nav.php';
 </div>
 </div>
 </div>
+
+<div class="modal fade bottom" id="centralModalLGInfoDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-full-height modal-bottom modal-notify modal-danger" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <form action="" method="post">
+                <div class="modal-header">
+                    <p class="heading lead">Delete Calf</p>
+                    <input type="hidden" id="delete_calf" name="delete_calf">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <h3>Do you want to delete this calf?</h3>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" name="delete_submit" type="submit">Delete
+
+                        </button>
+                        <a role="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade bottom" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-full-height modal-bottom modal-notify modal-danger" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <form action="" method="post">
+                <div class="modal-header">
+                    <p class="heading lead">Delete Calf</p>
+<!--                    <input type="hidden" id="delete_calf" name="delete_calf">-->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <h3>Do you want to delete this calf?</h3>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" name="delete_submit" type="submit">Delete
+
+                        </button>
+                        <a role="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </form>
+        </div>
+    </div>
+
+</div>
 <!-- js scripts -->
 <script src="../assets/js/jquery.slim.min.js"></script>
 <script src="../assets/js/popper.min.js"></script>
@@ -231,6 +297,9 @@ require_once 'nav.php';
 
     });
 
+    function deleteF(id) {
+
+    }
 </script>
 </body>
 
