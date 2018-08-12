@@ -38,6 +38,8 @@ for($month = 6; $month < 8; $month++){
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }
 
+
+
         }
     }
 }

@@ -77,24 +77,15 @@
         <?php
         require_once '../admin/nav.php';
         ?>
-        <div class="months" style="display: none">
-            <span id="1" onclick="loadMonthlyData(event,1)" >JAN</span>
-            <span id="2" onclick="loadMonthlyData(event,2)">FEB</span>
-            <span id="3" onclick="loadMonthlyData(event,3)">MAR</span>
-            <span id="4" onclick="loadMonthlyData(event,4)">APR</span>
-            <span id="5" onclick="loadMonthlyData(event,5)">MAY</span>
-            <span id="6" onclick="loadMonthlyData(event,6)">JUN</span>
-            <span id="7" onclick="loadMonthlyData(event,7)">JUL</span>
-            <span id="8" onclick="loadMonthlyData(event, 8)">AUG</span>
-            <span id="9" onclick="loadMonthlyData(event,9)">SEP</span>
-            <span id="10" onclick="loadMonthlyData(event,10)">OCT</span>
-            <span id="11" onclick="loadMonthlyData(event,11)">NOV</span>
-            <span id="12" onclick="loadMonthlyData(event,12)">DEC</span>
+
+        <div class="card">
+            <div class="card-body">
+                <input type="date" class="form-control w-75 d-inline" id="date-picker" >
+                <button class="btn btn-primary" id="load-btn">Load</button></div>
         </div>
-
         <div class="card mt-5">
-
-            <div class="card-body" id="graph">
+            <div class="card-header" id="graph-title"> </div>
+            <div class="card-body">
                 <div id="chart">
 
                 </div>
@@ -114,6 +105,33 @@
 <script src="../assets/js/c3.min.js"></script>
 <script src="../assets/js/main.js"></script>
 <script src="js/charts.js"></script>
+<script>
+    var button =  document.getElementById('load-btn');
+    var date_picker = document.getElementById('date-picker');
+    var title = document.getElementById('graph-title');
+    window.addEventListener('load', function (ev) {
+        loadTodaysData();
+
+        if(!date_picker.value){
+            var date = new Date();
+            var month = (1+date.getMonth()).toString().length ==1 ? '0'+(1+date.getMonth()): (1+date.getMonth());
+            var formatted_date = date.getFullYear() + '-'+ month + '-'+ date.getDate();
+            date_picker.value = formatted_date;
+            title.innerText ="Daily Milk Production for "+ date_picker.value;
+        }
+
+    });
+
+    button.addEventListener('click', function (ev) {
+        if(date_picker.value) {
+            //2018-07-10
+            loadTodaysData(date_picker.value);
+            title.innerText ="Daily Milk Production for "+ date_picker.value;
+        }
+    })
+
+
+</script>
 </body>
 
 </html>

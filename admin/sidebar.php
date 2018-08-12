@@ -22,16 +22,16 @@
 <!--            <ul class="collapse show list-styled" id="pageSubmenu">-->
             <ul class="collapse list-styled" id="pageSubmenu">
                 <li>
-                    <a href="#" onclick="loadTodaysData(event)" > Daily</a>
+                    <a href="daily.php"> Daily</a>
                 </li>
                 <li>
-                    <a href="#" onclick="loadMonthlyData(event)">Monthly</a>
+                    <a href="monthly.php">Monthly</a>
                 </li>
                 <li>
-                    <a href="#" onclick="loadMonthlyAverageData(event)">Monthly Average For Cow</a>
+                    <a href="monthlyaverageforcow.php">Monthly Average For Cow</a>
                 </li>
                 <li>
-                    <a href="#" onclick="loadYearlyData(event)">Year</a>
+                    <a href="allmonths.php">All months</a>
                 </li>
             </ul>
         </li>

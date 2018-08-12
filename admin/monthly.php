@@ -114,6 +114,11 @@
 <script src="../assets/js/c3.min.js"></script>
 <script src="../assets/js/main.js"></script>
 <script src="js/charts.js"></script>
+<script>
+    window.addEventListener('load', function (ev) {
+        loadMonthlyData();
+    });
+</script>
 </body>
 
 </html>
