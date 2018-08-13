@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 24, 2018 at 11:45 AM
+-- Generation Time: Aug 13, 2018 at 12:31 PM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -41,7 +41,7 @@ CREATE TABLE `breed` (
 --
 
 INSERT INTO `breed` (`id`, `name`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'freshian', '2018-07-15 18:50:11', '2018-07-15 18:50:11', NULL),
+(1, 'freshian', '2018-07-15 18:50:11', '2018-07-15 18:50:11', '2018-08-12 02:09:15'),
 (2, 'Ashire', '2018-07-15 22:47:56', '2018-07-15 22:47:56', NULL),
 (3, 'plp', '2018-07-16 23:27:58', '2018-07-16 23:27:58', NULL),
 (4, 'guernsey', '2018-07-16 23:33:39', '2018-07-16 23:33:39', NULL);
@@ -55,12 +55,24 @@ INSERT INTO `breed` (`id`, `name`, `created_at`, `updated_at`, `deleted_at`) VAL
 CREATE TABLE `calf` (
   `id` int(11) NOT NULL,
   `calf_id` varchar(191) NOT NULL,
+  `nick_name` varchar(191) NOT NULL,
   `dob` date NOT NULL,
   `birth_weight` double NOT NULL,
   `breed_id` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `calf`
+--
+
+INSERT INTO `calf` (`id`, `calf_id`, `nick_name`, `dob`, `birth_weight`, `breed_id`, `created_at`, `updated_at`) VALUES
+(1, 'cow11', 'kimoda', '2018-06-07', 20, 1, '2018-08-03 10:47:21', '2018-08-03 10:47:21'),
+(2, 'calf6', 'kimoda 2', '2018-08-01', 78, 1, '2018-08-03 10:47:41', '2018-08-03 10:47:41'),
+(3, '79', 'tena', '2018-08-08', 34.3, 2, '2018-08-03 11:39:30', '2018-08-03 11:39:30'),
+(4, 'effew', 'fefwef', '2018-08-07', 34, 2, '2018-08-03 11:40:05', '2018-08-03 11:40:05'),
+(6, 'lolo', 'plo', '2018-07-26', 23, 2, '2018-08-08 12:11:43', '2018-08-08 12:11:43');
 
 -- --------------------------------------------------------
 
@@ -74,9 +86,23 @@ CREATE TABLE `calf_weight_milk` (
   `calf_weight` double NOT NULL,
   `week` int(11) NOT NULL,
   `milk_amount` double NOT NULL,
+  `is_active` tinyint(1) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `calf_weight_milk`
+--
+
+INSERT INTO `calf_weight_milk` (`id`, `calf_id`, `calf_weight`, `week`, `milk_amount`, `is_active`, `created_at`, `updated_at`) VALUES
+(1, 'cow11', 20, 1, 2, 0, '2018-08-05 06:27:13', '2018-08-05 06:27:13'),
+(4, 'cow11', 56, 2, 5.6, 0, '2018-08-08 11:40:59', '2018-08-08 11:40:59'),
+(5, 'calf6', 6, 2, 0.6, 1, '2018-08-08 11:41:29', '2018-08-08 11:41:29'),
+(6, 'effew', 10, 2, 1, 1, '2018-08-08 11:44:05', '2018-08-08 11:44:05'),
+(7, 'lolo', 23, 1, 2.3, 0, '2018-08-08 12:54:22', '2018-08-08 12:54:22'),
+(8, 'cow11', 56, 4, 4.6, 1, '2018-08-08 12:55:02', '2018-08-08 12:55:02'),
+(11, 'lolo', 23, 2, 2.3, 1, '2018-08-13 05:35:57', '2018-08-13 05:35:57');
 
 -- --------------------------------------------------------
 
@@ -94,6 +120,18 @@ CREATE TABLE `cows` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cows`
+--
+
+INSERT INTO `cows` (`id`, `cow_id`, `nick_name`, `DOB`, `breed_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(2, 'EU 900', 'Shalyn  Kamili', '2018-07-20', 1, NULL, '2018-07-26 12:40:53', '2018-07-26 12:40:53'),
+(3, 'EU 901', 'papo', '2018-07-19', 3, NULL, '2018-07-26 12:42:00', '2018-07-26 12:42:00'),
+(4, 'sdsd', 'fd', '0000-00-00', 0, NULL, '2018-08-09 13:29:57', '2018-08-09 13:29:57'),
+(5, 'ds', 'sdsd', '2018-08-07', 1, NULL, '2018-08-09 13:30:35', '2018-08-09 13:30:35'),
+(6, 'dsd', 'sds', '2018-08-08', 3, NULL, '2018-08-09 13:30:51', '2018-08-09 13:30:51'),
+(7, 'fdf', 'df', '2018-08-07', 2, NULL, '2018-08-09 13:31:27', '2018-08-09 13:31:27');
 
 -- --------------------------------------------------------
 
@@ -114,7 +152,7 @@ CREATE TABLE `milk_records` (
 --
 
 INSERT INTO `milk_records` (`id`, `cow_id`, `morning`, `evening`, `date`) VALUES
-(2026, 'EU 300', 2.3, 4.3, '2018-01-01 00:00:00'),
+(2026, 'EU 300', 2, 4.3, '2018-01-01 00:00:00'),
 (2027, 'EU 301', 3.8, 1.8, '2018-01-01 00:00:00'),
 (2028, 'EU 302', 1.6, 3.1, '2018-01-01 00:00:00'),
 (2029, 'EU 303', 1.4, 2.8, '2018-01-01 00:00:00'),
@@ -2250,7 +2288,31 @@ INSERT INTO `milk_records` (`id`, `cow_id`, `morning`, `evening`, `date`) VALUES
 (4157, 'EU 306', 2, 3.6, '2018-07-30 00:00:00'),
 (4158, 'EU 307', 1.8, 4.4, '2018-07-30 00:00:00'),
 (4159, 'EU 308', 2.5, 4.8, '2018-07-30 00:00:00'),
-(4160, 'EU 309', 2.5, 3.7, '2018-07-30 00:00:00');
+(4160, 'EU 309', 2.5, 3.7, '2018-07-30 00:00:00'),
+(4161, 'Cow Majic', 45, 50, '2018-07-26 00:00:00'),
+(4162, 'EU 900', 4600, 0, '2018-07-26 00:00:00'),
+(4163, 'EU 901', 0, 23, '2018-08-06 00:00:00'),
+(4164, 'EU 900', 2.3, 0, '2018-08-09 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `notifications`
+--
+
+CREATE TABLE `notifications` (
+  `id` int(11) NOT NULL,
+  `calf_id` varchar(191) NOT NULL,
+  `is_read` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `notifications`
+--
+
+INSERT INTO `notifications` (`id`, `calf_id`, `is_read`) VALUES
+(57, 'lolo', 0),
+(62, 'cow11', 1);
 
 -- --------------------------------------------------------
 
@@ -2268,6 +2330,15 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `user_type`, `created_at`, `updated_at`) VALUES
+(1, 'adminer', 'd8578edf8458ce06fbc5bb76a58c5ca4', 1, '2018-08-05 07:28:33', '2018-08-05 07:28:33'),
+(2, 'mwangi', '81dc9bdb52d04dc20036dbd8313ed055', 0, '2018-08-05 07:39:04', '2018-08-05 07:39:04'),
+(4, 'mwangidavidwanjohi@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 0, '2018-08-12 19:37:42', '2018-08-12 19:37:42');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -2281,7 +2352,8 @@ ALTER TABLE `breed`
 -- Indexes for table `calf`
 --
 ALTER TABLE `calf`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `calf_id` (`calf_id`);
 
 --
 -- Indexes for table `calf_weight_milk`
@@ -2294,12 +2366,19 @@ ALTER TABLE `calf_weight_milk`
 --
 ALTER TABLE `cows`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `cow_id` (`cow_id`);
+  ADD UNIQUE KEY `cow_id` (`cow_id`),
+  ADD UNIQUE KEY `cow_id_2` (`cow_id`);
 
 --
 -- Indexes for table `milk_records`
 --
 ALTER TABLE `milk_records`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `notifications`
+--
+ALTER TABLE `notifications`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -2322,31 +2401,37 @@ ALTER TABLE `breed`
 -- AUTO_INCREMENT for table `calf`
 --
 ALTER TABLE `calf`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `calf_weight_milk`
 --
 ALTER TABLE `calf_weight_milk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `cows`
 --
 ALTER TABLE `cows`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `milk_records`
 --
 ALTER TABLE `milk_records`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4161;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4165;
+
+--
+-- AUTO_INCREMENT for table `notifications`
+--
+ALTER TABLE `notifications`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
