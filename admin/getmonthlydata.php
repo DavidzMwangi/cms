@@ -9,8 +9,10 @@ $month = intval($_GET['q']);
 $year = date("Y");
 $conn = new PDO("mysql:host=localhost;dbname=cms", "root", "");
 $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-$query = "select *  from milk_records where YEAR(date)='" . $year . "' and MONTH(date)='" . $month ."'";
+$query = "select  * from milk_records where YEAR(date)='" . $year . "' and MONTH(date)='" . $month ."'";
 
+//$query = "select avg(morning) as morning, avg(evening) as evening , date
+//          from milk_records where YEAR(date)='" . $year . "' and MONTH(date)='" . $month ."' group by Day(date)";
 $result = $conn->query($query);
 
 echo json_encode($result->fetchAll(), false);

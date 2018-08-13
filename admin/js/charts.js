@@ -1,6 +1,6 @@
 
 function loadYearlyData(event) {
-    event.preventDefault();
+    // event.preventDefault();
     $('.months').css('display', 'none');
     var xmlhttp = new XMLHttpRequest();
 
@@ -22,7 +22,10 @@ function loadYearlyData(event) {
 }
 
 function loadMonthlyData(event, month) {
-    event.preventDefault();
+    // event.preventDefault();
+    //remove active class from child elements of months class
+    $('.months >.active').removeClass("active");
+
     var xmlhttp = new XMLHttpRequest();
 
     if (month === "" || month === undefined) {
@@ -40,11 +43,13 @@ function loadMonthlyData(event, month) {
             var data2 = [];
 
             data.forEach(function (obj) {
-                data1.push((parseFloat(obj.morning) + parseFloat(obj.evening))/ 2.0);
+
+                data1.push(Number(((parseFloat(obj.morning) + parseFloat(obj.evening))/ 2.0).toFixed(2)));
+
                 var date = new Date(obj.date);
                 data2.push(date.getDate());
             });
-            console.log(data1);
+            // console.log(data1);
             // console.log(data2);
 
             var realDatax = ['x'];
@@ -71,25 +76,29 @@ function loadMonthlyData(event, month) {
                     count = 1;
                 }
             }
-            drawChart(realDatax, realDatay,'Milking Production in Litres(L)','Date');
+            drawChart(realDatay, realDatax,'Milking Production in Litres(L)','Date');
         }
     };
-    xmlhttp.open("GET", "getmonthlydata.php?q=" + 1, true);
+    console.log(month);
+    xmlhttp.open("GET", "getmonthlydata.php?q=" + month, true);
     xmlhttp.send();
 }
 function loadMonthlyAverageData(event,month) {
-    event.preventDefault();
-
+    //event.preventDefault();
+    $('.months >.active').removeClass("active");
     var url = 'monthaverage.php';
     if (month !== undefined) {
         url = url + '?q=' + month
     }
     $('.months').css('display', 'block');
-    $('#' + (1+ new Date().getMonth())).addClass('active');
-    var xmlhttp = new XMLHttpRequest();
+
+    $('#' + month).addClass('active');
+    var xmlhttp = new XMLHttpRequest()
+
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
             var data = JSON.parse(xmlhttp.responseText);
+            console.log(data);
             var cows =['x'];
             var averageMilk =['Average milk'];
             data.forEach(function (obj) {
@@ -106,10 +115,11 @@ function loadMonthlyAverageData(event,month) {
     xmlhttp.send();
 
 }
-function loadTodaysData(event, date) {
-    // window.location.href='http://localhost/cms/admin/index.php';
-    // alert('hi');
-    event.preventDefault();
+
+function loadTodaysData(date) {
+    //2018-07-10 date format
+    // event.preventDefault();
+
     $('.months').css('display', 'none');
     var url = 'getdailydata.php';
     if (date !== undefined) {

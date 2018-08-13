@@ -17,24 +17,24 @@ if (isset($_REQUEST['q'])){
     header("location:login.php");
 }
 
-require_once  "MilkRecord.php";
-$milk_record=new MilkRecord();
+require_once "MilkRecord.php";
+$milk_record = new MilkRecord();
 
 //?>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
     <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css"  href="../assets/css/c3.min.css" />
-    <link rel="stylesheet" type="text/css"  href="../assets/css/sidebar.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/c3.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/css/sidebar.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/plugins/DataTables/datatables.css">
 
     <style>
-        .months{
+        .months {
             border: 1px solid rgba(0, 0, 0, 0.125);
             background-color: white;
             border-radius: 0.25rem;
@@ -45,19 +45,21 @@ $milk_record=new MilkRecord();
             height: 50px;
             text-align: center;
 
-
         }
-        .months span{
+
+        .months span {
             background-color: #f2f2f2;
             padding: 0.5rem;
             border-radius: 0.25rem;
             cursor: pointer;
         }
-        .months span.active{
+
+        .months span.active {
             background-color: #007bff;
             color: #fff;
         }
-        .months span:hover{
+
+        .months span:hover {
             background-color: #007bff;
             color: #fff;
         }
@@ -81,7 +83,7 @@ $milk_record=new MilkRecord();
 
 
         <div class="container-fluid">
-        <div class="card mt-5">
+            <div class="card mt-5">
 
 
                 <div class="card-header">
@@ -89,60 +91,58 @@ $milk_record=new MilkRecord();
                     <h3>All Milk Records</h3>
 
                     <?php
-//                    echo $milk_record->totalMonthMilk(1);
+                    //                    echo $milk_record->totalMonthMilk(1);
                     ?>
                 </div>
 
                 <div class="card-body">
 
 
-                    <table id="table_id" class="display">
-                        <thead>
-                        <tr>
-                            <th>Month</th>
-                            <th>Total No of Herds</th>
-                            <th>Total Milk Amount(Litres)</th>
-                            <th>Average Morning Amount (litres)</th>
-                            <th>Average Evening Amount (litres)</th>
-                            <th>Herd Average per Month</th>
-                        </tr>
-                        </thead>
-                        <tbody>
+                        <table id="table_id" class="display">
+                            <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Total No of Herds</th>
+                                <th>Total Milk Amount(Litres)</th>
+                                <th>Average Morning Amount (litres)</th>
+                                <th>Average Evening Amount (litres)</th>
+                                <th>Herd Average per Month</th>
+                            </tr>
+                            </thead>
+                            <tbody>
 
 
+                            <?php
+                            //                    echo $milk_record->monRec(1);
+                            //                    echo $milk_record->monRec(2);
+                            //                    echo $milk_record->monRec(3);
+                            //                    echo $milk_record->monRec(4);
+                            //                    echo $milk_record->monRec(5);
+                            //                    echo $milk_record->monRec(6);
+                            //                    echo $milk_record->monRec(7);
+                            //                    echo $milk_record->monRec(8);
+                            //                    echo $milk_record->monRec(9);
+                            //                    echo $milk_record->monRec(10);
+                            //                    echo $milk_record->monRec(11);
+                            //                    echo $milk_record->monRec(12);
 
-                    <?php
-//                    echo $milk_record->monRec(1);
-//                    echo $milk_record->monRec(2);
-//                    echo $milk_record->monRec(3);
-//                    echo $milk_record->monRec(4);
-//                    echo $milk_record->monRec(5);
-//                    echo $milk_record->monRec(6);
-//                    echo $milk_record->monRec(7);
-//                    echo $milk_record->monRec(8);
-//                    echo $milk_record->monRec(9);
-//                    echo $milk_record->monRec(10);
-//                    echo $milk_record->monRec(11);
-//                    echo $milk_record->monRec(12);
-
-                    for ($i=1;$i<=12;$i++){
-                        echo $milk_record->monRec($i);
-
-
-                    }
+                            for ($i = 1; $i <= 12; $i++) {
+                                echo $milk_record->monRec($i);
 
 
-                    ?>
+                            }
 
-                        </tbody>
-                    </table>
-                    <!--                <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" data-target="#fluidModalBottomDangerDemo" >Delete</button></a>-->
 
+                            ?>
+
+                            </tbody>
+                        </table>
+                        <!--                <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" data-target="#fluidModalBottomDangerDemo" >Delete</button></a>--
 
                 </div>
 
 
-        </div>
+            </div>
         </div>
     </div>
 </div>
@@ -163,7 +163,7 @@ $milk_record=new MilkRecord();
     $(document).ready(function () {
         $('#table_id').DataTable({
             "ordering": false,
-            "pageLength":12
+            "pageLength": 12
         });
 
 

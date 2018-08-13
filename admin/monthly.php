@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <?php
-session_start();
-include_once '../login/user.php';
-$user = new User;
-$id = $_SESSION['id'];
-if (!$user->session()){
-    header("location:../login.php");
-}
-else{
-    if (!$user->isAdmin()){
-        header("location:../index.php");
-    }
-}
-if (isset($_REQUEST['q'])){
-    $user->logout();
-    header("location:login.php");
-}
-?>
+//session_start();
+//include_once '../login/user.php';
+//$user = new User;
+//$id = $_SESSION['id'];
+//if (!$user->session()){
+//    header("location:../login.php");
+//}
+//else{
+//    if (!$user->isAdmin()){
+//        header("location:../index.php");
+//    }
+//}
+//if (isset($_REQUEST['q'])){
+//    $user->logout();
+//    header("location:login.php");
+//}
+//?>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -65,9 +65,8 @@ if (isset($_REQUEST['q'])){
     <!-- sidebar -->
 
     <?php
-    include '../admin/sidebar.php';
+    require_once '../admin/sidebar.php';
     ?>
-
 
 
 
@@ -115,7 +114,11 @@ if (isset($_REQUEST['q'])){
 <script src="../assets/js/c3.min.js"></script>
 <script src="../assets/js/main.js"></script>
 <script src="js/charts.js"></script>
-
+<script>
+    window.addEventListener('load', function (ev) {
+        loadMonthlyData();
+    });
+</script>
 </body>
 
 </html>

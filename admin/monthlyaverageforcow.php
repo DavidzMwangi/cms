@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <?php
-session_start();
-include_once '../login/user.php';
-$user = new User;
-$id = $_SESSION['id'];
-if (!$user->session()){
-    header("location:../login.php");
-}
-else{
-    if (!$user->isAdmin()){
-        header("location:../index.php");
-    }
-}
-if (isset($_REQUEST['q'])){
-    $user->logout();
-    header("location:login.php");
-}
-?>
+//session_start();
+//include_once '../login/user.php';
+//$user = new User;
+//$id = $_SESSION['id'];
+//if (!$user->session()){
+//    header("location:../login.php");
+//}
+//else{
+//    if (!$user->isAdmin()){
+//        header("location:../index.php");
+//    }
+//}
+//if (isset($_REQUEST['q'])){
+//    $user->logout();
+//    header("location:login.php");
+//}
+//?>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -65,9 +65,8 @@ if (isset($_REQUEST['q'])){
     <!-- sidebar -->
 
     <?php
-    include '../admin/sidebar.php';
+    require_once '../admin/sidebar.php';
     ?>
-
 
 
 
@@ -79,18 +78,18 @@ if (isset($_REQUEST['q'])){
         require_once '../admin/nav.php';
         ?>
         <div class="months" style="display: none">
-            <span id="1" onclick="loadMonthlyData(event,1)" >JAN</span>
-            <span id="2" onclick="loadMonthlyData(event,2)">FEB</span>
-            <span id="3" onclick="loadMonthlyData(event,3)">MAR</span>
-            <span id="4" onclick="loadMonthlyData(event,4)">APR</span>
-            <span id="5" onclick="loadMonthlyData(event,5)">MAY</span>
-            <span id="6" onclick="loadMonthlyData(event,6)">JUN</span>
-            <span id="7" onclick="loadMonthlyData(event,7)">JUL</span>
-            <span id="8" onclick="loadMonthlyData(event, 8)">AUG</span>
-            <span id="9" onclick="loadMonthlyData(event,9)">SEP</span>
-            <span id="10" onclick="loadMonthlyData(event,10)">OCT</span>
-            <span id="11" onclick="loadMonthlyData(event,11)">NOV</span>
-            <span id="12" onclick="loadMonthlyData(event,12)">DEC</span>
+            <span id="1" onclick="loadMonthlyAverageData(event,1)" >JAN</span>
+            <span id="2" onclick="loadMonthlyAverageData(event,2)">FEB</span>
+            <span id="3" onclick="loadMonthlyAverageData(event,3)">MAR</span>
+            <span id="4" onclick="loadMonthlyAverageData(event,4)">APR</span>
+            <span id="5" onclick="loadMonthlyAverageData(event,5)">MAY</span>
+            <span id="6" onclick="loadMonthlyAverageData(event,6)">JUN</span>
+            <span id="7" onclick="loadMonthlyAverageData(event,7)">JUL</span>
+            <span id="8" onclick="loadMonthlyAverageData(event, 8)">AUG</span>
+            <span id="9" onclick="loadMonthlyAverageData(event,9)">SEP</span>
+            <span id="10" onclick="loadMonthlyAverageData(event,10)">OCT</span>
+            <span id="11" onclick="loadMonthlyAverageData(event,11)">NOV</span>
+            <span id="12" onclick="loadMonthlyAverageData(event,12)">DEC</span>
         </div>
 
         <div class="card mt-5">
@@ -115,7 +114,11 @@ if (isset($_REQUEST['q'])){
 <script src="../assets/js/c3.min.js"></script>
 <script src="../assets/js/main.js"></script>
 <script src="js/charts.js"></script>
-
+<script>
+    window.addEventListener('load', function (ev) {
+        loadMonthlyAverageData(ev,new Date().getMonth()+1);
+    })
+</script>
 </body>
 
 </html>
