@@ -92,7 +92,10 @@ class CalfManager
     public function addCalfMilk($calf_id,$calf_weight)
 
     {
-
+            //check whether there exist a notification that displayed the calf as needing to be updated and change is status of is_read to false
+            require_once 'NotificationManager.php';
+            $notification_manager=new NotificationManager();
+            $notification_manager->notificationDisabler($calf_id);
 
         $week=$this->weekCalculator($calf_id);
         $sq1l="SELECT * FROM calf_weight_milk WHERE calf_id='".$calf_id."' AND is_active=true";
@@ -128,6 +131,10 @@ class CalfManager
 
         //dealing with the milk amount now
         if ((int)$previous_week_record['milk_amount']>0){
+
+            if ($previous_week_record['week']==$week){
+                return 4;
+            }
 
             $sql2="UPDATE calf_weight_milk SET is_active=false WHERE id='".$previous_week_record['id']."'";
 

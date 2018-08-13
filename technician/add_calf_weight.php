@@ -1,20 +1,5 @@
 <?php
-session_start();
-include_once '../login/user.php';
-$user = new User;
-$id = $_SESSION['id'];
-if (!$user->session()){
-    header("location:../login.php");
-}
-else{
-    if (!$user->isAdmin()){
-        header("location:../index.php");
-    }
-}
-if (isset($_REQUEST['q'])){
-    $user->logout();
-    header("location:login.php");
-}
+require_once 'authcontroller.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -57,6 +42,9 @@ if (isset($_POST['submit'])){
       case 3:
           $status=3;
           break;
+      case 4:
+          $status=4;
+          break;
       default:
           $status=5;//error
           break;
@@ -98,7 +86,7 @@ if (isset($_POST['submit'])){
                             if ($status==1){
                                 ?>
                                 <!--                <div class="row">-->
-                                <div class="col-offset-4 col-md-4 col-lg-4 col-sm-12  alert-success" >
+                                <div class="col-offset-4 col-md-12 col-lg-12 col-sm-12  alert-success" >
                                     <h3>Record Saved successfully</h3>
                                 </div>
                                 <!--                </div>-->
@@ -107,7 +95,7 @@ if (isset($_POST['submit'])){
                                 ?>
 
                                 <div class="row">
-                                    <div class="col-md-4 alert-danger">
+                                    <div class="col-md-12 alert-danger">
                                         <h3>The calf has already completed the period of being given milk</h3>
                                     </div>
                                 </div>
@@ -116,11 +104,21 @@ if (isset($_POST['submit'])){
                                 ?>
 
                                 <div class="row">
-                                    <div class="col-md-4 alert-danger">
+                                    <div class="col-md-12 alert-danger">
                                         <h3>The calf has already completed the period of being given milk</h3>
                                     </div>
                                 </div>
                                 <?php
+                            }else if ($status==4){
+                                ?>
+
+                        <div class="row">
+                            <div class="col-md-12 alert-danger">
+                                <h3>The calf weight has already been updated for this week</h3>
+                            </div>
+                        </div>
+                        <?php
+
                             }
                         }
 

@@ -99,6 +99,27 @@ require_once 'nav.php';
             }
 
         }
+
+        if (isset($_POST['delete_submit'])){
+            $technician_id=$_POST['delete_technician'];
+
+           if( $technician_manager->deleteTechnician($technician_id)){
+               $delete_status=true;
+           }else{
+               $delete_status=false;
+           }
+        }
+
+        if (isset($_POST['password_submit'])){
+            $new_password=$_POST['new_password'];
+            $selected_technician_id=$_POST['technician_id'];
+
+            if ($technician_manager->changePassword($selected_technician_id,$new_password)){
+                $change_status=true;
+            }else{
+                $change_status=false;
+            }
+        }
         ?>
 <div class="container-fluid">
 
@@ -116,25 +137,67 @@ require_once 'nav.php';
 
                     <?php
 
-                    if (isset($status) && $status==true){
+                    if (isset($status)){
+                        if ( $status){
 
-                        ?>
-                        <div class="alert alert-success">
+                            ?>
+                            <div class="alert alert-success">
 
-                            <h5>Record Saved</h5>
-                        </div>
+                                <h5>Record Saved</h5>
+                            </div>
 
-                        <?php
-                    }else if (isset($status) && $status==false){
-                        ?>
-                        <div class="alert alert-danger">
+                            <?php
+                        }else {
+                            ?>
+                            <div class="alert alert-danger">
 
-                            <h5>Error saving the record</h5>
-                        </div>
-                        <?php
-                    }else{
-
+                                <h5>Error saving the record</h5>
+                            </div>
+                            <?php
+                        }
                     }
+
+                    if (isset($delete_status)){
+                        if ( $delete_status){
+
+                            ?>
+                            <div class="alert alert-success">
+
+                                <h5>Technician Deleted</h5>
+                            </div>
+
+                            <?php
+                        }else {
+                            ?>
+                            <div class="alert alert-danger">
+
+                                <h5>Error deleting technician record</h5>
+                            </div>
+                            <?php
+                        }
+                    }
+
+
+                    if (isset($change_status)){
+                        if ( $change_status){
+
+                            ?>
+                            <div class="alert alert-success">
+
+                                <h5>Password successfully saved</h5>
+                            </div>
+
+                            <?php
+                        }else {
+                            ?>
+                            <div class="alert alert-danger">
+
+                                <h5>Error changing the password</h5>
+                            </div>
+                            <?php
+                        }
+                    }
+
                     ?>
                 </div>
 
@@ -193,7 +256,7 @@ require_once 'nav.php';
                         <td>'.$row['created_at'].'</td>
                        <td>
                        <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" onclick="deleteF('.$row['id'].')" data-target="#centralModalLGInfoDemo"  >Delete</button>
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#changePassword">Change Password</button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#changePassword" onclick="changePassword('.$row['id'].')">Change Password</button>
                        </a>
                          </td>
                         </tr>';
@@ -222,8 +285,8 @@ require_once 'nav.php';
             <!--Header-->
             <form action="" method="post">
                 <div class="modal-header">
-                    <p class="heading lead">Delete Calf</p>
-                    <input type="hidden" id="delete_calf" name="delete_calf">
+                    <p class="heading lead">Delete Technician</p>
+                    <input type="hidden" id="delete_technician" name="delete_technician">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" class="white-text">&times;</span>
                     </button>
@@ -231,7 +294,7 @@ require_once 'nav.php';
 
                 <!--Body-->
                 <div class="modal-body">
-                    <h3>Do you want to delete this calf?</h3>
+                    <h3>Do you want to delete this technician?</h3>
 
                     <div class="modal-footer">
                         <button class="btn btn-danger" name="delete_submit" type="submit">Delete
@@ -255,24 +318,34 @@ require_once 'nav.php';
             <!--Header-->
             <form action="" method="post">
                 <div class="modal-header">
-                    <p class="heading lead">Delete Calf</p>
-<!--                    <input type="hidden" id="delete_calf" name="delete_calf">-->
+                    <p class="heading lead">Change Password</p>
+                    <input type="hidden" id="technician_id" name="technician_id">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" class="white-text">&times;</span>
                     </button>
                 </div>
 
                 <!--Body-->
+                <form action="" method="post">
                 <div class="modal-body">
-                    <h3>Do you want to delete this calf?</h3>
+<!--                    <h3>Do you want to delete this calf?</h3>-->
+                    <div class="row">
 
+                    <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                        <label for="new_password">New Password</label>
+                        <input type="text" class="form-control" id="new_password" name="new_password">
+                    </div>
+
+
+                    </div>
                     <div class="modal-footer">
-                        <button class="btn btn-danger" name="delete_submit" type="submit">Delete
+                        <button class="btn btn-primary" name="password_submit" type="submit">Change Password
 
                         </button>
                         <a role="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
                     </div>
                 </div>
+                </form>
                 <!--/.Content-->
             </form>
         </div>
@@ -299,6 +372,11 @@ require_once 'nav.php';
 
     function deleteF(id) {
 
+        $('#delete_technician').val(id);
+    }
+
+    function changePassword(technician_id) {
+        $('#technician_id').val(technician_id);
     }
 </script>
 </body>

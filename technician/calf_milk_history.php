@@ -1,20 +1,5 @@
 <?php
-session_start();
-include_once '../login/user.php';
-$user = new User;
-$id = $_SESSION['id'];
-if (!$user->session()){
-    header("location:../login.php");
-}
-else{
-    if (!$user->isAdmin()){
-        header("location:../index.php");
-    }
-}
-if (isset($_REQUEST['q'])){
-    $user->logout();
-    header("location:login.php");
-}
+require_once 'authcontroller.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,6 +40,8 @@ $calf_manager=new CalfManager();
 
         <?php
         require_once 'nav.php';
+
+//      echo  date("Y-m-d h:i:s")
         ?>
 
         <div class="container-fluid">
@@ -127,19 +114,6 @@ $calf_manager=new CalfManager();
 
 
 
-<!--                        --><?php
-//
-//                        $result66=$calf_manger->activeCalfMilkRecords();
-//                        while($row=$result66->fetch_array()){
-//                            echo '<tr>
-//                      <td >'.$row['calf_id'].'</td>
-//                        <td>'.$row['calf_weight'].'</td>
-//                        <td>'.$row['week'].'</td>
-//                        <td>'.$row['milk_amount'].'</td>
-//                        <td>'.$row['created_at'].'</td>
-//                        </tr>';
-//                        }
-//                        ?>
 
 
                         </tbody>
@@ -183,7 +157,6 @@ $calf_manager=new CalfManager();
                 $.each(res.data,function (key,value) {
 
                     calf_table.row.add([value[1],value[2],value[3],value[4],value[6]]);
-                    // console.log(value[1])
 
                 });
                 calf_table.draw();
