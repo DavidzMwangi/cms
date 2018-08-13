@@ -1,4 +1,7 @@
 <?php
+require_once 'authcontroller.php';
+?>
+<?php
 require_once 'Cow.php';
 
 if (isset($_POST['btn-add'])){

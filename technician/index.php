@@ -1,3 +1,12 @@
+<?php
+require_once 'authcontroller.php';
+
+//require_once 'NotificationManager.php';
+//$notification_manager=new NotificationManager();
+//
+//$notification_manager->addNotification();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +19,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css"  href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="../assets/plugins/DataTables/datatables.css">
+
 
 </head>
 <?php

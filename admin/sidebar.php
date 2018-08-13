@@ -1,3 +1,11 @@
+
+<?php
+
+//this code attempts to ensure that the technician notiication is ptodate by updating the record everytime the sidebar is loaded by technician or the admin
+require_once '../technician/NotificationManager.php';
+$notification_manager=new NotificationManager();
+$notification_manager->addNotification();
+?>
 <!-- sidebar -->
 <nav id="sidebar">
     <div class="sidebar-header">
@@ -22,7 +30,9 @@
 <!--            <ul class="collapse show list-styled" id="pageSubmenu">-->
             <ul class="collapse list-styled" id="pageSubmenu">
                 <li>
+
                     <a href="daily.php"> Daily</a>
+
                 </li>
                 <li>
                     <a href="monthly.php">Monthly</a>
@@ -31,7 +41,9 @@
                     <a href="monthlyaverageforcow.php">Monthly Average For Cow</a>
                 </li>
                 <li>
+
                     <a href="allmonths.php">All months</a>
+
                 </li>
             </ul>
         </li>
@@ -61,3 +73,5 @@
         </li>
     </ul>
 </nav>
+
+

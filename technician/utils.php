@@ -69,4 +69,14 @@ if (isset($_GET['edit_calf_id_id'])){
    echo json_encode($query55->fetch_assoc());
 }
 
+
+if (isset($_GET['notification_to_toggle'])){
+    $id=$_GET['notification_to_toggle'];
+
+    $sql66="UPDATE notifications SET is_read=false WHERE id='".$id."'";
+    $query66=$DB->connect()->query($sql66);
+
+    echo json_encode($query66->fetch_assoc());
+
+}
 ?>

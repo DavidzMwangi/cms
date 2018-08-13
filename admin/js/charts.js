@@ -1,3 +1,4 @@
+
 function loadYearlyData(event) {
     // event.preventDefault();
     $('.months').css('display', 'none');
@@ -42,7 +43,9 @@ function loadMonthlyData(event, month) {
             var data2 = [];
 
             data.forEach(function (obj) {
+
                 data1.push(Number(((parseFloat(obj.morning) + parseFloat(obj.evening))/ 2.0).toFixed(2)));
+
                 var date = new Date(obj.date);
                 data2.push(date.getDate());
             });
@@ -88,8 +91,10 @@ function loadMonthlyAverageData(event,month) {
         url = url + '?q=' + month
     }
     $('.months').css('display', 'block');
+
     $('#' + month).addClass('active');
     var xmlhttp = new XMLHttpRequest()
+
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
             var data = JSON.parse(xmlhttp.responseText);
@@ -110,15 +115,17 @@ function loadMonthlyAverageData(event,month) {
     xmlhttp.send();
 
 }
+
 function loadTodaysData(date) {
     //2018-07-10 date format
     // event.preventDefault();
+
     $('.months').css('display', 'none');
     var url = 'getdailydata.php';
     if (date !== undefined) {
         url = url + '?q=' + date
     }
-    var xmlhttp = new XMLHttpRequest()
+    var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
             var data = JSON.parse(xmlhttp.responseText);

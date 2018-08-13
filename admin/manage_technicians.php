@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <?php
-//session_start();
-//include_once '../login/user.php';
-//$user = new User;
-//$id = $_SESSION['id'];
-//if (!$user->session()){
-//    header("location:../login.php");
-//}
-//else{
-//    if (!$user->isAdmin()){
-//        header("location:../index.php");
-//    }
-//}
-//if (isset($_REQUEST['q'])){
-//    $user->logout();
-//    header("location:login.php");
-//}
+session_start();
+include_once '../login/user.php';
+$user = new User;
+$id = $_SESSION['id'];
+if (!$user->session()){
+    header("location:../login.php");
+}
+else{
+    if (!$user->isAdmin()){
+        header("location:../index.php");
+    }
+}
+if (isset($_REQUEST['q'])){
+    $user->logout();
+    header("location:login.php");
+}
 
 
 //?>
@@ -97,6 +97,27 @@
             }
 
         }
+
+        if (isset($_POST['delete_submit'])){
+            $technician_id=$_POST['delete_technician'];
+
+           if( $technician_manager->deleteTechnician($technician_id)){
+               $delete_status=true;
+           }else{
+               $delete_status=false;
+           }
+        }
+
+        if (isset($_POST['password_submit'])){
+            $new_password=$_POST['new_password'];
+            $selected_technician_id=$_POST['technician_id'];
+
+            if ($technician_manager->changePassword($selected_technician_id,$new_password)){
+                $change_status=true;
+            }else{
+                $change_status=false;
+            }
+        }
         ?>
         <div class="container-fluid">
 
@@ -114,29 +135,71 @@
 
                             <?php
 
-                            if (isset($status) && $status == true) {
 
-                                ?>
-                                <div class="alert alert-success">
+                    if (isset($status)){
+                        if ( $status){
 
-                                    <h5>Record Saved</h5>
-                                </div>
-
-                                <?php
-                            } else if (isset($status) && $status == false) {
-                                ?>
-                                <div class="alert alert-danger">
-
-                                    <h5>Error saving the record</h5>
-                                </div>
-                                <?php
-                            } else {
-
-                            }
                             ?>
-                        </div>
+                            <div class="alert alert-success">
 
-                    </div>
+                                <h5>Record Saved</h5>
+                            </div>
+
+                            <?php
+                        }else {
+                            ?>
+                            <div class="alert alert-danger">
+
+                                <h5>Error saving the record</h5>
+                            </div>
+                            <?php
+                        }
+                    }
+
+                    if (isset($delete_status)){
+                        if ( $delete_status){
+
+                            ?>
+                            <div class="alert alert-success">
+
+                                <h5>Technician Deleted</h5>
+                            </div>
+
+                            <?php
+                        }else {
+                            ?>
+                            <div class="alert alert-danger">
+
+                                <h5>Error deleting technician record</h5>
+                            </div>
+                            <?php
+                        }
+                    }
+
+
+                    if (isset($change_status)){
+                        if ( $change_status){
+
+                            ?>
+                            <div class="alert alert-success">
+
+                                <h5>Password successfully saved</h5>
+                            </div>
+
+                            <?php
+                        }else {
+                            ?>
+                            <div class="alert alert-danger">
+
+                                <h5>Error changing the password</h5>
+                            </div>
+                            <?php
+                        }
+                    }
+
+                    ?>
+                </div>
+
 
                     <form method="post">
                         <div class="row">
@@ -194,8 +257,11 @@
                       <td >' . $row['username'] . '</td>
                         <td>' . $row['created_at'] . '</td>
                        <td>
-                       <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" onclick="deleteF(' . $row['id'] . ')" data-target="#centralModalLGInfoDemo"  >Delete</button>
-                            <button class="btn btn-primary">Change Password</button>
+
+                     
+                       <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" onclick="deleteF('.$row['id'].')" data-target="#centralModalLGInfoDemo"  >Delete</button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#changePassword" onclick="changePassword('.$row['id'].')">Change Password</button>
+
                        </a>
                          </td>
                         </tr>';
@@ -215,6 +281,85 @@
     </div>
 </div>
 </div>
+
+</div>
+
+<div class="modal fade bottom" id="centralModalLGInfoDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-full-height modal-bottom modal-notify modal-danger" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <form action="" method="post">
+                <div class="modal-header">
+                    <p class="heading lead">Delete Technician</p>
+                    <input type="hidden" id="delete_technician" name="delete_technician">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <h3>Do you want to delete this technician?</h3>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" name="delete_submit" type="submit">Delete
+
+                        </button>
+                        <a role="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade bottom" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-full-height modal-bottom modal-notify modal-danger" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <form action="" method="post">
+                <div class="modal-header">
+                    <p class="heading lead">Change Password</p>
+                    <input type="hidden" id="technician_id" name="technician_id">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <form action="" method="post">
+                <div class="modal-body">
+<!--                    <h3>Do you want to delete this calf?</h3>-->
+                    <div class="row">
+
+                    <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                        <label for="new_password">New Password</label>
+                        <input type="text" class="form-control" id="new_password" name="new_password">
+                    </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" name="password_submit" type="submit">Change Password
+
+                        </button>
+                        <a role="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
+                    </div>
+                </div>
+                </form>
+                <!--/.Content-->
+            </form>
+        </div>
+    </div>
+
+</div>
+
 <!-- js scripts -->
 <script src="../assets/js/jquery.slim.min.js"></script>
 <script src="../assets/js/popper.min.js"></script>
@@ -231,6 +376,14 @@
 
     });
 
+    function deleteF(id) {
+
+        $('#delete_technician').val(id);
+    }
+
+    function changePassword(technician_id) {
+        $('#technician_id').val(technician_id);
+    }
 </script>
 </body>
 

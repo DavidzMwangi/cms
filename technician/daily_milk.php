@@ -1,3 +1,6 @@
+<?php
+require_once 'authcontroller.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,9 +77,9 @@ if (isset($_POST['edit_submit'])){
     <!-- page content -->
     <div id="content" class="w-100 ml-2">
 
-        <?php
+<!--        --><?php
         require_once 'nav.php';
-        ?>
+//        ?>
 
         <div class="container-fluid">
             <div class="card " style="margin-top: 25px">
@@ -206,7 +209,6 @@ if (isset($_POST['edit_submit'])){
                     </tr>
                     </thead>
                     <tbody>
-<!--                    <td >'.$data->cowNameResolver($result['cow_id']).'</td>-->
 
                     <?php
 
@@ -219,12 +221,12 @@ if (isset($_POST['edit_submit'])){
                         <td>'.$result['morning'].'</td>
                         <td>'.$result['evening'].'</td>
                         <td>
-                        
-                      
+
+
                       <a href="#"><button class="btn btn-outline-primary"  onclick="getSelectedDetails('.$result['id'].','.$result['morning'].','.$result['evening'].')"  data-toggle="modal" data-target="#centralModalLGInfoDemo" >
                        Edit
                        </button>
-                       </a> 
+                       </a>
                          </td>
                         </tr>';
                     }
@@ -232,7 +234,6 @@ if (isset($_POST['edit_submit'])){
 
                     </tbody>
                 </table>
-<!--                <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" data-target="#fluidModalBottomDangerDemo" >Delete</button></a>-->
 
 
             </div>
@@ -382,7 +383,6 @@ if (isset($_POST['edit_submit'])){
             .then(function (res) {
 
                 $('#edit_cow_id').val(res.data['cow_id']);
-                // console.log(res.data)
             })
             .catch(function (reason) {
                 alert("An error has occurred")

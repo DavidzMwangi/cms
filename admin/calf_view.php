@@ -1,20 +1,22 @@
-<!--<!DOCTYPE html>-->
+<html>
+<!DOCTYPE html>
 <?php
-//session_start();
-//include_once '../login/user.php';
-//$user = new User;
-//$id = $_SESSION['id'];
-//if (!$user->session()){
-//    header("location:../login.php");
-//}
-//else{
-//    if (!$user->isAdmin()){
-//        header("location:../index.php");
-//    }
-//}//if (isset($_REQUEST['q'])){
-//    $user->logout();
-//    header("location:login.php");
-//}
+session_start();
+include_once '../login/user.php';
+$user = new User;
+$id = $_SESSION['id'];
+if (!$user->session()){
+    header("location:../login.php");
+}
+else{
+    if (!$user->isAdmin()){
+        header("location:../index.php");
+    }
+}
+if (isset($_REQUEST['q'])){
+    $user->logout();
+    header("location:login.php");
+}
 
  require_once "../technician/CowManager.php";
 $cow_manager=new CowManager();
@@ -175,7 +177,7 @@ if (isset($_POST['delete_submit'])){
         </div>
     </div>
 
-
+</div>
     <!-- js scripts -->
     <script src="../assets/js/jquery.slim.min.js"></script>
     <script src="../assets/js/popper.min.js"></script>

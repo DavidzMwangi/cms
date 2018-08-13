@@ -58,6 +58,7 @@ if (isset($_REQUEST['q'])){
         }
     </style>
 
+
 </head>
 <body>
 <div class="wrapper">
@@ -79,23 +80,23 @@ if (isset($_REQUEST['q'])){
         require_once '../admin/nav.php';
         ?>
         <div class="months" style="display: none">
-            <span id="1" onclick="loadMonthlyData(event,1)" >JAN</span>
-            <span id="2" onclick="loadMonthlyData(event,2)">FEB</span>
-            <span id="3" onclick="loadMonthlyData(event,3)">MAR</span>
-            <span id="4" onclick="loadMonthlyData(event,4)">APR</span>
-            <span id="5" onclick="loadMonthlyData(event,5)">MAY</span>
-            <span id="6" onclick="loadMonthlyData(event,6)">JUN</span>
-            <span id="7" onclick="loadMonthlyData(event,7)">JUL</span>
-            <span id="8" onclick="loadMonthlyData(event, 8)">AUG</span>
-            <span id="9" onclick="loadMonthlyData(event,9)">SEP</span>
-            <span id="10" onclick="loadMonthlyData(event,10)">OCT</span>
-            <span id="11" onclick="loadMonthlyData(event,11)">NOV</span>
-            <span id="12" onclick="loadMonthlyData(event,12)">DEC</span>
+            <span id="1">JAN</span>
+            <span id="2">FEB</span>
+            <span id="3">MAR</span>
+            <span id="4">APR</span>
+            <span id="5">MAY</span>
+            <span id="6">JUN</span>
+            <span id="7">JUL</span>
+            <span id="8">AUG</span>
+            <span id="9">SEP</span>
+            <span id="10">OCT</span>
+            <span id="11">NOV</span>
+            <span id="12">DEC</span>
         </div>
 
         <div class="card mt-5">
 
-            <div class="card-body" id="graph">
+            <div class="card-body">
                 <div id="chart">
 
                 </div>
@@ -116,6 +117,12 @@ if (isset($_REQUEST['q'])){
 <script src="../assets/js/main.js"></script>
 <script src="js/charts.js"></script>
 
+<script type="text/javascript">
+    $(document).ready(function ()
+    {
+        loadTodaysData(event)
+    })
+</script>
 </body>
 
 </html>
