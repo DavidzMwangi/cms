@@ -21,11 +21,11 @@ $notification_manager=new NotificationManager();
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <small class="label bg-danger rounded-circle">
-
-                            <?php
+<!---->
+<!--                            --><?php
                            $records= $notification_manager->allActiveNotifications();
                            echo $records->num_rows;
-                            ?>
+//                            ?>
                         </small>
                         Notifications
 

@@ -32,12 +32,13 @@ class NotificationManager
         }
 
 //        create instance of calf manager in order to access week calculator
-        $calf_manager=new CalfManager();
+        require_once 'CalfManager.php';
+        $cm=new CalfManager();
 
         //loop through the records determining if the week that is in the record is the same week as the current week.
         foreach ($results as $result){
             //determine the calf weight
-            $db_calf_weeks=$calf_manager->weekCalculator($result['calf_id']);
+            $db_calf_weeks=$cm->weekCalculator($result['calf_id']);
             if ($result['week']<$db_calf_weeks){
                 //the db has no current week weight of the calf
                 //create an instance of the notification if the record does not exist already

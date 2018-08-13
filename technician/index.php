@@ -1,5 +1,11 @@
 <?php
 require_once 'authcontroller.php';
+
+//require_once 'NotificationManager.php';
+//$notification_manager=new NotificationManager();
+//
+//$notification_manager->addNotification();
+
 ?>
 <!DOCTYPE html>
 <html>
