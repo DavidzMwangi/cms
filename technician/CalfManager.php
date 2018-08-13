@@ -30,6 +30,18 @@ class CalfManager
 
     }
 
+
+    public function updateCalf($old_calf_id,$calf_id,$calf_weight,$nickname,$breed_id,$dob)
+    {
+
+        $sql="UPDATE calf SET calf_id='".$calf_id."', birth_weight='".$calf_weight."', nick_name='".$nickname."', breed_id='".$breed_id."',dob='".$dob."' WHERE calf_id='".$old_calf_id."'";
+
+        if ($this->db->connect()->query($sql)){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public function showCalf()
     {
         $sql="SELECT * FROM calf ";
@@ -59,8 +71,33 @@ class CalfManager
 
     }
 
-    public function addCalfMilk($calf_id,$week,$calf_weight)
+    public function weekCalculator($calf_id)
     {
+        //get the date today
+        $today_date=date("m/d/Y");
+        $calf=$this->calfRecord($calf_id)[3];
+        $calf_dob=date("m/d/Y",strtotime($calf));
+
+
+        $today_date = (string)$today_date;
+
+        $today_f=DateTime::createFromFormat('m/d/Y',$today_date);
+        $dob_f=DateTime::createFromFormat('m/d/Y',$calf_dob);
+
+      return   floor($today_f->diff($dob_f)->days/7);
+
+
+    }
+
+    public function addCalfMilk($calf_id,$calf_weight)
+
+    {
+            //check whether there exist a notification that displayed the calf as needing to be updated and change is status of is_read to false
+            require_once 'NotificationManager.php';
+            $notification_manager=new NotificationManager();
+            $notification_manager->notificationDisabler($calf_id);
+
+        $week=$this->weekCalculator($calf_id);
         $sq1l="SELECT * FROM calf_weight_milk WHERE calf_id='".$calf_id."' AND is_active=true";
         //check if the record is single or are several rows
         $result=$this->db->connect()->query($sq1l);
@@ -70,7 +107,9 @@ class CalfManager
         }else if ($result->num_rows>1){
             //unlikely to happen but in case it does select the last record that is in the result
             $num_rows=$result->num_rows;
-            //TODO get the last record from the array of result
+            $all_records=$result->fetch_array();
+//            $previous_week_record=end($all_records);
+            $previous_week_record=array_pop($all_records);
 
         }else{
             //no record is found meaning the calf has completed the period of being given milk or its the new instance of the calf
@@ -92,6 +131,10 @@ class CalfManager
 
         //dealing with the milk amount now
         if ((int)$previous_week_record['milk_amount']>0){
+
+            if ($previous_week_record['week']==$week){
+                return 4;
+            }
 
             $sql2="UPDATE calf_weight_milk SET is_active=false WHERE id='".$previous_week_record['id']."'";
 
@@ -128,5 +171,14 @@ class CalfManager
     {
         $sql="SELECT * FROM calf_weight_milk WHERE is_active=true";
         return $this->db->connect()->query($sql);
+    }
+
+    public function calfRecord($calf_id)
+    {
+        $sql="SELECT * FROM calf WHERE calf_id='".$calf_id."'";
+        $query=$this->db->connect()->query($sql);
+
+        $result=$query->fetch_row();
+        return $result;
     }
 }

@@ -1,20 +1,22 @@
-<!--<!DOCTYPE html>-->
+<html>
+<!DOCTYPE html>
 <?php
-//session_start();
-//include_once '../login/user.php';
-//$user = new User;
-//$id = $_SESSION['id'];
-//if (!$user->session()){
-//    header("location:../login.php");
-//}
-//else{
-//    if (!$user->isAdmin()){
-//        header("location:../index.php");
-//    }
-//}//if (isset($_REQUEST['q'])){
-//    $user->logout();
-//    header("location:login.php");
-//}
+session_start();
+include_once '../login/user.php';
+$user = new User;
+$id = $_SESSION['id'];
+if (!$user->session()){
+    header("location:../login.php");
+}
+else{
+    if (!$user->isAdmin()){
+        header("location:../index.php");
+    }
+}
+if (isset($_REQUEST['q'])){
+    $user->logout();
+    header("location:login.php");
+}
 
  require_once "../technician/CowManager.php";
 $cow_manager=new CowManager();
@@ -99,7 +101,7 @@ if (isset($_POST['delete_submit'])){
 
 
                 <div class="card-header">
-                    <h3>All Calfs</h3>
+                    <h3>All Calves</h3>
                 </div>
                 <div class="card-body">
 
@@ -107,7 +109,7 @@ if (isset($_POST['delete_submit'])){
                         <thead>
                         <tr>
                             <th> NickName</th>
-                            <th>Calf_Id</th>
+                            <th>Calf Id</th>
                             <th>Birth Weight</th>
                             <th>Breed</th>
                             <th>Action</th>
@@ -127,7 +129,7 @@ if (isset($_POST['delete_submit'])){
                         <td>'.$row['birth_weight'].'</td>
                         <td>'.$cow_manager->breedResolver($row['id']).'</td>
                        <td>
-                       <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" onclick="deleteF('.$row['id'].')" data-target="#centralModalLGInfoDemo"  >delete</button></a>
+                       <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" onclick="deleteF('.$row['id'].')" data-target="#centralModalLGInfoDemo"  >Delete</button></a>
                          </td>
                         </tr>';
                         }
@@ -152,7 +154,7 @@ if (isset($_POST['delete_submit'])){
             <!--Header-->
             <form action="" method="post">
                 <div class="modal-header">
-                    <p class="heading lead">delete</p>
+                    <p class="heading lead">Delete Calf</p>
                     <input type="hidden" id="delete_calf" name="delete_calf">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" class="white-text">&times;</span>
@@ -161,10 +163,10 @@ if (isset($_POST['delete_submit'])){
 
                 <!--Body-->
                 <div class="modal-body">
-                    <h3>Do you want to delete this cow?</h3>
+                    <h3>Do you want to delete this calf?</h3>
 
                     <div class="modal-footer">
-                        <button class="btn btn-danger" name="delete_submit" type="submit">delete
+                        <button class="btn btn-danger" name="delete_submit" type="submit">Delete
 
                         </button>
                         <a role="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
@@ -175,7 +177,7 @@ if (isset($_POST['delete_submit'])){
         </div>
     </div>
 
-
+</div>
     <!-- js scripts -->
     <script src="../assets/js/jquery.slim.min.js"></script>
     <script src="../assets/js/popper.min.js"></script>

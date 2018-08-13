@@ -22,6 +22,7 @@ class User
 
             $_SESSION['login'] = true;
             $_SESSION['id'] = $data['id'];
+            $_SESSION['username']=$data['username'];
             if ($data['user_type'] == 1) {
                 $_SESSION['user_type'] = 'admin';
             } else {
@@ -45,6 +46,7 @@ class User
         $row = mysqli_fetch_array($result);
         echo $row['name'];
     }
+
 
     public function session()
     {

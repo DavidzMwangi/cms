@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <?php
-//session_start();
-//include_once '../login/user.php';
-//$user = new User;
-//$id = $_SESSION['id'];
-//if (!$user->session()){
-//    header("location:../login.php");
-//}
-//else{
-//    if (!$user->isAdmin()){
-//        header("location:../index.php");
-//    }
-//}
-//if (isset($_REQUEST['q'])){
-//    $user->logout();
-//    header("location:login.php");
-//}
+session_start();
+include_once '../login/user.php';
+$user = new User;
+$id = $_SESSION['id'];
+if (!$user->session()){
+    header("location:../login.php");
+}
+else{
+    if (!$user->isAdmin()){
+        header("location:../index.php");
+    }
+}
+if (isset($_REQUEST['q'])){
+    $user->logout();
+    header("location:login.php");
+}
 
 
 require_once '../technician/CowManager.php';
@@ -123,7 +123,7 @@ if (isset($_POST['delete_submit'])){
                         <td>'.$row['DOB'].'</td>
                         <td>'.$cow_manager->breedResolver($row['breed_id']).'</td>
                        <td>
-                       <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" onclick="deleteF('.$row['id'].')" data-target="#centralModalLGInfoDemo"  >delete</button></a>
+                       <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" onclick="deleteF('.$row['id'].')" data-target="#centralModalLGInfoDemo"  >Delete</button></a>
                          </td>
                         </tr>';
                     }
@@ -148,7 +148,7 @@ if (isset($_POST['delete_submit'])){
             <!--Header-->
             <form action="" method="post">
             <div class="modal-header">
-                <p class="heading lead">delete</p>
+                <p class="heading lead">Delete cow</p>
                 <input type="hidden" id="cow_to_delete" name="cow_to_delete">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true" class="white-text">&times;</span>
@@ -160,7 +160,7 @@ if (isset($_POST['delete_submit'])){
                 <h3>Do you want to delete this cow?</h3>
 
             <div class="modal-footer">
-                <button class="btn btn-danger" name="delete_submit" type="submit">delete
+                <button class="btn btn-danger" name="delete_submit" type="submit">Delete
 
                 </button>
                 <a role="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>

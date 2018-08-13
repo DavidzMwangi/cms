@@ -1,3 +1,6 @@
+<?php
+require_once 'authcontroller.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,22 +44,30 @@ if (isset($_POST['submit'])){
         $save_status=false;
     }
 }
+
+
+if (isset($_POST['edit_submit'])){
+    //get the values
+    $old_cow_id=$_POST['edit_cow_record_id'];
+    $cow_id=$_POST['edit_cow_id'];
+    $nick_name=$_POST['edit_cow_nick_name'];
+    $dob=$_POST['edit_dob'];
+    $breed_id=$_POST['edit_breed'];
+    if ($cow_manager->updateCow($old_cow_id,$cow_id,$nick_name,$dob,$breed_id)){
+            $edit_status=true;
+    }else{
+            $edit_status=false;
+    }
+}
 ?>
 <div class="wrapper">
     <!-- sidebar -->
     <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3>NAV HEADER</h3>
-        </div>
-
-        <ul class="list-styled components">
-            <p>Dummy heading</p>
 
 
             <?php
             require_once 'sidebar.php';
             ?>
-        </ul>
     </nav>
 
     <!-- page content -->
@@ -79,12 +90,32 @@ if (isset($_POST['submit'])){
                     <form action="" method="post">
 
                         <?php
-                        if (isset($save_status)){
-                            if ($save_status==true){
+                        if (isset($save_status) ){
+                            if ($save_status==true  ){
                                 ?>
                                 <!--                <div class="row">-->
                                 <div class="col-offset-4 col-md-4 col-lg-4 col-sm-12  alert-success" >
                                     <h3>Record Saved successfully</h3>
+                                </div>
+                                <!--                </div>-->
+                                <?php
+                            }else{
+                                ?>
+
+                                <div class="row">
+                                    <div class="col-md-4 alert-danger">
+                                        <h3>Error saving the record</h3>
+                                    </div>
+                                </div>
+                                <?php
+                            }
+                        }
+                        if (isset($edit_status) ){
+                            if ($edit_status==true  ){
+                                ?>
+                                <!--                <div class="row">-->
+                                <div class="col-offset-4 col-md-4 col-lg-4 col-sm-12  alert-success" >
+                                    <h3>Record Updated successfully</h3>
                                 </div>
                                 <!--                </div>-->
                                 <?php
@@ -118,7 +149,7 @@ if (isset($_POST['submit'])){
 
                             <div class="col-md-4 col-sm-12 col-lg-4">
                                 <label for="dob">DateOf Birth</label>
-                                <input type="date" name="dob" class="form-control" id="dob">
+                                <input type="date" name="dob" class="form-control" id="dob" required>
                             </div>
 
 
@@ -128,7 +159,6 @@ if (isset($_POST['submit'])){
                             <div class="col-md-4 col-sm-12 col-lg-4">
                                 <label for="breed">Breed</label>
                                 <select name="breed" id="breed" class="form-control" required >
-                                    <option disabled selected>Select Cow Breed</option>
                                     <?php
 
 
@@ -200,7 +230,7 @@ if (isset($_POST['submit'])){
                         <td>'.$row['DOB'].'</td>
                         <td>'.$cow_manager->breedResolver($row['breed_id']).'</td>
                        <td>
-                       <a href="#"><button class="btn btn-outline-primary" onclick="getSelectedDetails('.$row['id'].','.$row['nick_name'].')" data-toggle="modal" data-target="#centralModalLGInfoDemo"  >Edit</button></a>
+                       <a href="#"><button class="btn btn-outline-primary" onclick="getSelectedDetails('.$row['id'].')" data-toggle="modal" data-target="#centralModalLGInfoDemo"  >Edit</button></a>
                          </td>
                         </tr>';
                         }
@@ -235,7 +265,7 @@ if (isset($_POST['submit'])){
                 <!--Body-->
                 <div class="modal-body">
 
-                    <input type="hidden" id="edit_milk_record_id" name="edit_milk_record_id">
+                    <input type="hidden" id="edit_cow_record_id" name="edit_cow_record_id">
                     <div class="row">
                         <div class="col-md-4 col-lg-4 col-sm-12">
                             <label for="edit_cow_id">Cow ID</label>
@@ -292,7 +322,7 @@ if (isset($_POST['submit'])){
 <script src="js/main.js"></script>
 <script src="../assets/plugins/select2/select2.js"></script>
 <script type="text/javascript" charset="utf8" src="../assets/plugins/DataTables/datatables.js"></script>
-
+<script type="text/javascript" src="../assets/plugins/axios/axios.min.js"></script>
 <script>
 
     $(document).ready(function () {
@@ -301,11 +331,44 @@ if (isset($_POST['submit'])){
 
     });
 
-    function getSelectedDetails(id,nickname) {
-        //'.$row['id'].','.$row['nick_name'].','.$row['DOB'].','.$row['breed_id'].'
-        alert(nickname)
-            // $('#edit_cow_nick_name').val(nick_name);
-            // $('#edit_dob').val(dob);
+    function getSelectedDetails(cow_id) {
+        var edit_breed_id;
+        var url='utils.php?edit_cow_id='+cow_id;
+        axios.get(url)
+            .then(function (res) {
+                $("#edit_cow_id").val(res.data['cow_id']);
+                $('#edit_cow_nick_name').val(res.data['nick_name']);
+                $('#edit_dob').val(res.data['DOB']);
+                $('#edit_cow_record_id').val(res.data['cow_id']);
+                edit_breed_id=res.data['breed_id'];
+                // alert(edit_breed_id);
+            console.log(res.data)
+            })
+            .catch(function (reason) {
+
+
+            });
+
+        var url2='utils.php?all_breeds=1';
+        axios.get(url2)
+            .then(function (res) {
+                $('#edit_breed').empty();
+
+
+                $.each(res.data,function (key,value) {
+
+                    if (value[0]===edit_breed_id){
+                        $('#edit_breed').append("<option value='"+value[0]+"' selected>"+value[1]+"</option>");
+
+                    }else {
+                        $('#edit_breed').append("<option value='" + value[0] + "'>" + value[1] + "</option>");
+                    }
+                });
+            // console.log(res.data)
+            })
+            .catch(function (reason) {
+
+            })
     }
 </script>
 

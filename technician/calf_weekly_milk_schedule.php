@@ -1,4 +1,5 @@
 <?php
+require_once 'authcontroller.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,17 +31,12 @@ $calf_manger= new CalfManager();
 <div class="wrapper">
     <!-- sidebar -->
     <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3>NAV HEADER</h3>
-        </div>
-
-        <ul class="list-styled components">
 
 
             <?php
             require_once 'sidebar.php';
             ?>
-        </ul>
+
     </nav>
 
     <!-- page content -->

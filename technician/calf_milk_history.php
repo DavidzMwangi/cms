@@ -1,4 +1,6 @@
-
+<?php
+require_once 'authcontroller.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,25 +28,11 @@ $calf_manager=new CalfManager();
 <div class="wrapper">
     <!-- sidebar -->
     <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3>NAV HEADER</h3>
-        </div>
 
-        <ul class="list-styled components">
-            <p>Dummy heading</p>
-            <!-- <li class="active">
-                 <a href="#homesubmenu" data-toggle="collapse" aria-expanded="false"  class="dropdown-toggle">Home</a>
-                 <ul class="collapse list-styled" id="homesubmenu">
-                   <li><a href="">Home 1</a></li>
-                   <li><a href="">Home 2</a></li>
-                   <li><a href="">Home 3</a></li>
-                 </ul>
-             </li>-->
 
             <?php
             require_once 'sidebar.php';
             ?>
-        </ul>
     </nav>
 
     <!-- page content -->
@@ -52,6 +40,8 @@ $calf_manager=new CalfManager();
 
         <?php
         require_once 'nav.php';
+
+//      echo  date("Y-m-d h:i:s")
         ?>
 
         <div class="container-fluid">
@@ -101,6 +91,7 @@ $calf_manager=new CalfManager();
             <div class="card " style="margin-top: 25px">
                 <div class="card-header">
 
+
                     <h3>Calf Records</h3>
                     <hr>
                 </div>
@@ -108,7 +99,7 @@ $calf_manager=new CalfManager();
                 <div class="card-body">
 
 
-                    <table id="cows_table" class="display">
+                    <table id="calf_table" class="display">
                         <thead>
                         <tr>
                             <th>Calf Id</th>
@@ -123,19 +114,6 @@ $calf_manager=new CalfManager();
 
 
 
-<!--                        --><?php
-//
-//                        $result66=$calf_manger->activeCalfMilkRecords();
-//                        while($row=$result66->fetch_array()){
-//                            echo '<tr>
-//                      <td >'.$row['calf_id'].'</td>
-//                        <td>'.$row['calf_weight'].'</td>
-//                        <td>'.$row['week'].'</td>
-//                        <td>'.$row['milk_amount'].'</td>
-//                        <td>'.$row['created_at'].'</td>
-//                        </tr>';
-//                        }
-//                        ?>
 
 
                         </tbody>
@@ -161,8 +139,8 @@ $calf_manager=new CalfManager();
 
     $(document).ready(function () {
         $('#cow_name').select2();
-        $('#cows_table').DataTable({
-            'pageLength':20
+       window.calf_table= $('#calf_table').DataTable({
+            'pageLength':10
         });
 
 
@@ -172,9 +150,16 @@ $calf_manager=new CalfManager();
         //get the calf record
 
         var url='utils.php?calf_id='+ calf_id;
+        calf_table.clear().draw();
         axios.get(url)
             .then(function (res) {
-                console.log(res.data)
+
+                $.each(res.data,function (key,value) {
+
+                    calf_table.row.add([value[1],value[2],value[3],value[4],value[6]]);
+
+                });
+                calf_table.draw();
             })
             .catch(function (reason) {
                 console.log("error")

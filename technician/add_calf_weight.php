@@ -1,4 +1,6 @@
-
+<?php
+require_once 'authcontroller.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,16 +26,24 @@ $calf_manager=new CalfManager();
 
 if (isset($_POST['submit'])){
 
+
+
+//    $data=$_POST['week'];
+//    $week=substr($data,strpos($data,"W")+1);
+
+
     $calf_id=$_POST['calf_id'];
-    $week=$_POST['week'];
     $calf_weight=$_POST['calf_weight'];
 
-  switch ($calf_manager->addCalfMilk($calf_id,$week,$calf_weight)){
+  switch ($calf_manager->addCalfMilk($calf_id,$calf_weight)){
       case 1:
           $status=1;
           break;
       case 3:
           $status=3;
+          break;
+      case 4:
+          $status=4;
           break;
       default:
           $status=5;//error
@@ -44,25 +54,11 @@ if (isset($_POST['submit'])){
 <div class="wrapper">
     <!-- sidebar -->
     <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3>NAV HEADER</h3>
-        </div>
 
-        <ul class="list-styled components">
-            <p>Dummy heading</p>
-            <!-- <li class="active">
-                 <a href="#homesubmenu" data-toggle="collapse" aria-expanded="false"  class="dropdown-toggle">Home</a>
-                 <ul class="collapse list-styled" id="homesubmenu">
-                   <li><a href="">Home 1</a></li>
-                   <li><a href="">Home 2</a></li>
-                   <li><a href="">Home 3</a></li>
-                 </ul>
-             </li>-->
 
             <?php
             require_once 'sidebar.php';
             ?>
-        </ul>
     </nav>
 
     <!-- page content -->
@@ -90,7 +86,7 @@ if (isset($_POST['submit'])){
                             if ($status==1){
                                 ?>
                                 <!--                <div class="row">-->
-                                <div class="col-offset-4 col-md-4 col-lg-4 col-sm-12  alert-success" >
+                                <div class="col-offset-4 col-md-12 col-lg-12 col-sm-12  alert-success" >
                                     <h3>Record Saved successfully</h3>
                                 </div>
                                 <!--                </div>-->
@@ -99,7 +95,7 @@ if (isset($_POST['submit'])){
                                 ?>
 
                                 <div class="row">
-                                    <div class="col-md-4 alert-danger">
+                                    <div class="col-md-12 alert-danger">
                                         <h3>The calf has already completed the period of being given milk</h3>
                                     </div>
                                 </div>
@@ -108,11 +104,21 @@ if (isset($_POST['submit'])){
                                 ?>
 
                                 <div class="row">
-                                    <div class="col-md-4 alert-danger">
+                                    <div class="col-md-12 alert-danger">
                                         <h3>The calf has already completed the period of being given milk</h3>
                                     </div>
                                 </div>
                                 <?php
+                            }else if ($status==4){
+                                ?>
+
+                        <div class="row">
+                            <div class="col-md-12 alert-danger">
+                                <h3>The calf weight has already been updated for this week</h3>
+                            </div>
+                        </div>
+                        <?php
+
                             }
                         }
 
@@ -137,13 +143,7 @@ if (isset($_POST['submit'])){
 
                             </div>
 
-                            <div class="col-md-4 col-sm-12 col-lg-4">
-                                <label for="week">Week</label>
-                                <select id="week" name="week" class="form-control" required>
-                                    <option selected disabled>Select Current Week</option>
-                                    <option value="1">One</option>
-                                </select>
-                            </div>
+
 
 
                             <div class="col-md-4 col-sm-12 col-lg-4">
