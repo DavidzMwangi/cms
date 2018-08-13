@@ -143,11 +143,7 @@ if (isset($_POST['submit'])){
 
                             </div>
 
-<!--                            <div class="col-md-4 col-sm-12 col-lg-4">-->
-<!--                                <label for="week">Week</label>-->
-<!--                                <input type="week" class="form-control" id="week" name="week">-->
-<!---->
-<!--                            </div>-->
+
 
 
                             <div class="col-md-4 col-sm-12 col-lg-4">
