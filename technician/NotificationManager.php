@@ -72,4 +72,27 @@ class NotificationManager
         }
     }
 
+    public function notificationDisabler($calf_id)
+    {
+        $sql="SELECT * FROM notifications WHERE calf_id='".$calf_id."' AND is_read=true";
+       $results= $this->DB->connect()->query($sql);
+
+       if ($results->num_rows==1){
+           $sql2="UPDATE notifications SET is_read=false WHERE calf_id='".$calf_id."'";
+           $this->DB->connect()->query($sql2);
+
+       }else if ($results->num_rows>1){
+          //more than one record found. can hardly occur but incase it does occur,
+            while ($row=$results->fetch_array()){
+                $sql2="UPDATE notifications SET is_read=false WHERE calf_id='".$row['calf_id']."'";
+                $this->DB->connect()->query($sql2);
+            }
+
+
+       }else{
+           //no records found
+
+       }
+    }
+
 }

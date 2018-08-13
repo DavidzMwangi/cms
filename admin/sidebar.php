@@ -1,3 +1,11 @@
+
+<?php
+
+//this code attempts to ensure that the technician notiication is ptodate by updating the record everytime the sidebar is loaded by technician or the admin
+require_once '../technician/NotificationManager.php';
+$notification_manager=new NotificationManager();
+$notification_manager->addNotification();
+?>
 <!-- sidebar -->
 <nav id="sidebar">
     <div class="sidebar-header">

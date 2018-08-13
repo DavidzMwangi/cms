@@ -37,6 +37,8 @@ $notification_manager=new NotificationManager();
 
 
                         //add notification
+                        $notification_manager->addNotification();
+
 
                         $query=$notification_manager->allActiveNotifications();
 
