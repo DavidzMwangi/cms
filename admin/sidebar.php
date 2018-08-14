@@ -17,16 +17,35 @@ $notification_manager->addNotification();
         <p>Menu </p>
 
 
-        <li><a href=""><i class="fa fa-dashboard mr-3"></i>Dashboard</a></li>
-        <li><a href="../admin/calf_view.php"><i class="fa fa-share mr-3"></i>View Calf</a></li>
-        <li>
-            <a href="../admin/view_cow.php"><i class="fa fa-share mr-3"></i>View Cow</a>
+        <li><a  href="#dashSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fa fa-dashboard mr-3"></i>Dashboard</a>
+            <ul class="collapse list-styled" id="dashSubmenu">
+                <li><a href="../admin/calf_view.php"><i class="fa fa-share mr-3"></i>View Calf</a></li>
+                <li>
+                    <a href="../admin/view_cow.php"><i class="fa fa-share mr-3"></i>View Cow</a>
+                </li>
+            </ul>
+
         </li>
-        <li><a href="../admin/daily_milk_production.php"><i class="fa fa-database mr-3"></i>Today Milk Production</a></li>
-        <li><a href="../admin/milk_production.php"><i class="fa fa-database mr-3"></i>Milk Production</a></li>
+
+        <li><a  href="#tableSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fa fa-table mr-3"></i>Tabular Records</a>
+            <ul class="collapse" id="tableSubmenu">
+                <li><a href="../admin/daily_milk_production.php"><i class="fa fa-database mr-3"></i>Today Milk Production</a></li>
+                <li><a href="../admin/milk_production.php"><i class="fa fa-database mr-3"></i>Specific date</a></li>
+                <li>
+                    <a href="../admin/monthlyTabularMilkRecords.php"><i class="fa fa-database mr-3"></i>Summary (Monthly)</a>
+                </li>
+            </ul>
+
+        </li>
+
+
+
 
         <li>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-reddit mr-3"></i>Records</a>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fa fa-bar-chart  mr-3"></i>Graphical Records</a>
 <!--            <ul class="collapse show list-styled" id="pageSubmenu">-->
             <ul class="collapse list-styled" id="pageSubmenu">
                 <li>
@@ -45,22 +64,13 @@ $notification_manager->addNotification();
                     <a href="allmonths.php">All months</a>
 
                 </li>
-            </ul>
-        </li>
-
-        <li>
-
-            <a href="#monthMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-database mr-3"></i>Monthly Records</a>
-            <ul class="collapse  list-styled" id="monthMenu">
                 <li>
-                    <a href="../admin/monthlyTabularMilkRecords.php">Tabular View</a>
-                </li>
-
-                <li>
-                    <a href="monthlyGraph.php">Graph</a>
+                    <a href="monthlyGraph.php">Graph </a>
                 </li>
             </ul>
         </li>
+
+
 
         <li>
             <a href="manage_technicians.php"><i class="fa fa-users mr-3"></i>Manage Accounts</a>
