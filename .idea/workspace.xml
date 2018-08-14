@@ -1,36 +1,11 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d9bedd4-717e-49d8-84e8-258c78f147e5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/allmonths.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/daily.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/monthly.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/monthlyaverageforcow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/getmonthlydata.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/getmonthlydata.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/js/charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/js/charts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/manage_technicians.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/manage_technicians.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/monthaverage.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/monthaverage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/monthlyTabularMilkRecords.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/monthlyTabularMilkRecords.php" afterDir="false" />
+    <list default="true" id="f684da07-adf2-4640-904a-026136cb378e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/admin/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap-grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap-grid.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap-reboot.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap-4/css/bootstrap.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap-4/js/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap-4/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap-4/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap-4/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap-4/js/bootstrap.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap-4/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap-4/js/bootstrap.min.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.php" beforeDir="false" afterPath="$PROJECT_DIR$/data.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/technician/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/technician/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/technician/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/technician/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/technician/sidebar.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,84 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="charts.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/js/charts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="3" column="39" lean-forward="true" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="92" column="14" lean-forward="true" selection-start-line="92" selection-start-column="14" selection-end-line="92" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="daily_milk_production.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/daily_milk_production.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-864" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="daily.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/daily.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="113" lean-forward="true" selection-start-line="111" selection-start-column="4" selection-end-line="113" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/sidebar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="allmonths.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/allmonths.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="105" column="25" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="monthlyaverageforcow.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/monthlyaverageforcow.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="118" column="59" selection-start-line="118" selection-start-column="59" selection-end-line="118" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>modal</find>
-      <find>edit_calf_id_id</find>
-      <find>$cow_manager</find>
-      <find>edit_calf_record_id</find>
-    </findStrings>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -125,48 +23,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/technician/config.php" />
-        <option value="$PROJECT_DIR$/technician/header.php" />
-        <option value="$PROJECT_DIR$/technician/content.php" />
-        <option value="$PROJECT_DIR$/login/dbconfig.php" />
-        <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/technician/index.html" />
-        <option value="$PROJECT_DIR$/technician/footer.php" />
-        <option value="$PROJECT_DIR$/technician/save_milk.php" />
-        <option value="$PROJECT_DIR$/technician/add_milk_record.php" />
-        <option value="$PROJECT_DIR$/technician/MilkManager.php" />
-        <option value="$PROJECT_DIR$/technician/utils.php" />
-        <option value="$PROJECT_DIR$/technician/CowManager.php" />
-        <option value="$PROJECT_DIR$/technician/CalfManager.php" />
-        <option value="$PROJECT_DIR$/technician/add_calf.php" />
-        <option value="$PROJECT_DIR$/technician/add_calf_weight.php" />
-        <option value="$PROJECT_DIR$/technician/add_cow.php" />
-        <option value="$PROJECT_DIR$/technician/breed.php" />
-        <option value="$PROJECT_DIR$/technician/calf_milk_history.php" />
-        <option value="$PROJECT_DIR$/technician/calf_weekly_milk_schedule.php" />
-        <option value="$PROJECT_DIR$/technician/index.php" />
-        <option value="$PROJECT_DIR$/technician/daily_milk.php" />
-        <option value="$PROJECT_DIR$/technician/sidebar.php" />
-        <option value="$PROJECT_DIR$/technician/nav.php" />
-        <option value="$PROJECT_DIR$/assets/js/datatable.js" />
-        <option value="$PROJECT_DIR$/admin/utils.php" />
-        <option value="$PROJECT_DIR$/admin/nav.php" />
-        <option value="$PROJECT_DIR$/admin/monthlyGraph.php" />
-        <option value="$PROJECT_DIR$/admin/calf_view.php" />
-        <option value="$PROJECT_DIR$/admin/view_cow.php" />
-        <option value="$PROJECT_DIR$/admin/milk_production.php" />
-        <option value="$PROJECT_DIR$/admin/getdailydata.php" />
-        <option value="$PROJECT_DIR$/admin/index.php" />
-        <option value="$PROJECT_DIR$/admin/getmonthlydata.php" />
-        <option value="$PROJECT_DIR$/login/User.php" />
-        <option value="$PROJECT_DIR$/admin/manage_technicians.php" />
-        <option value="$PROJECT_DIR$/admin/monthlyTabularMilkRecords.php" />
-        <option value="$PROJECT_DIR$/admin/daily.php" />
-        <option value="$PROJECT_DIR$/admin/monthly.php" />
-        <option value="$PROJECT_DIR$/admin/monthlyaverageforcow.php" />
-        <option value="$PROJECT_DIR$/admin/sidebar.php" />
-        <option value="$PROJECT_DIR$/admin/allmonths.php" />
-        <option value="$PROJECT_DIR$/admin/js/charts.js" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -179,9 +36,6 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="PhpServers">
-    <servers />
-  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/../../php/PEAR" />
@@ -193,46 +47,11 @@
     <option name="width" value="1370" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="cms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cms" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cms" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cms" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cms" type="462c0819:PsiDirectoryNode" />
-              <item name="technician" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -240,24 +59,16 @@
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="cms" type="cbb8eebc:String" user="cms" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
             <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="cms" type="cbb8eebc:String" user="cms" />
-              <item name="admin" type="cbb8eebc:String" user="admin" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="cms" type="cbb8eebc:String" user="cms" />
-              <item name="utils" type="cbb8eebc:String" user="utils" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
+              <item name="cms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cms" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -266,20 +77,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="util&#9;FILE&#9;file://D:/Programming/projects/htdocs/cms/technician/utils.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WholeSaleSystem" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Programming\projects\htdocs\cms\technician" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Programming\projects\htdocs\cms\assets\js" />
-      <recent name="D:\Programming\projects\htdocs\cms\assets\plugins" />
-      <recent name="D:\Programming\projects\htdocs\cms\technician" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -298,97 +96,41 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1d9bedd4-717e-49d8-84e8-258c78f147e5" name="Default" comment="" />
-      <created>1529998749462</created>
+      <changelist id="f684da07-adf2-4640-904a-026136cb378e" name="Default" comment="" />
+      <created>1534231717803</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1529998749462</updated>
-      <workItem from="1529998750819" duration="2862000" />
-      <workItem from="1530117094366" duration="15000" />
-      <workItem from="1530212920055" duration="28562000" />
-      <workItem from="1530351742882" duration="518000" />
-      <workItem from="1530442385617" duration="941000" />
-      <workItem from="1530608897787" duration="5367000" />
-      <workItem from="1530776738641" duration="1018000" />
-      <workItem from="1530779520613" duration="314000" />
-      <workItem from="1531251159760" duration="1525000" />
-      <workItem from="1531326963234" duration="248000" />
-      <workItem from="1531327319464" duration="385000" />
-      <workItem from="1531435405128" duration="11024000" />
-      <workItem from="1531509266353" duration="698000" />
-      <workItem from="1533554096624" duration="253000" />
-      <workItem from="1533554563611" duration="1552000" />
-      <workItem from="1533572956235" duration="203000" />
-      <workItem from="1533632111698" duration="1171000" />
-      <workItem from="1533720997878" duration="7758000" />
-      <workItem from="1533795878562" duration="7657000" />
-      <workItem from="1533831923714" duration="15832000" />
-      <workItem from="1533913863268" duration="6246000" />
-      <workItem from="1534059840207" duration="3934000" />
-      <workItem from="1534091997040" duration="3310000" />
-      <workItem from="1534097859431" duration="4185000" />
+      <updated>1534231717803</updated>
+      <workItem from="1534231739588" duration="138000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106496000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="138000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20440729" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32978722" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32972136" />
+      <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="CSS Styles" order="10" weight="0.32991454" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20440729" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="CSS Styles" order="10" weight="0.32991454" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32978722" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -398,290 +140,7 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6341">
-          <caret line="373" column="12" selection-start-line="373" selection-start-column="12" selection-end-line="373" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/plugins/axios/axios.min.js" />
-    <entry file="file://$PROJECT_DIR$/technician/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="47" selection-start-line="6" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/SaveMilk.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/BreedManager.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/addcow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-947" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/CowManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/CalfManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/add_calf_weight.php" />
-    <entry file="file://$PROJECT_DIR$/technician/add_cow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/add_milk_record.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1151">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/breed.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/calf_weekly_milk_schedule.php" />
-    <entry file="file://$PROJECT_DIR$/technician/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2890">
-          <caret line="170" column="30" selection-start-line="170" selection-start-column="30" selection-end-line="170" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/daily_milk.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="6" lean-forward="true" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/MilkManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/plugins/jQueryUI/jquery-ui.js" />
-    <entry file="file://$PROJECT_DIR$/assets/js/jquery-2.2.4.min.js" />
-    <entry file="file://$PROJECT_DIR$/assets/js/datatable.js" />
-    <entry file="file://$PROJECT_DIR$/technician/add_calf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="317" column="34" lean-forward="true" selection-start-line="317" selection-end-line="318" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/utils.php" />
-    <entry file="file://$PROJECT_DIR$/admin/MilkRecord.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/calf_milk_history.php" />
-    <entry file="file://$PROJECT_DIR$/admin/utils.php" />
-    <entry file="file://$PROJECT_DIR$/technician/sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/technician/nav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/nav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/monthlyGraph.php" />
-    <entry file="file://$PROJECT_DIR$/admin/calf_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1488">
-          <caret line="107" column="28" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/view_cow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1776">
-          <caret line="126" column="30" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/milk_production.php" />
-    <entry file="file://$PROJECT_DIR$/admin/getyeardata.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/getmonthlydata.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/getdailydata.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/monthlyTabularMilkRecords.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="141" column="17" selection-start-line="141" selection-start-column="17" selection-end-line="141" selection-end-column="17" />
-          <folding>
-            <element signature="n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/dbconfig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/manage_technicians.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="212" lean-forward="true" selection-start-line="212" selection-end-line="212" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#table#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/monthaverage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/daily_milk_production.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-864" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/daily.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="113" lean-forward="true" selection-start-line="111" selection-start-column="4" selection-end-line="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/monthly.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="80" column="55" selection-start-line="80" selection-start-column="50" selection-end-line="80" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/monthlyaverageforcow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="118" column="59" selection-start-line="118" selection-start-column="59" selection-end-line="118" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="92" column="14" lean-forward="true" selection-start-line="92" selection-start-column="14" selection-end-line="92" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/allmonths.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="105" column="25" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/js/charts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="39" lean-forward="true" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-        </state>
-      </provider>
     </entry>
   </component>
 </project>
-

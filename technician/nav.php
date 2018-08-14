@@ -14,21 +14,21 @@ $notification_manager=new NotificationManager();
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-                </li>
+<!--                <li class="nav-item active">-->
+<!--                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>-->
+<!--                </li>-->
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <small class="label bg-danger rounded-circle">
+                        <small class="badge badge-danger">
+<!--                            class="label bg-danger rounded-circle"-->
 <!---->
 <!--                            --><?php
                            $records= $notification_manager->allActiveNotifications();
                            echo $records->num_rows;
 //                            ?>
                         </small>
-                        Notifications
-
+                        Notification
 
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -43,7 +43,8 @@ $notification_manager=new NotificationManager();
                         $query=$notification_manager->allActiveNotifications();
 
                             while ($row=$query->fetch_array()){
-                         echo '<i class="fa fa-warning" ></i></span><a class="dropdown-item" href="add_calf_weight.php" onclick="toggleNotificaton('.$row['id'].')"><b>'.$row['calf_id'].' </b>needs to be updated its weight</a><hr>';
+                                echo '<a class="dropdown-item" href="add_calf_weight.php" onclick="toggleNotificaton('.$row['id'].')"><b>'.$row['calf_id'].' </b>needs to be updated its weight 
+                                <i class="fa fa-mars text-primary"></i></a>';
 
                             }
 
@@ -51,9 +52,9 @@ $notification_manager=new NotificationManager();
 
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="#">Profile</a>
-                </li>
+<!--                <li class="nav-item">-->
+                <!--                    <a class="nav-link " href="#">Profile</a>-->
+                <!--                </li>-->
             </ul>
             <a href="../logout.php" class="btn btn-outline-light">Logout</a>
 
