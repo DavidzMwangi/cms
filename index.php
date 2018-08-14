@@ -12,7 +12,7 @@ include_once 'header.php';
     }
 </style>
 <body class="index-body"  id="body_body" >
-<div class="container" >
+<div class="container " >
   <nav class="navbar">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -25,7 +25,7 @@ include_once 'header.php';
   </nav>
 
   <div class="project-name">
-    <h1>ANIMAL MANAGEMENT SYSTEM</h1>
+    <h1 style="color: cyan">ANIMAL MANAGEMENT SYSTEM</h1>
 
   </div>
 </div>

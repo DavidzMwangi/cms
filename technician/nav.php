@@ -20,14 +20,23 @@ $notification_manager=new NotificationManager();
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <small class="badge badge-danger">
+
 <!--                            class="label bg-danger rounded-circle"-->
 <!---->
 <!--                            --><?php
                            $records= $notification_manager->allActiveNotifications();
-                           echo $records->num_rows;
-//                            ?>
+                           if ($records->num_rows>0){
+                               ?>
+                        <small class="badge badge-danger">
+                            <?php
+                               echo $records->num_rows;
+                               ?>
                         </small>
+                        <?php
+                           }
+
+//                            ?>
+
                         Notification
 
                     </a>
