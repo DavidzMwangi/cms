@@ -52,7 +52,7 @@ $notification_manager=new NotificationManager();
                         $query=$notification_manager->allActiveNotifications();
 
                             while ($row=$query->fetch_array()){
-                                echo '<a class="dropdown-item" href="add_calf_weight.php" onclick="toggleNotificaton('.$row['id'].')"><b>'.$row['calf_id'].' </b>needs to be updated its weight 
+                                echo '<a class="dropdown-item" href="add_calf_weight.php" onclick="toggleNotification('.$row['id'].')"><b>'.$row['calf_id'].' </b>needs to be updated its weight 
                                 <i class="fa fa-mars text-primary"></i></a>';
 
                             }
@@ -71,15 +71,15 @@ $notification_manager=new NotificationManager();
     </div>
 </nav>
 <script type="text/javascript">
-    function toggleNotificaton(id) {
+    function toggleNotification(id) {
 
-        var url='utils.php?notification_to_toggle='+id;
-        axios.get(url)
-            .then(function (value) {
-                alert("saved")
-            })
-            .catch(function (reason) {
-                alert("error")
-            })
+        // var url='utils.php?notification_to_toggle='+id;
+        // axios.get(url)
+        //     .then(function (value) {
+        //         // alert("saved")
+        //     })
+        //     .catch(function (reason) {
+        //         alert("error")
+        //     })
     }
 </script>

@@ -192,7 +192,7 @@ if (isset($_POST['edit_submit'])){
             <div class="card " style="margin-top: 25px">
             <div class="card-header">
 
-                    <h3>All Milk Records</h3>
+                    <h3>Today Milk Records</h3>
             </div>
 
             <div class="card-body">
