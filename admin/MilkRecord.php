@@ -58,14 +58,6 @@ class MilkRecord
                 $month_values[]= 0;
             }
 
-
-
-
-
-
-
-
-
         }
         return json_encode($month_values,JSON_NUMERIC_CHECK);
 
@@ -184,7 +176,7 @@ class MilkRecord
         if ($result->num_rows>0){
 
             while ($row=$result->fetch_assoc()){
-//
+
                 return "<tr>
 
                         <td>".$month_name."</td>
@@ -197,8 +189,6 @@ class MilkRecord
             }
 
         }
-
-
     }
 
 }

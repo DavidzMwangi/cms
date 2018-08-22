@@ -20,7 +20,6 @@ if (isset($_GET['calf_id'])){
        echo json_encode(null);
 
    }
-//    echo $_GET['calf_id'];
 }else{
     echo null;
 }

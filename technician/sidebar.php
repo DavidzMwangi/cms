@@ -32,19 +32,6 @@
             <a href="add_calf_weight.php"> <i class="fa fa-plus mr-3"> </i>Add Calf Weight</a>
         </li>
 
-        <!--  <li>  <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Calf</a>-->
-        <!--    <ul class="collapse list-unstyled" id="pageSubmenu">-->
-        <!--        <li>-->
-        <!--            <a href="add_calf.php">Add calf record</a>-->
-        <!--        </li>-->
-        <!--        <li>-->
-        <!--            <a href="add_calf_weight.php">Add Calf Weight</a>-->
-        <!--        </li>-->
-        <!--        <li>-->
-        <!--            <a href="calf_milk_history.php">Milk Amount History</a>-->
-        <!--        </li>-->
-        <!--    </ul>-->
-        <!--</li>-->
         <li>
             <a href="breed.php"> <i class="fa fa-umbrella mr-3"> </i>Breed</a>
         </li>

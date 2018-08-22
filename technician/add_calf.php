@@ -133,12 +133,12 @@ if (isset($_POST['edit_submit'])){
 
                             <div class="col-md-3 col-sm-12 col-lg-3">
                                 <label for="dob">Date of Birth</label>
-                                <input type="date" name="dob" class="form-control" id="dob">
+                                <input type="date" name="dob" class="form-control" id="dob" required>
                             </div>
 
                             <div class="col-md-3 col-sm-12 col-lg-3">
                                 <label for="birth_weight">Birth Weight</label>
-                                <input type="number" name="birth_weight" class="form-control" step="any" id="birth_weight" min="1">
+                                <input type="number" name="birth_weight" class="form-control" step="any" id="birth_weight" min="1" required>
 
                             </div>
 
@@ -146,7 +146,6 @@ if (isset($_POST['edit_submit'])){
                             <div class="col-md-3 col-sm-12 col-lg-3">
                                 <label for="breed">Breed</label>
                                 <select name="breed" id="breed" class="form-control" required >
-<!--                                    <option disabled selected>Select Cow Breed</option>-->
 
                                     <?php
 

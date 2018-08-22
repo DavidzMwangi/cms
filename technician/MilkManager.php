@@ -2,11 +2,11 @@
 class MilkManager{
 
         private  $db;
+
     public function __construct()
     {
         require_once 'config.php';
         $db=new DB_FACADE();
-
 
         $this->db=$db;
     }
@@ -14,7 +14,9 @@ class MilkManager{
 
     public function milkRecords()
     {
-        return mysqli_query($this->db->connect(),"SELECT * FROM milk_records");
+        $today=date('Y-m-d');
+
+        return mysqli_query($this->db->connect(),"SELECT * FROM milk_records WHERE date='".$today."'");
 
 
     }

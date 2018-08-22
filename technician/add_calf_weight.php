@@ -85,11 +85,10 @@ if (isset($_POST['submit'])){
                         if (isset($status)){
                             if ($status==1){
                                 ?>
-                                <!--                <div class="row">-->
                                 <div class="col-offset-4 col-md-12 col-lg-12 col-sm-12  alert-success" >
                                     <h3>Record Saved successfully</h3>
                                 </div>
-                                <!--                </div>-->
+
                                 <?php
                             }else if ($status==3){
                                 ?>
@@ -129,22 +128,18 @@ if (isset($_POST['submit'])){
                                 <select id="calf_id" name="calf_id" class="form-control" required>
                                     <option selected disabled>Select a calf</option>
                                     <?php
-//                                    $sql="SELECT cow_id,nick_name FROM cows ";
-//                                    $results=mysqli_query($DB->connect(),$sql);
+
                                     $results=$calf_manager->allCalves();
                                     while ($row = mysqli_fetch_array($results)) {
                                         echo "<option value=".$row['calf_id'].">$row[1] <b>    Nickname: </b>$row[1]</option>";
                                     }
-//
-//
-//                                    ?>
+
+
+                                   ?>
                                 </select>
 
 
                             </div>
-
-
-
 
                             <div class="col-md-4 col-sm-12 col-lg-4">
                                 <label for="calf_weight">Calf Weight</label>
@@ -162,14 +157,8 @@ if (isset($_POST['submit'])){
 
                     </form>
 
-
-
                 </div>
             </div>
-
-
-
-
 
         </div>
     </div>
