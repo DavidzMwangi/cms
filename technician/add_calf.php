@@ -62,6 +62,18 @@ if (isset($_POST['edit_submit'])){
         $edit_status=false;
     }
 }
+
+if (isset($_POST['delete_submit'])){
+
+    $id=$_POST['delete_calf'];
+
+    if($calf_manger->deleteCalf($id)){
+        $delete_status=true;
+    }else{
+
+        $delete_status=false;
+    }
+}
 ?>
 <div class="wrapper">
     <!-- sidebar -->
@@ -71,8 +83,6 @@ if (isset($_POST['edit_submit'])){
             require_once 'sidebar.php';
             ?>
     </nav>
-
-    <!-- page content -->
     <div id="content" class="w-100 ml-2">
 
         <?php
@@ -91,7 +101,7 @@ if (isset($_POST['edit_submit'])){
 
                     <form action="" method="post">
 
-<!--                        --><?php
+                    <?php
                         if (isset($status)){
                             if ($status==true){
                                 ?>
@@ -220,7 +230,9 @@ if (isset($_POST['edit_submit'])){
                         <td>'.$cow_manager->breedResolver($row['breed_id']).'</td>
                         <td>'.$row['birth_weight'].'</td>
                        <td>
-                       <a href="#"><button class="btn btn-outline-primary" onclick="getSelectedDetails('.$row['id'].')" data-toggle="modal" data-target="#centralModalLGInfoDemo"  >Edit</button></a>
+                      
+                       <button class="btn btn-outline-primary" onclick="getSelectedDetails('.$row['id'].')" data-toggle="modal" data-target="#centralModalLGInfoDemo"  >Edit</button>
+                       <button class="btn btn-danger" onclick="deleteFunction('.$row['id'].')" data-toggle="modal" data-target="#deleteCalf"> Delete</button>
                          </td>
                         </tr>';
                         }
@@ -237,6 +249,40 @@ if (isset($_POST['edit_submit'])){
         </div>
     </div>
 </div>
+
+<div class="modal fade bottom" id="deleteCalf" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-full-height modal-bottom modal-notify modal-danger" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <form action="" method="post">
+                <div class="modal-header">
+                    <p class="heading lead">Delete Breed</p>
+                    <input type="hidden" id="delete_calf" name="delete_calf">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <h3>Do you want to delete this calf?</h3>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" name="delete_submit" type="submit">Delete
+
+                        </button>
+                        <a role="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </form>
+        </div>
+    </div>
+
+</div>
+
 
 <div class="modal fade" id="centralModalLGInfoDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-notify modal-info" role="document">
@@ -324,6 +370,9 @@ if (isset($_POST['edit_submit'])){
 
     });
 
+    function deleteFunction(id) {
+        $('#delete_calf').val(id);
+    }
     function getSelectedDetails(id) {
         var edit_breed_id;
 
