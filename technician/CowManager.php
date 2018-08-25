@@ -43,7 +43,7 @@ class CowManager
     public function availableCows()
     {
 
-        $sql="SELECT * FROM cows";
+        $sql="SELECT * FROM cows WHERE deleted_at is null ";
 
 
         return mysqli_query($this->db->connect(),$sql);
@@ -82,24 +82,18 @@ class CowManager
     public function deleteCow($id)
 
     {
-        $sql = "DELETE FROM cows WHERE id='".$id."'";
-        if($this->db->connect()->query($sql)==true){
+        $now=date("Y-m-d h:i:s");
+        $sql="UPDATE cows SET deleted_at='".$now."' WHERE id='".$id."'";
+        if ($this->db->connect()->query($sql)){
             return true;
-        }else {
+        }else{
             return false;
         }
 
 
+
+
     }
 
-//    public function deleteCalf ($ID){
-//
-//        $sql = "DELETE FROM calfs WHERE id= '".$ID."'";
-//        if ( $this->db->connect()->query($sql)==true){
-//            return true;
-//        }else{
-//            return false;
-//        }
-//
-//    }
+
 }

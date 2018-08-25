@@ -59,6 +59,15 @@ if (isset($_POST['edit_submit'])){
             $edit_status=false;
     }
 }
+
+if (isset($_POST['delete_submit'])){
+    $delete_id=$_POST['delete_cow'];
+   if ( $cow_manager->deleteCow($delete_id)){
+       $delete_status=true;
+   }else{
+       $delete_status=false;
+   }
+}
 ?>
 <div class="wrapper">
     <!-- sidebar -->
@@ -113,24 +122,38 @@ if (isset($_POST['edit_submit'])){
                         if (isset($edit_status) ){
                             if ($edit_status==true  ){
                                 ?>
-                                <!--                <div class="row">-->
                                 <div class="col-offset-4 col-md-4 col-lg-4 col-sm-12  alert-success" >
-                                    <h3>Record Updated successfully</h3>
+                                    <h3>Record deleted successfully</h3>
                                 </div>
-                                <!--                </div>-->
                                 <?php
                             }else{
                                 ?>
 
                                 <div class="row">
                                     <div class="col-md-4 alert-danger">
-                                        <h3>Error saving the record</h3>
+                                        <h3>Error deleting the record</h3>
                                     </div>
                                 </div>
                                 <?php
                             }
                         }
 
+                        if (isset($delete_status)){
+                            ?>
+
+                        <div class="col-offset-4 col-md-4 col-lg-4 col-sm-12  alert-success" >
+                            <h3>Record Updated successfully</h3>
+                        </div>
+                        <?php
+                        }else{
+                            ?>
+                        <div class="row">
+                            <div class="col-md-4 alert-danger">
+                                <h3>Error saving the record</h3>
+                            </div>
+                        </div>
+                        <?php
+                        }
                         ?>
                         <div class="row">
 
@@ -230,7 +253,9 @@ if (isset($_POST['edit_submit'])){
                         <td>'.$row['DOB'].'</td>
                         <td>'.$cow_manager->breedResolver($row['breed_id']).'</td>
                        <td>
-                       <a href="#"><button class="btn btn-outline-primary" onclick="getSelectedDetails('.$row['id'].')" data-toggle="modal" data-target="#centralModalLGInfoDemo"  >Edit</button></a>
+                       
+                       <button class="btn btn-outline-primary" onclick="getSelectedDetails('.$row['id'].')" data-toggle="modal" data-target="#centralModalLGInfoDemo"  >Edit</button>
+                       <button class="btn btn-danger" onclick="deleteFunction('.$row['id'].')" data-target="#deleteCow" data-toggle="modal">Delete</button>
                          </td>
                         </tr>';
                         }
@@ -246,6 +271,39 @@ if (isset($_POST['edit_submit'])){
 
         </div>
     </div>
+</div>
+
+<div class="modal fade bottom" id="deleteCow" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-full-height modal-bottom modal-notify modal-danger" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <form action="" method="post">
+                <div class="modal-header">
+                    <p class="heading lead">Delete Breed</p>
+                    <input type="hidden" id="delete_cow" name="delete_cow">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <h3>Do you want to delete this cow?</h3>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" name="delete_submit" type="submit">Delete
+
+                        </button>
+                        <a role="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">No, thanks</a>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </form>
+        </div>
+    </div>
+
 </div>
 
 <div class="modal fade" id="centralModalLGInfoDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -328,8 +386,11 @@ if (isset($_POST['edit_submit'])){
     $(document).ready(function () {
         $('#cows_table').DataTable();
 
-
     });
+
+    function deleteFunction(id) {
+        $('#delete_cow').val(id);
+    }
 
     function getSelectedDetails(cow_id) {
         var edit_breed_id;

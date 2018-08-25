@@ -44,7 +44,7 @@ class CalfManager
     }
     public function showCalf()
     {
-        $sql="SELECT * FROM calf ";
+        $sql="SELECT * FROM calf WHERE deleted_at is null ";
 
         $query=$this->db->connect()->query($sql);
 
@@ -52,6 +52,16 @@ class CalfManager
 
     }
 
+    public function deleteCalf($id)
+    {
+        $now=date("Y-m-d h:i:s");
+        $sql="UPDATE calf SET deleted_at='".$now."' WHERE id='".$id."'";
+        if ($this->db->connect()->query($sql)){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public function allCalves()
     {
         $sql="SELECT * FROM calf";
@@ -60,16 +70,16 @@ class CalfManager
 //        return mysqli_query($this->db->connect(),$sql);
 
     }
-    public function deleteCalf ($ID){
-
-        $sql = "DELETE FROM calf WHERE id= '".$ID."'";
-        if ( $this->db->connect()->query($sql)==true){
-            return true;
-        }else{
-            return false;
-        }
-
-    }
+//    public function deleteCalf ($ID){
+//
+//        $sql = "DELETE FROM calf WHERE id= '".$ID."'";
+//        if ( $this->db->connect()->query($sql)==true){
+//            return true;
+//        }else{
+//            return false;
+//        }
+//
+//    }
 
     public function weekCalculator($calf_id)
     {
