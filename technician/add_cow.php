@@ -139,6 +139,8 @@ if (isset($_POST['delete_submit'])){
                         }
 
                         if (isset($delete_status)){
+
+                            if ($delete_status){
                             ?>
 
                         <div class="col-offset-4 col-md-4 col-lg-4 col-sm-12  alert-success" >
@@ -153,6 +155,7 @@ if (isset($_POST['delete_submit'])){
                             </div>
                         </div>
                         <?php
+                        }
                         }
                         ?>
                         <div class="row">
