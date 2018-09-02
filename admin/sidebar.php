@@ -17,17 +17,18 @@ $notification_manager->addNotification();
         <p>Menu </p>
 
 
-        <li><a  href="#dashSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                <i class="fa fa-dashboard mr-3"></i>Dashboard</a>
-            <ul class="collapse list-styled" id="dashSubmenu">
-                <li><a href="../admin/calf_view.php"><i class="fa fa-share mr-3"></i>View Calf</a></li>
-                <li>
-                    <a href="../admin/view_cow.php"><i class="fa fa-share mr-3"></i>View Cow</a>
-                </li>
-            </ul>
-
+<!--        <li><a  href="#dashSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">-->
+<!--                <i class="fa fa-dashboard mr-3"></i>Dashboard</a>-->
+<!--            <ul class="collapse list-styled" id="dashSubmenu">-->
+<!---->
+<!--            </ul>-->
+<!---->
+<!--        </li>-->
+        <li><a href="../admin/index.php"><i class="fa fa-dashboard mr-3"></i>DashBoard</a> </li>
+        <li><a href="../admin/calf_view.php"><i class="fa fa-share mr-3"></i>View Calves</a></li>
+        <li>
+            <a href="../admin/view_cow.php"><i class="fa fa-share mr-3"></i>View Cows</a>
         </li>
-
         <li><a  href="#tableSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                 <i class="fa fa-table mr-3"></i>Tabular Records</a>
             <ul class="collapse" id="tableSubmenu">
