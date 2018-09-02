@@ -17,6 +17,15 @@ if (isset($_REQUEST['q'])){
     $user->logout();
     header("location:login.php");
 }
+
+
+require_once '../technician/CowManager.php';
+$cow_manager=new CowManager();
+
+require_once '../technician/MilkManager.php';
+$milk_manager=new MilkManager();
+
+
 ?>
 <head>
     <meta charset="utf-8" />
@@ -28,6 +37,8 @@ if (isset($_REQUEST['q'])){
     <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css"  href="../assets/css/c3.min.css" />
     <link rel="stylesheet" type="text/css"  href="../assets/css/sidebar.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/DataTables/datatables.css">
+
     <style>
         .months{
             border: 1px solid rgba(0, 0, 0, 0.125);
@@ -71,39 +82,70 @@ if (isset($_REQUEST['q'])){
 
 
 
-    <!-- page content -->
     <div id="content" class="w-100 ml-2">
 
-
         <?php
-        require_once '../admin/nav.php';
+        require_once "nav.php";
         ?>
-        <div class="months" style="display: none">
-            <span id="1" onclick="loadMonthlyData(event,1)" >JAN</span>
-            <span id="2" onclick="loadMonthlyData(event,2)">FEB</span>
-            <span id="3" onclick="loadMonthlyData(event,3)">MAR</span>
-            <span id="4" onclick="loadMonthlyData(event,4)">APR</span>
-            <span id="5" onclick="loadMonthlyData(event,5)">MAY</span>
-            <span id="6" onclick="loadMonthlyData(event,6)">JUN</span>
-            <span id="7" onclick="loadMonthlyData(event,7)">JUL</span>
-            <span id="8" onclick="loadMonthlyData(event, 8)">AUG</span>
-            <span id="9" onclick="loadMonthlyData(event,9)">SEP</span>
-            <span id="10" onclick="loadMonthlyData(event,10)">OCT</span>
-            <span id="11" onclick="loadMonthlyData(event,11)">NOV</span>
-            <span id="12" onclick="loadMonthlyData(event,12)">DEC</span>
-        </div>
 
-        <div class="card mt-5">
 
-            <div class="card-body" id="graph">
-                <div id="chart">
+        <div class="container-fluid">
+
+
+            <div class="card mt-5">
+
+
+                <div class="card-header">
+                    <h3>Today's Milk Records</h3>
+                </div>
+                <div class="card-body">
+
+                    <table id="table_id" class="display">
+                        <thead>
+                        <tr>
+                            <th>Cow ID</th>
+                            <th>Cow NickName</th>
+                            <th>Cow Breed</th>
+                            <th>Morning Amount</th>
+                            <th>Evening Amount</th>
+                            <th>Average Milk</th>
+                            <th>Total Milk</th>
+                        </tr>
+                        </thead>
+                        <!--                                            <td>'.$cow_manager->breedResolver($cow_manager->singleCow($row['cow_id'])['breed_id']).'</td>-->
+
+                        <tbody>
+                        <?php
+
+                        $result66=$milk_manager->SingleDailyMilkRecords();
+
+
+                        while($row=$result66->fetch_array()){
+                            echo $cow_manager->breedResolver($cow_manager->singleCow($row['cow_id'])) . '<tr>
+                                                  <td >'.$row['cow_id'].'</td>
+                                                  <td >'.$row['id'].'</td>
+                                                 <td>' .'</td>
+
+                        <td>'.$row['morning_amount'].'</td>
+                        <td>'.$row['evening_amount'].'</td>
+                        <td>'.(($row['evening_amount']+$row['morning_amount'])/2).'</td>
+                        <td>'.(($row['evening_amount']+$row['morning_amount'])).'</td>
+                      
+                        </tr>';
+                        }
+                        ?>
+                        </tbody>
+
+                    </table>
+
 
                 </div>
+
             </div>
 
         </div>
-
     </div>
+
 </div>
 
 
@@ -115,7 +157,20 @@ if (isset($_REQUEST['q'])){
 <script src="../assets/js/c3.min.js"></script>
 <script src="../assets/js/main.js"></script>
 <script src="js/charts.js"></script>
+<script type="text/javascript" charset="utf8" src="../assets/plugins/DataTables/datatables.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#table_id').DataTable({
 
+        });
+
+
+    });
+
+    function deleteF(id) {
+        $('#cow_to_delete').val(id)
+    }
+</script>
 </body>
 
 </html>
