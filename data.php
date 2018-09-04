@@ -20,8 +20,8 @@ if ($conn->connect_error) {
 // if($conn->query($query) == true){
 //     echo "Table records dropped";
 // }
-for($month = 6; $month < 8; $month++){
-    for($day =1; $day <= 30; $day++){
+for($month = 9; $month <= 9; $month++){
+    for($day =1; $day <= 4; $day++){
         for($cow = 0;$cow < 10; $cow++){
            $cow_id = 'EU '.(300 + $cow);
            $morning = random_number(); //btn 1.2 - 4.8

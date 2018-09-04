@@ -64,7 +64,7 @@ class CalfManager
     }
     public function allCalves()
     {
-        $sql="SELECT * FROM calf";
+        $sql="SELECT * FROM calf WHERE deleted_at IS NULL";
 
         return $this->db->connect()->query($sql);
 //        return mysqli_query($this->db->connect(),$sql);

@@ -258,7 +258,7 @@ if (isset($_POST['delete_submit'])){
             <!--Header-->
             <form action="" method="post">
                 <div class="modal-header">
-                    <p class="heading lead">Delete Breed</p>
+                    <p class="heading lead">Delete Calf</p>
                     <input type="hidden" id="delete_calf" name="delete_calf">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" class="white-text">&times;</span>

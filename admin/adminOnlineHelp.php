@@ -96,46 +96,12 @@ $milk_manager=new MilkManager();
 
 
                 <div class="card-header">
-                    <h3>Today's Milk Records</h3>
+                    <h3>Online Help</h3>
                 </div>
                 <div class="card-body">
 
-                    <table id="table_id" class="display">
-                        <thead>
-                        <tr>
-                            <th>Cow ID</th>
 
-                            <th>Morning Amount</th>
-                            <th>Evening Amount</th>
-                            <th>Average Milk</th>
-                            <th>Total Milk</th>
-                        </tr>
-                        </thead>
-                        <!--                                            <td>'.$cow_manager->breedResolver($cow_manager->singleCow($row['cow_id'])['breed_id']).'</td>-->
-<!--                        $cow_manager->breedResolver($cow_manager->singleCow($row['id']))-->
-                        <tbody>
-                        <?php
-
-                        $result66=$milk_manager->SingleDailyMilkRecords();
-
-
-                        while($row=$result66->fetch_array()){
-                            echo '<tr>
-                                                  <td >'.$row['cow_id'].'</td>
-
-                                                
-
-                        <td>'.$row['morning'].'</td>
-                        <td>'.$row['evening'].'</td>
-                        <td>'.(($row['evening']+$row['morning'])/2).'</td>
-                        <td>'.(($row['evening']+$row['morning'])).'</td>
-                      
-                        </tr>';
-                        }
-                        ?>
-                        </tbody>
-
-                    </table>
+                    <embed src="AdminManual.pdf" type="application/pdf" class="col-md-12 col-lg-12" height="800">
 
 
                 </div>
@@ -157,19 +123,7 @@ $milk_manager=new MilkManager();
 <script src="../assets/js/main.js"></script>
 <script src="js/charts.js"></script>
 <script type="text/javascript" charset="utf8" src="../assets/plugins/DataTables/datatables.js"></script>
-<script>
-    $(document).ready(function () {
-        $('#table_id').DataTable({
 
-        });
-
-
-    });
-
-    function deleteF(id) {
-        $('#cow_to_delete').val(id)
-    }
-</script>
 </body>
 
 </html>

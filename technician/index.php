@@ -52,7 +52,7 @@ $calf_manger= new CalfManager();
                 <div class="card " style="margin-top: 25px">
                     <div class="card-header">
 
-                        <h3>Current Milking Schedule</h3>
+                        <h3>Calves Milk Giving Schedule</h3>
                         <hr>
                     </div>
 

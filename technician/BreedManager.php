@@ -20,7 +20,7 @@ class BreedManager
     public function allBreeds()
     {
 
-        $sql="SELECT id,name FROM breed WHERE deleted_at IS null ";
+        $sql="SELECT id,name FROM breed WHERE deleted_at IS NULL ";
         return $this->db->connect()->query($sql);
         
     }

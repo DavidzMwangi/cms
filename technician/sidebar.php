@@ -16,10 +16,10 @@
 
     <ul class="list-styled components">
         <p>Menu</p>
-        <li><a href="index.php"> <i class="fa fa-desktop mr-3"> </i>Dashboard</a></li>
+<!--        <li><a href="index.php"> <i class="fa fa-desktop mr-3"> </i>Dashboard</a></li>-->
         <li><a href="calf_weekly_milk_schedule.php"><i class="fa fa-table mr-3"> </i>Current Calf Milk Table</a></li>
         <li>
-            <a href="calf_milk_history.php"> <i class="fa fa-history mr-3"> </i>Milk Amount History</a>
+            <a href="calf_milk_history.php"> <i class="fa fa-history mr-3"> </i>Calf Milk History</a>
         </li>
         <li><a href="add_cow.php"><i class="fa fa-plus-square mr-3"> </i>Add Cow</a></li>
 
@@ -36,8 +36,39 @@
             <a href="breed.php"> <i class="fa fa-umbrella mr-3"> </i>Breed</a>
         </li>
         <li>
-            <a href="../logout.php"><i class="fa fa-lock mr-3"> </i>Logout</a>
+            <a href="#" data-toggle="modal" data-target="#loge"><i class="fa fa-lock mr-3"> </i>Logout</a>
         </li>
     </ul>
 </nav>
+<div class="modal fade bottom" id="loge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-full-height modal-bottom modal-notify modal-danger" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+
+            <div class="modal-header">
+                <p class="heading lead">Logout</p>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+                <p>Do you want to logout?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="../logout.php" class="btn btn-danger"  >Yes
+
+                </a>
+                <a role="button" class="btn btn-danger waves-effect" data-dismiss="modal">No, thanks</a>
+            </div>
+
+            <!--/.Content-->
+
+        </div>
+    </div>
+
+</div>
 

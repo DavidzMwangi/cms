@@ -52,12 +52,10 @@ class CowManager
     public function breedResolver($breed_id)
     {
         $sql="SELECT name FROM breed WHERE id='".$breed_id."'";
-
-        $query=mysqli_query($this->db->connect(),$sql);
-
-        $row=mysqli_num_rows($query);
+        $query1=$this->db->connect()->query($sql);
+        $row=$query1->num_rows;
         if ($row==1){
-            $record=mysqli_fetch_assoc($query);
+            $record=$query1->fetch_assoc();
             return $record['name'];
         }else{
             return null;
@@ -68,10 +66,12 @@ class CowManager
     {
         $sql="SELECT * FROM cows WHERE id='".$cow_id."'";
 
-        $result=mysqli_query($this->db->connect(),$sql);
-        $row=mysqli_num_rows($result);
+
+        $result=$this->db->connect()->query($sql);
+//        $result=mysqli_query($this->db->connect(),$sql);
+        $row=$result->num_rows;
         if ($row==1){
-            $record=mysqli_fetch_assoc($result);
+            $record=$result->fetch_assoc();
             return $record['breed_id'];
         }else{
             return null;

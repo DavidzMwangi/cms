@@ -92,7 +92,7 @@ $calf_manager=new CalfManager();
                 <div class="card-header">
 
 
-                    <h3>Calf Records</h3>
+                    <h3>Calf Milk History</h3>
                     <hr>
                 </div>
 

@@ -257,7 +257,7 @@ if (isset($_POST['delete_submit'])){
                         <td>'.$cow_manager->breedResolver($row['breed_id']).'</td>
                        <td>
                        
-                       <button class="btn btn-outline-primary" onclick="getSelectedDetails('.$row['id'].')" data-toggle="modal" data-target="#centralModalLGInfoDemo"  >Edit</button>
+                       <button class="btn btn-outline-primary" onclick="getSelectedDetails('.$row['id'].')" data-toggle="modal" data-target="#editCow"  >Edit</button>
                        <button class="btn btn-danger" onclick="deleteFunction('.$row['id'].')" data-target="#deleteCow" data-toggle="modal">Delete</button>
                          </td>
                         </tr>';
@@ -284,7 +284,7 @@ if (isset($_POST['delete_submit'])){
             <!--Header-->
             <form action="" method="post">
                 <div class="modal-header">
-                    <p class="heading lead">Delete Breed</p>
+                    <p class="heading lead">Delete Cow</p>
                     <input type="hidden" id="delete_cow" name="delete_cow">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true" class="white-text">&times;</span>
@@ -309,7 +309,7 @@ if (isset($_POST['delete_submit'])){
 
 </div>
 
-<div class="modal fade" id="centralModalLGInfoDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="editCow" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-notify modal-info" role="document">
         <!--Content-->
         <div class="modal-content">

@@ -122,10 +122,10 @@ $milk_manager=new MilkManager();
                                                   <td >'.$row['id'].'</td>
                                                  <td>' .'</td>
 
-                        <td>'.$row['morning_amount'].'</td>
-                        <td>'.$row['evening_amount'].'</td>
-                        <td>'.(($row['evening_amount']+$row['morning_amount'])/2).'</td>
-                        <td>'.(($row['evening_amount']+$row['morning_amount'])).'</td>
+                        <td>'.$row['morning'].'</td>
+                        <td>'.$row['evening'].'</td>
+                        <td>'.(($row['evening']+$row['morning'])/2).'</td>
+                        <td>'.(($row['evening']+$row['morning'])).'</td>
                       
                         </tr>';
                         }

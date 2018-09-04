@@ -14,16 +14,11 @@ $notification_manager=new NotificationManager();
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-<!--                <li class="nav-item active">-->
-<!--                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>-->
-<!--                </li>-->
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-<!--                            class="label bg-danger rounded-circle"-->
-<!---->
-<!--                            --><?php
+                            <?php
                            $records= $notification_manager->allActiveNotifications();
                            if ($records->num_rows>0){
                                ?>
@@ -65,11 +60,44 @@ $notification_manager=new NotificationManager();
                 <!--                    <a class="nav-link " href="#">Profile</a>-->
                 <!--                </li>-->
             </ul>
-            <a href="../logout.php" class="btn btn-outline-light">Logout</a>
+            <a href="onlineHelp.php"  class="btn btn-outline-light m-1 ">Online Help</a>
+            <a href="#" data-toggle="modal" data-target="#centralModalLGInfoDemo" class="btn btn-outline-light">Logout</a>
 
         </div>
     </div>
 </nav>
+<div class="modal fade bottom" id="centralModalLGInfoDemo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-full-height modal-bottom modal-notify modal-danger" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+
+            <div class="modal-header">
+                <p class="heading lead">Logout</p>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body">
+                <p>Do you want to logout?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="../logout.php" class="btn btn-danger"  >Yes
+
+                </a>
+                <a role="button" class="btn btn-danger waves-effect" data-dismiss="modal">No, thanks</a>
+            </div>
+
+            <!--/.Content-->
+
+        </div>
+    </div>
+
+</div>
+
 <script type="text/javascript">
     function toggleNotification(id) {
 

@@ -127,7 +127,8 @@ if (isset($_POST['delete_submit'])){
                       <td >'.$row['nick_name'].'</td>
                         <td>'.$row['calf_id'].'</td>
                         <td>'.$row['birth_weight'].'</td>
-                        <td>'.$cow_manager->breedResolver($row['id']).'</td>
+                        
+                        <td>'.$cow_manager->breedResolver($row['breed_id']).'</td>
                        <td>
                        <a href="#"><button class="btn btn-outline-danger" data-toggle="modal" onclick="deleteF('.$row['id'].')" data-target="#centralModalLGInfoDemo"  >Delete</button></a>
                          </td>

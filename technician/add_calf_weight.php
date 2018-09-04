@@ -72,7 +72,7 @@ if (isset($_POST['submit'])){
             <div class="card " style="margin-top: 25px">
                 <div class="card-header">
 
-                    <h3>Add Weekly Calf Weight</h3>
+                    <h3>Add/Update Weekly Calf Weight</h3>
                     <hr>
                 </div>
 
